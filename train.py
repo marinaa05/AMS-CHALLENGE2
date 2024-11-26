@@ -40,8 +40,8 @@ class Logger(object):
 GPU_iden = 0
 def main():
     batch_size = 1
-    train_dir = '/data/whq/Data/LPBA40s2s_data/Train/'
-    val_dir = '/data/whq/Data/LPBA40s2s_data/Val/'
+    train_dir = 'Train'
+    val_dir = 'Val'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
