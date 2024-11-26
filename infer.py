@@ -129,27 +129,29 @@ def main():
     print('Best model: {}'.format(natsorted(os.listdir(model_dir))[model_idx]))
     model.load_state_dict(best_model)  # naloži uteži modela
     model.cuda()  # prenese model na gpu (hitrejše računanje)
+    # Ustvarimo interpolacijski model:
     reg_model = utils.register_model(img_size, 'nearest')
     reg_model.cuda()
-    test_composed = transforms.Compose([trans.Seg_norm(),
-                                        trans.NumpyType((np.float32, np.int16)),
+    test_composed = transforms.Compose([trans.Seg_norm(),  # normalizacija
+                                        trans.NumpyType((np.float32, np.int16)),  # pretvorba v ustrezen podatkovni tip
                                         ])
     test_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=test_composed)
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
-    eval_dsc_def = AverageMeter()
-    eval_dsc_raw = AverageMeter()
-    eval_det = AverageMeter()
+    eval_dsc_def = AverageMeter()  # objekt za DSC za registrirane slike
+    eval_dsc_raw = AverageMeter()  # objekt za DSC za začetne (neregistrirane) slike
+    eval_det = AverageMeter()  # objekt za %|Jac. det.| <= 0
     with torch.no_grad():
         idx = 0
-        for data in test_loader:
+        for data in test_loader:  # gremo skozi validacijske podatke
             model.eval()
             data = [t.cuda() for t in data]
-            x = data[0]
-            y = data[1]
-            x_seg = data[2]
-            y_seg = data[3]
+            x = data[0]  # moving img
+            y = data[1]  # fixed img
+            x_seg = data[2]  # segmentacija moving img
+            y_seg = data[3]  # segmentacija fixed img
 
-            x_def, flow = model(x,y)
+            x_def, flow = model(x,y)  # x_def - registriran x, flow - deformacijsko polje
+            # Aplikacija def. polja na segmentacijo:
             def_out = reg_model([x_seg.cuda().float(), flow.cuda()])
 
             visualize_registration(
@@ -159,12 +161,17 @@ def main():
                 deformation_field=flow[0], 
                 idx=idx
             )
+            
             idx += 1
 
             tar = y.detach().cpu().numpy()[0, 0, :, :, :]
+            # Izračun Jac. det.:
             jac_det = utils.jacobian_determinant_vxm(flow.detach().cpu().numpy()[0, :, :, :, :])
+            # Beleži delež determinant, ki so <= 0:
             eval_det.update(np.sum(jac_det <= 0) / np.prod(tar.shape), x.size(0))
+            # DSC za registrirano sliko:
             dsc_trans = utils.dice_val_VOI(def_out.long(), y_seg.long())
+            # DSC za neregistirano sliko:
             dsc_raw = utils.dice_val_VOI(x_seg.long(), y_seg.long())
             print('Trans dsc: {:.4f}, Raw dsc: {:.4f}'.format(dsc_trans.item(),dsc_raw.item()))
             eval_dsc_def.update(dsc_trans.item(), x.size(0))
