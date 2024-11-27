@@ -47,6 +47,31 @@ class AverageMeter(object):
         self.vals.append(val)
         self.std = np.std(self.vals)
 
+def comput_fig(img, idx):
+    '''
+    Vizualizacija 3D volumetričnih podatkov v obliki 2D rezin.
+    '''
+    img = img.detach().cpu().numpy()[0, 0, 48:64, :, :]
+    # [batch, kanal, D, H, W] - izberemo 1. vzorec, 1. kanal, 3D množica rezin od 48. do 63. skozi Z os
+    # X, Y ostanejo nespremenjene
+    fig = plt.figure(figsize=(12, 12), dpi=180)  # dpi - gostota slikovnih točk
+
+    for i in range(img.shape[0]):  # iteracija skozi vse rezine v dimenziji Z (range(16))
+        plt.subplot(4, 4, i + 1)
+        plt.axis('off')
+        plt.imshow(img[i, :, :], cmap='gray')
+    fig.subplots_adjust(wspace=0, hspace=0)
+    #return fig
+    output_dir = "slike1"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Določite pot do shranjevanja slike
+    output_file = os.path.join(output_dir, f"output_figure_{stdy_idx}.png")
+
+    # Shrani sliko
+    plt.savefig(output_file)  # Shranjevanje slike
+    plt.close()  # Zapri sliko
+    print(f"Slika shranjena: {output_file}")
 
 def visualize_registration(fixed_image, moving_image, moving_transformed, deformation_field, idx, slice_idx=None):
     """
@@ -155,6 +180,8 @@ def main():
             # Aplikacija def. polja na segmentacijo:
             def_out = reg_model([x_seg.cuda().float(), flow.cuda()])
 
+            # Prikaz slik:
+            # 1)
             visualize_registration(
                 fixed_image=y[0, 0], 
                 moving_image=x[0, 0], 
@@ -163,6 +190,9 @@ def main():
                 idx=idx
             )
             
+            # 2)
+            comput_fig(x_def, idx)
+
             idx += 1
 
             tar = y.detach().cpu().numpy()[0, 0, :, :, :]
