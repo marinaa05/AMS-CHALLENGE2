@@ -37,19 +37,24 @@ class Logger(object):
 
     def flush(self):
         pass
+
 GPU_iden = 0
+
 def main():
     batch_size = 1
     train_dir = 'LPBA_data\Train'
     val_dir = 'LPBA_data\Val'
     weights = [1, 1]  # loss weights
-    lr = 0.0001
+    lr = 0.0001  # learning rate
+    # Parametri, ki določajo arhitekturo pozornosti in št. kanalov:
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
     #save_dir = 'ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    # Mapa, kamor bomo shranjevali model:
     save_dir = 'ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
 
+    # Če mapa za model ne obstaja, ustvarimo novo:
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
     if not os.path.exists('logs/' + save_dir):
@@ -66,7 +71,7 @@ def main():
     Initialize model
     '''
     model = ModeTv2_model(img_size, head_dim=head_dim, num_heads=num_heads,channels=channels//2, scale=1)
-    model.cuda()
+    model.cuda()  # premik na GPU (hitrejše računanje)
 
     '''
     Initialize spatial transformation function
@@ -76,7 +81,7 @@ def main():
 
 
     '''
-    If continue from previous training
+    If continue from previous training (if cont_training=True)
     '''
     if cont_training:
         model_dir = 'experiments/'+save_dir
@@ -94,17 +99,21 @@ def main():
                                          trans.NumpyType((np.float32, np.float32)),
                                          ])
 
-    val_composed = transforms.Compose([trans.Seg_norm(),
+    val_composed = transforms.Compose([trans.Seg_norm(),  # normalizacija
                                        trans.NumpyType((np.float32, np.int16))])
     train_set = datasets.LPBABrainDatasetS2S(glob.glob(train_dir + '*.pkl'), transforms=train_composed)
     val_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=val_composed)
+    # Branje train data:
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
+    # Branje validacijskih podatkov:
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
 
+    # Optimizator z AMSGrad za stabilizacijo učenja:
     optimizer = optim.Adam(model.parameters(), lr=updated_lr, weight_decay=0, amsgrad=True)
-    criterion = losses.NCC_vxm()
+    criterion = losses.NCC_vxm()  # ocena podobnosti slik
     criterions = [criterion]
-    criterions += [losses.Grad3d(penalty='l2')]
+    criterions += [losses.Grad3d(penalty='l2')]  # Grad3d - preverja kao zvezve/gladke so spremembe v def. polju
+    
     best_dsc = 0
     for epoch in range(epoch_start, max_epoch):
         print('Training Starts')
@@ -115,20 +124,21 @@ def main():
         idx = 0
         for data in train_loader:
             idx += 1
-            model.train()
+            model.train()  # model nastavljen na train način
             adjust_learning_rate(optimizer, epoch, max_epoch, lr)
-            x = data[0].cuda()
-            y = data[1].cuda()
+            x = data[0].cuda()  # moving imgs
+            y = data[1].cuda()  # fixed imgs
 
-            output = model(x,y)
+            output = model(x,y)  # izračun napovedi outputa
 
             loss = 0
             loss_vals = []
-            for n, loss_function in enumerate(criterions):
-                curr_loss = loss_function(output[n], y) * weights[n]
+            for n, loss_function in enumerate(criterions):  #iteracija skozi funkcije izgube
+                curr_loss = loss_function(output[n], y) * weights[n]  # trenutna izguba
                 loss_vals.append(curr_loss)
                 loss += curr_loss
             loss_all.update(loss.item(), y.numel())
+            # Posodobitev uteži:
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -137,8 +147,9 @@ def main():
 
         print('{} Epoch {} loss {:.4f}'.format(save_dir, epoch, loss_all.avg))
         print('Epoch {} loss {:.4f}'.format(epoch, loss_all.avg), file=f, end=' ')
+
         '''
-        Validation
+        Validation (po zaključku vsake epohe)
         '''
         eval_dsc = utils.AverageMeter()
         with torch.no_grad():
@@ -158,6 +169,8 @@ def main():
                 print(epoch, ':',eval_dsc.avg)
         best_dsc = max(eval_dsc.avg, best_dsc)
         print(eval_dsc.avg, file=f)
+
+        # Po vsaki epohi se model shrani (max št. shranjenih modelov=8 - da ne zavzamejo prevec GB):
         save_checkpoint({
             'epoch': epoch + 1,
             'state_dict': model.state_dict(),

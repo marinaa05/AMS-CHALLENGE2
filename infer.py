@@ -11,6 +11,7 @@ from mpl_toolkits.mplot3d import axes3d
 from natsort import natsorted
 from models_cuda import ModeTv2_model
 import random
+
 def same_seeds(seed):
     # Python built-in random module
     random.seed(seed)
