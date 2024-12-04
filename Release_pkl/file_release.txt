@@ -1,0 +1,1 @@
+Datoteka vsebuje dataset Release_06_12_23 v formatu .pkl, ki v originalu vsebuje datoteke v formatu .nii.gz.

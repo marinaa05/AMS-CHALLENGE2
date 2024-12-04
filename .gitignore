@@ -1,0 +1,6 @@
+*.csv
+*.pkl
+*.nii.gz
+*.png
+LPBA_data.zip
+.gitbak
