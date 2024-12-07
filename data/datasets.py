@@ -8,6 +8,11 @@ import numpy as np
 def pkload(fname):
     with open(fname, 'rb') as f:
         return pickle.load(f)
+    
+def pksave(data, fname):
+    """Funkcija za shranjevanje podatkov v pickle datoteko."""
+    with open(fname, 'wb') as f:
+        pickle.dump(data, f)
 
 class LPBABrainDatasetS2S(Dataset):
     def __init__(self, data_path, transforms):
@@ -138,3 +143,39 @@ class LPBABrainHalfInferDatasetS2S(Dataset):
 
     def __len__(self):
         return len(self.paths)*(len(self.paths)-1)
+
+
+# Kam shraniti:
+data_directory = "Thorax_pairs"
+os.makedirs(data_directory, exist_ok=True)  # Ustvari mapo, če ne obstaja
+
+# Definirajte datoteko za shranjevanje parov
+# output_file = os.path.join(data_directory, "Thorax_pairs_1.txt")
+
+data_paths = [("Release_pkl/imagesTr/ThoraxCBCT_0000_0000.pkl",           "Release_pkl/imagesTr/ThoraxCBCT_0000_0001.pkl"),
+              ("Release_pkl/imagesTr/ThoraxCBCT_0001_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0001_0001.pkl"),
+              ("Release_pkl/imagesTr/ThoraxCBCT_0002_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0002_0001.pkl"),
+              ("Release_pkl/imagesTr/ThoraxCBCT_0003_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0003_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0004_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0004_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0005_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0005_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0006_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0006_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0007_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0007_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0008_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0008_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0009_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0009_0001.pkl"),("Release_pkl/imagesTr/ThoraxCBCT_0010_0000.pkl", "Release_pkl/imagesTr/ThoraxCBCT_0010_0001.pkl"),]  # Ustvarite pare iz datotek
+
+# Procesiranje in shranjevanje
+for i, (fbct_path, cbct_path) in enumerate(data_paths):
+    # Naloži FBCT in CBCT slike
+    fbct_image = pkload(fbct_path)
+    cbct_image = pkload(cbct_path)
+
+    # Normalizacija (če je potrebna)
+    fbct_image = fbct_image / np.max(fbct_image)
+    cbct_image = cbct_image / np.max(cbct_image)
+
+    # Združitev v eno matriko z dimenzijami [2, 256, 192, 192]
+    combined_images = np.stack([fbct_image, cbct_image], axis=0)
+
+    # Pot za shranjevanje združenega para
+    output_path = os.path.join(data_directory, f"Thorax_pair_{i:03d}.pkl")
+
+    # Shranjevanje v .pkl datoteko
+    pksave(combined_images, output_path)
+
+    print(f"Shranjeno: {output_path}")
+
+print("Vsi pari so bili uspešno shranjeni.")
