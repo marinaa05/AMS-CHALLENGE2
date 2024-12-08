@@ -6,23 +6,23 @@ import numpy as np
 import pandas as pd
 import SimpleITK as sitk
 
-path = "./dataset/LPBA_data/Train/subject_13.pkl"
-with open(path, "rb") as file:
-   res= pickle.load(file)
+# path = "./dataset/LPBA_data/Train/subject_13.pkl"
+# with open(path, "rb") as file:
+#    res= pickle.load(file)
 #print(type(res))
-print(len(res))
+# print(len(res))
 #print(res[0])
-print(res[0].shape)
+# print(res[0].shape)
 #print(res[1])
-print(res[1].shape)
+#print(res[1].shape)
 #plt.imshow(res[0])
-path = "Preprocessing/imagesTr_to_pkl/ThoraxCBCT_0000_0000.pkl"
-with open(path, "rb") as file:
-   res= pickle.load(file)
-#print(type(res))
-print(len(res))
-#print(res[0])
-print(res[0].shape)
+# path = "Thorax_pairs/Thorax_pair_000.pkl"
+# with open(path, "rb") as file:
+#    res= pickle.load(file)
+# #print(type(res))
+# print(len(res))
+# #print(res[0])
+# print(res[0].shape)
 #print(res[1])
 # print(res[1].shape)
 #plt.imshow(res[0])
@@ -193,5 +193,43 @@ def load_and_show_slice(pkl_file):
         print(f"Data is not 3D (shape: {data_array.shape}), cannot visualize.")
 
 # Example usage
-pkl_file_path = 'dataset/LPBA_data/Train/subject_11.pkl'  # Replace with the actual file path
-load_and_show_slice(pkl_file_path)
+# pkl_file_path = 'dataset/LPBA_data/Train/subject_11.pkl'  # Replace with the actual file path
+# load_and_show_slice(pkl_file_path)
+
+# import pickle
+# import numpy as np
+
+# with open('Release_pkl/labelsTr/ThoraxCBCT_0011_0000.pkl', 'rb') as f:
+#     data = pickle.load(f)
+
+# label_image = data[0]['label']  # Adjust key if needed
+# unique_labels = np.unique(label_image)
+# print(unique_labels)  # Use these values in `self.seg_table`
+
+import pickle
+
+# Pot do datoteke
+# path_to_file = 'Release_pkl/labelsTr/ThoraxCBCT_0012_0000.pkl'
+
+# # Odpiranje in branje datoteke
+# with open(path_to_file, 'rb') as f:
+#     data = pickle.load(f)
+
+# import numpy as np
+
+# # label_image je že vaš naložen numpy array
+# label_image = data  # Celotna struktura podatkov je array
+
+# # Poiščite unikatne vrednosti
+# unique_labels = np.unique(label_image)
+# print("Unique labels:", unique_labels)
+
+import pandas as pd
+
+# Pot do datoteke
+file_path = 'Release_06_12_23/keypoints01Tr/ThoraxCBCT_0000_0000.csv'
+
+# Preberi CSV datoteko
+data = pd.read_csv(file_path)
+print(data.head())  # Prikaže prvih nekaj vrstic
+

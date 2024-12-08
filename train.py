@@ -44,24 +44,28 @@ def main():
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
     # val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
 
-    train_dir = 'ProcessedData/Train'
-    val_dir = 'ProcessedData/Val'
+    train_dir = 'Thorax_pairs/Train'
+    val_dir = 'Thorax_pairs/Val'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'New_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
     if not os.path.exists('logs/' + save_dir):
         os.makedirs('logs/' + save_dir)
+
     sys.stdout = Logger('logs/' + save_dir)
+
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
     max_epoch = 30
-    img_size = (160, 192, 160)
+    # img_size = (160, 192, 160)
+    img_size = (256, 192, 192)
     cont_training = False
 
     '''
@@ -98,8 +102,13 @@ def main():
 
     val_composed = transforms.Compose([trans.Seg_norm(),
                                        trans.NumpyType((np.float32, np.int16))])
-    train_set = datasets.LPBABrainDatasetS2S(glob.glob(train_dir + '*.pkl'), transforms=train_composed)
-    val_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=val_composed)
+    
+    # train_set = datasets.LPBABrainDatasetS2S(glob.glob(train_dir + '*.pkl'), transforms=train_composed)
+    # val_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=val_composed)
+    
+    train_set = datasets.ThoraxDatasetS2S(glob.glob(os.path.join(train_dir, '*.pkl')), transforms=train_composed)
+    val_set = datasets.ThoraxDatasetS2S(glob.glob(os.path.join(val_dir, '*.pkl')), transforms=val_composed)
+
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
 
@@ -107,6 +116,7 @@ def main():
     criterion = losses.NCC_vxm()
     criterions = [criterion]
     criterions += [losses.Grad3d(penalty='l2')]
+
     best_dsc = 0
     for epoch in range(epoch_start, max_epoch):
         print('Training Starts')
