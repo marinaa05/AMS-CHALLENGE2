@@ -16,16 +16,16 @@ import SimpleITK as sitk
 #print(res[1])
 #print(res[1].shape)
 #plt.imshow(res[0])
-# path = "Thorax_pairs/Thorax_pair_000.pkl"
+# path = "Thorax_pairs/Train_Resized/Thorax_pair_000.pkl"
 # with open(path, "rb") as file:
 #    res= pickle.load(file)
 # #print(type(res))
 # print(len(res))
 # #print(res[0])
 # print(res[0].shape)
-#print(res[1])
+# # print(res[1])
 # print(res[1].shape)
-#plt.imshow(res[0])
+# plt.imshow(res[0])
 
 
 def nii_to_pkl(input_folder, output_folder):
@@ -224,12 +224,55 @@ import pickle
 # unique_labels = np.unique(label_image)
 # print("Unique labels:", unique_labels)
 
-import pandas as pd
+# import pandas as pd
 
-# Pot do datoteke
-file_path = 'Release_06_12_23/keypoints01Tr/ThoraxCBCT_0000_0000.csv'
+# # Pot do datoteke
+# file_path = 'Release_06_12_23/keypoints01Tr/ThoraxCBCT_0000_0000.csv'
 
-# Preberi CSV datoteko
-data = pd.read_csv(file_path)
-print(data.head())  # Prikaže prvih nekaj vrstic
+# # Preberi CSV datoteko
+# data = pd.read_csv(file_path)
+# print(data.head())  # Prikaže prvih nekaj vrstic
+
+
+import pickle
+
+# file_path = "Thorax_pairs/Val_Resized/Thorax_pair_001.pkl"  # zamenjaj z dejansko potjo do .pkl datoteke
+
+# with open(file_path, 'rb') as f:
+#     data = pickle.load(f)
+
+# print(f"Type of data: {type(data)}")
+# if isinstance(data, (list, tuple)):
+#     print(f"Length of data: {len(data)}")
+#     for i, item in enumerate(data):
+#         print(f"Item {i}: Type: {type(item)}, Shape: {getattr(item, 'shape', 'N/A')}")
+# else:
+#     print("Data format is unexpected.")
+
+import glob
+
+# Converting into tuple:
+# file_paths = glob.glob("Thorax_pairs/Val_Resized/*.pkl")  # Prilagodi pot
+
+# for path in file_paths:
+#     with open(path, 'rb') as f:
+#         data = pickle.load(f)
+
+#     # Pretvori v tuple in ponovno shrani
+#     data = tuple(data)
+#     with open(path, 'wb') as f:
+#         pickle.dump(data, f)
+
+# print("Vse datoteke so posodobljene.")
+
+# Preveri vse .pkl datoteke v datasetu
+import pickle
+import glob
+
+train_files = glob.glob("dataset/LPBA_data/Train/*.pkl")
+for file in train_files:
+    with open(file, 'rb') as f:
+        data = pickle.load(f)
+        print(f"File: {file}, Data length: {len(data)}")
+
 

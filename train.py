@@ -38,14 +38,14 @@ class Logger(object):
 
     def flush(self):
         pass
-GPU_iden = 0
+GPU_iden = 1
 def main():
     batch_size = 1
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
     # val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
 
-    train_dir = 'Thorax_pairs/Train'
-    val_dir = 'Thorax_pairs/Val'
+    train_dir = 'Thorax_pairs/Train_Resized'
+    val_dir = 'Thorax_pairs/Val_Resized'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
@@ -64,8 +64,8 @@ def main():
 
     epoch_start = 0
     max_epoch = 30
-    # img_size = (160, 192, 160)
-    img_size = (256, 192, 192)
+    img_size = (160, 192, 160)
+    # img_size = (256, 192, 192)
     cont_training = False
 
     '''
@@ -107,7 +107,7 @@ def main():
     # val_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=val_composed)
     
     train_set = datasets.ThoraxDatasetS2S(glob.glob(os.path.join(train_dir, '*.pkl')), transforms=train_composed)
-    val_set = datasets.ThoraxDatasetS2S(glob.glob(os.path.join(val_dir, '*.pkl')), transforms=val_composed)
+    val_set = datasets.ThoraxInferDatasetS2S(glob.glob(os.path.join(val_dir, '*.pkl')), transforms=val_composed)
 
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)

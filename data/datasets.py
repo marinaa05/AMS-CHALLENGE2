@@ -9,10 +9,10 @@ def pkload(fname):
     with open(fname, 'rb') as f:
         return pickle.load(f)
     
-def pksave(data, fname):
-    """Funkcija za shranjevanje podatkov v pickle datoteko."""
-    with open(fname, 'wb') as f:
-        pickle.dump(data, f)
+# def pksave(data, fname):
+#     """Funkcija za shranjevanje podatkov v pickle datoteko."""
+#     with open(fname, 'wb') as f:
+#         pickle.dump(data, f)
 
 class LPBABrainDatasetS2S(Dataset):
     def __init__(self, data_path, transforms):
@@ -186,26 +186,108 @@ data_paths = [("Release_pkl/imagesTr/ThoraxCBCT_0011_0000.pkl",           "Relea
 # print(fbct_image.shape, cbct_image.shape)
 
 
+# class ThoraxDatasetS2S(Dataset):
+#     def __init__(self, file_paths, transforms=None):
+#         self.file_paths = file_paths
+#         self.transforms = transforms
+
+#     def __len__(self):
+#         return len(self.file_paths)
+
+#     def __getitem__(self, idx):
+
+#         with open(self.file_paths[idx], 'rb') as f:
+#             data = pickle.load(f)
+
+#         fixed_image = data[0]
+#         moving_image = data[1]
+
+#         fixed_image = fixed_image[None, ...]
+#         moving_image = moving_image[None, ...]
+
+#         if self.transforms:
+#             fixed_image, moving_image = self.transforms([fixed_image, moving_image])
+
+#         return torch.tensor(fixed_image, dtype=torch.float32), torch.tensor(moving_image, dtype=torch.float32)
+
 class ThoraxDatasetS2S(Dataset):
-    def __init__(self, file_paths, transforms=None):
-        self.file_paths = file_paths
+    def __init__(self, data_path, transforms):
+        self.paths = data_path
         self.transforms = transforms
 
-    def __len__(self):
-        return len(self.file_paths)
+    def __getitem__(self, index):
+        # Pridobivanje indeksov za par podatkov (fixed, moving)
+        x_index = index // (len(self.paths) - 1)
+        s = index % (len(self.paths) - 1)
+        y_index = s + 1 if s >= x_index else s
 
-    def __getitem__(self, idx):
+        # Pridobitev poti do datotek
+        path_x = self.paths[x_index]
+        path_y = self.paths[y_index]
 
-        with open(self.file_paths[idx], 'rb') as f:
-            data = pickle.load(f)
+        # Naložitev podatkov
+        x, x_seg = pkload(path_x)
+        y, y_seg = pkload(path_y)
 
-        fixed_image = data[0]
-        moving_image = data[1]
+        # Dodajanje dimenzije kanala
+        x, y = x[None, ...], y[None, ...]
 
-        fixed_image = fixed_image[None, ...]
-        moving_image = moving_image[None, ...]
-
+        # Transformacije (če so podane)
         if self.transforms:
-            fixed_image, moving_image = self.transforms([fixed_image, moving_image])
+            x, y = self.transforms([x, y])
 
-        return torch.tensor(fixed_image, dtype=torch.float32), torch.tensor(moving_image, dtype=torch.float32)
+        # Pretvorba v contiguous array
+        x = np.ascontiguousarray(x)
+        y = np.ascontiguousarray(y)
+
+        # Pretvorba v PyTorch tensorje
+        x, y = torch.from_numpy(x), torch.from_numpy(y)
+
+        return x, y
+
+    def __len__(self):
+        # Izračun dolžine dataset-a glede na vse možne pare
+        return len(self.paths) * (len(self.paths) - 1)
+    
+class ThoraxInferDatasetS2S(Dataset):
+    def __init__(self, data_path, transforms=None):
+        self.paths = data_path
+        self.transforms = transforms
+
+    def __getitem__(self, index):
+        # Pridobivanje indeksov za par podatkov (fixed, moving)
+        x_index = index // (len(self.paths) - 1)
+        s = index % (len(self.paths) - 1)
+        y_index = s + 1 if s >= x_index else s
+
+        # Naložitev podatkov
+        path_x = self.paths[x_index]
+        path_y = self.paths[y_index]
+        x, x_seg = pkload(path_x)
+        y, y_seg = pkload(path_y)
+
+        # Dodajanje dimenzije kanala
+        x, y = x[None, ...], y[None, ...]
+        x_seg, y_seg = x_seg[None, ...], y_seg[None, ...]
+
+        # Transformacije (če so podane)
+        if self.transforms:
+            x, x_seg = self.transforms([x, x_seg])
+            y, y_seg = self.transforms([y, y_seg])
+
+        # Pretvorba v contiguous array
+        x = np.ascontiguousarray(x)
+        y = np.ascontiguousarray(y)
+        x_seg = np.ascontiguousarray(x_seg)
+        y_seg = np.ascontiguousarray(y_seg)
+
+        # Pretvorba v PyTorch tensorje
+        x, y = torch.from_numpy(x), torch.from_numpy(y)
+        x_seg, y_seg = torch.from_numpy(x_seg), torch.from_numpy(y_seg)
+
+        return x, y, x_seg, y_seg
+
+    def __len__(self):
+        # Izračun dolžine dataset-a glede na vse možne pare
+        return len(self.paths) * (len(self.paths) - 1)
+

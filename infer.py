@@ -89,7 +89,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     if slice_idx is None:
         slice_idx = fixed.shape[2] // 2
 
-    output_dir = "slike2"
+    output_dir = "slike3"
     os.makedirs(output_dir, exist_ok=True)
 
     # Fiksna slika
@@ -127,12 +127,12 @@ def main():
 
     stdy_idx = 0
 
-    val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
+    val_dir = '/workspace/modetv2/Thorax_pairs/Val_Resized/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = 'New_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -148,7 +148,7 @@ def main():
                                         trans.NumpyType((np.float32, np.int16)),
                                         ])
     
-    test_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=test_composed)
+    test_set = datasets.ThoraxInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=test_composed)
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
     eval_dsc_def = AverageMeter()
     eval_dsc_raw = AverageMeter()
@@ -174,15 +174,15 @@ def main():
             # Klic funkcije za vizualizacijo
             #visualize_registration(fixed_image, moving_image_transformed, deformation_field, stdy_idx)
             
-            #visualize_registration(
-            #    fixed=y[0, 0], 
-            #    moving_image=x[0, 0], 
-            #    moving_transformed=x_def[0, 0], 
-            #    deformation_field=flow[0], 
-            #    stdy_idx=stdy_idx
-            #)
+            visualize_registration(
+               fixed=y[0, 0], 
+               moving_image=x[0, 0], 
+               moving_transformed=x_def[0, 0], 
+               deformation_field=flow[0], 
+               stdy_idx=stdy_idx
+            )
 
-            comput_fig(x_def, stdy_idx)
+            # comput_fig(x_def, stdy_idx)
             
             stdy_idx += 1
 
