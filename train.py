@@ -44,14 +44,14 @@ def main():
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
     # val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
 
-    train_dir = 'Thorax_pairs/Train_Resized'
-    val_dir = 'Thorax_pairs/Val_Resized'
+    train_dir = 'Thorax_pairs/Train_Resized2'
+    val_dir = 'Thorax_pairs/Val_Resized2'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'New_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'New2_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -64,8 +64,8 @@ def main():
 
     epoch_start = 0
     max_epoch = 30
-    img_size = (160, 192, 160)
-    # img_size = (256, 192, 192)
+    # img_size = (160, 192, 160)
+    img_size = (160, 120, 120)   ## sprememba
     cont_training = False
 
     '''
@@ -97,11 +97,16 @@ def main():
     Initialize training
     '''
     train_composed = transforms.Compose([
+                                        
+                                         #trans.Resize(192//2),  ## sprememba
                                          trans.NumpyType((np.float32, np.float32)),
                                          ])
 
-    val_composed = transforms.Compose([trans.Seg_norm(),
-                                       trans.NumpyType((np.float32, np.int16))])
+    val_composed = transforms.Compose([
+                                        trans.Seg_norm(),
+                                        #trans.Resize(192//2),  ## sprememba
+                                        trans.NumpyType((np.float32, np.int16)),
+                                       ])
     
     # train_set = datasets.LPBABrainDatasetS2S(glob.glob(train_dir + '*.pkl'), transforms=train_composed)
     # val_set = datasets.LPBABrainInferDatasetS2S(glob.glob(val_dir + '*.pkl'), transforms=val_composed)

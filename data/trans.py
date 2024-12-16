@@ -2,6 +2,9 @@
 import collections
 import numpy as np
 
+from torchvision import transforms
+
+
 
 class Base(object):
     def sample(self, *shape):
@@ -66,4 +69,16 @@ class NumpyType(Base):
     def __str__(self):
         s = ', '.join([str(s) for s in self.types])
         return 'NumpyType(({}))'.format(s)
+
+
+# class Resize(Base):
+#     def __init__(self, size=192//2):
+#         self.t = transforms.Resize(size)
+
+#     def tf(self, img, k=0):
+#         return self.t(img)
+
+#     def __str__(self):
+#         s = ', '.join([str(s) for s in self.types])
+#         return 'ResizeType(({}))'.format(s)
 
