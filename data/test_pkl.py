@@ -6,15 +6,15 @@ import numpy as np
 import pandas as pd
 import SimpleITK as sitk
 
-# path = "./dataset/LPBA_data/Train/subject_13.pkl"
-# with open(path, "rb") as file:
-#    res= pickle.load(file)
-#print(type(res))
-# print(len(res))
-#print(res[0])
-# print(res[0].shape)
-#print(res[1])
-#print(res[1].shape)
+path = "dataset/LPBA_data/Train/subject_11.pkl"
+with open(path, "rb") as file:
+   res= pickle.load(file)
+print(type(res))
+print(len(res))
+# print(res[0])
+print(res[0].shape)
+# print(res[1])
+print(res[1].shape)
 #plt.imshow(res[0])
 # path = "Thorax_pairs/Train_Resized/Thorax_pair_000.pkl"
 # with open(path, "rb") as file:

@@ -57,7 +57,7 @@ def comput_fig(img, stdy_idx):
     fig.subplots_adjust(wspace=0, hspace=0)
     #return fig
     # Ustvari mapo "slike1", če še ne obstaja
-    output_dir = "slike1"
+    output_dir = "slike3_comput_fig"
     os.makedirs(output_dir, exist_ok=True)
 
     # Določite pot do shranjevanja slike
@@ -127,16 +127,18 @@ def main():
 
     stdy_idx = 0
 
-    val_dir = '/workspace/modetv2/Thorax_pairs/Val_Resized/'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'New_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = 'Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
-    img_size = (160, 192, 160)
+    # img_size = (160, 192, 160)
+    img_size = (170, 128, 128)
+
     model = ModeTv2_model(img_size)
     best_model = torch.load(model_dir + natsorted(os.listdir(model_dir))[model_idx])['state_dict']
     print('Best model: {}'.format(natsorted(os.listdir(model_dir))[model_idx]))
@@ -174,15 +176,15 @@ def main():
             # Klic funkcije za vizualizacijo
             #visualize_registration(fixed_image, moving_image_transformed, deformation_field, stdy_idx)
             
-            visualize_registration(
-               fixed=y[0, 0], 
-               moving_image=x[0, 0], 
-               moving_transformed=x_def[0, 0], 
-               deformation_field=flow[0], 
-               stdy_idx=stdy_idx
-            )
+            # visualize_registration(
+            #    fixed=y[0, 0], 
+            #    moving_image=x[0, 0], 
+            #    moving_transformed=x_def[0, 0], 
+            #    deformation_field=flow[0], 
+            #    stdy_idx=stdy_idx
+            # )
 
-            # comput_fig(x_def, stdy_idx)
+            comput_fig(x_def, stdy_idx)
             
             stdy_idx += 1
 

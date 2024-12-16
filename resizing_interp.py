@@ -1,1 +1,0 @@
-Datoteka za resizing

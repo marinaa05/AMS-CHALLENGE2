@@ -44,14 +44,14 @@ def main():
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
     # val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
 
-    train_dir = 'Thorax_pairs/Train_Resized2'
-    val_dir = 'Thorax_pairs/Val_Resized2'
+    train_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Train'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'New2_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -65,7 +65,7 @@ def main():
     epoch_start = 0
     max_epoch = 30
     # img_size = (160, 192, 160)
-    img_size = (160, 120, 120)   ## sprememba
+    img_size = (170, 128, 128)   ## sprememba
     cont_training = False
 
     '''
