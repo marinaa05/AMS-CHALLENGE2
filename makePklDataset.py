@@ -34,6 +34,7 @@ def cropByCenter(image,center,final_shape=(160,192,160)):
 
     # Izrez vzdolž 0 axis:
     cropmin, cropmax = c[0] - crop[0], c[0] + crop[0]
+    # Obravnava robnih primerov:
     if cropmin < 0:
         cropmin = 0
         cropmax = final_shape[0]
@@ -41,6 +42,7 @@ def cropByCenter(image,center,final_shape=(160,192,160)):
         cropmax = image.shape[0]
         cropmin = image.shape[0] - final_shape[0]
     image = image[cropmin:cropmax, :, :]
+
     # 1 axis
     cropmin, cropmax = c[1] - crop[1], c[1] + crop[1]
     if cropmin < 0:
@@ -63,10 +65,11 @@ def cropByCenter(image,center,final_shape=(160,192,160)):
     return image
 
 # path_to_LPBA='/data/LPBA40/' # the path of the original dataset
-# img_niis = natsorted(glob.glob(path_to_LPBA+'*/*/*skullstripped.img.gz'))
-# label_niis = natsorted(glob.glob(path_to_LPBA+'*/*/*label.img.gz'))
+# img_niis = natsorted(glob.glob(path_to_LPBA+'*/*/*skullstripped.img.gz'))  # seznam poti do slik
+# label_niis = natsorted(glob.glob(path_to_LPBA+'*/*/*label.img.gz'))  # seznam poti do oznak
 # print(img_niis, label_niis)
 
+# Mapa za shranjevanje:
 # save_path = 'LPBA_data/'
 # if not os.path.exists(save_path):
 #     os.makedirs(save_path)
@@ -82,7 +85,7 @@ def cropByCenter(image,center,final_shape=(160,192,160)):
 #     img = cropByCenter(img, c)
 #     label = cropByCenter(label, c)
 
-#     #norm
+#     # normalizacija
 #     img = minmax(img).astype('float32')
 #     label = label.astype('uint16')
 #     print(img.shape,np.unique(img),label.dtype, label.shape,np.unique(label),label.dtype)
