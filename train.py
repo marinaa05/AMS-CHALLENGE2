@@ -44,8 +44,8 @@ def main():
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
     # val_dir = '/workspace/modetv2/dataset/LPBA_data/Val/'
 
-    train_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Train'
-    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val'
+    train_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Train'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Val'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6

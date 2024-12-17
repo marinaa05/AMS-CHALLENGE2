@@ -57,7 +57,7 @@ def comput_fig(img, stdy_idx):
     fig.subplots_adjust(wspace=0, hspace=0)
     #return fig
     # Ustvari mapo "slike1", če še ne obstaja
-    output_dir = "slike3_comput_fig"
+    output_dir = "post_release_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Določite pot do shranjevanja slike
@@ -87,52 +87,55 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
 
     # Izračun sredinskega reza, če ni podan
     if slice_idx is None:
-        slice_idx = fixed.shape[2] // 2
+        slice_idx = [fixed.shape[0] // 2, fixed.shape[1] // 2, fixed.shape[2] // 2]  # [X, Y, Z]
 
-    output_dir = "slike3"
+    axes = ['X', 'Y', 'Z']
+    slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
+
+    output_dir = "post_release_slike2"
     os.makedirs(output_dir, exist_ok=True)
 
-    # Fiksna slika
-    plt.figure(figsize=(16, 4))
-    plt.subplot(1, 4, 1)
-    plt.imshow(fixed[:, :, slice_idx], cmap='gray')
-    plt.title("Fixed Image")
-    #plt.axis('off')
+    # Prikaz za vse osi (x, y, z)
+    for i, axis in enumerate(axes):
+        plt.figure(figsize=(16, 8))
+        plt.suptitle(f"Visualization - Axis: {axis}")
+        
+        # Fiksna slika
+        plt.subplot(3, 4, 1)
+        plt.imshow(np.take(fixed, slices[i], axis=i), cmap='gray')
+        plt.title(f"Fixed Image ({axis}-axis)")
+        
+        plt.subplot(3, 4, 2)
+        plt.imshow(np.take(moving_image, slices[i], axis=i), cmap='gray')
+        plt.title(f"Moving Image ({axis}-axis)")
 
-    plt.subplot(1, 4, 2)
-    plt.imshow(moving_image[:, :, slice_idx], cmap='gray')
-    plt.title("Moving Image (Pre)")
-
-    # Transformirana premikajoča slika
-    plt.subplot(1, 4, 3)
-    plt.imshow(moving_transformed[:, :, slice_idx], cmap='gray')
-    plt.title("Transformed Moving Image")
-    #plt.axis('off')
-
-    # Deformacijsko polje (v eni smeri, npr. X)
-    plt.subplot(1, 4, 4)
-    plt.imshow(deformation_field[0, :, :, slice_idx], cmap='jet')  # X-smer deformacije
-    plt.title("Deformation Field (X-direction)")
-    #plt.axis('off')
-
-    plt.tight_layout()
-    #output_file = f"output_figure_{stdy_idx}.png"  # Shrani za vsako iteracijo
-    output_file = os.path.join(output_dir, f"output_figure_{stdy_idx}.png")  # Pot do slike
-    plt.savefig(output_file)  # Shranjevanje slike
-    plt.close()
-    print(f"Slika shranjena: {output_file}")
+        plt.subplot(3, 4, 3)
+        plt.imshow(np.take(moving_transformed, slices[i], axis=i), cmap='gray')
+        plt.title(f"Transformed Moving Image ({axis}-axis)")
+        
+        # Deformacijsko polje (X, Y, Z komponente)
+        for j in range(3):
+            plt.subplot(3, 4, 4 + j)
+            plt.imshow(np.take(deformation_field[j], slices[i], axis=i), cmap='jet')
+            plt.title(f"Deformation Field ({axis}-axis, Dir: {['X', 'Y', 'Z'][j]})")
+        
+        plt.tight_layout()
+        output_file = os.path.join(output_dir, f"output_figure_{stdy_idx}_{axis}.png")
+        plt.savefig(output_file)
+        plt.close()
+        print(f"Slika shranjena: {output_file}")
 
 
 def main():
 
     stdy_idx = 0
 
-    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val/'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Val/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = 'Post_Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -176,13 +179,13 @@ def main():
             # Klic funkcije za vizualizacijo
             #visualize_registration(fixed_image, moving_image_transformed, deformation_field, stdy_idx)
             
-            # visualize_registration(
-            #    fixed=y[0, 0], 
-            #    moving_image=x[0, 0], 
-            #    moving_transformed=x_def[0, 0], 
-            #    deformation_field=flow[0], 
-            #    stdy_idx=stdy_idx
-            # )
+            visualize_registration(
+               fixed=y[0, 0], 
+               moving_image=x[0, 0], 
+               moving_transformed=x_def[0, 0], 
+               deformation_field=flow[0], 
+               stdy_idx=stdy_idx
+            )
 
             comput_fig(x_def, stdy_idx)
             
