@@ -10,19 +10,29 @@ def pksave(img, label, save_path):
         pickle.dump((img, label), f)
 
 def nii2arr(nii_img):
+    """
+    Pretvorba .nii datoteke v numpy array
+    """
     return sitk.GetArrayFromImage(sitk.ReadImage(nii_img))
 
 def center(arr):
+    """
+    Izračuna center (središče) ne-nulskih vrednosti v numpy arrayu.
+    """
     c = np.sort(np.nonzero(arr))[:,[0,-1]]
     return np.mean(c, axis=-1).astype('int16')
 
 def minmax(arr):
+    """
+    Izvede normalizacijo numpy arraya v interval [0, 1]
+    """
     return (arr-np.min(arr))/(np.max(arr)-np.min(arr))
 
 def cropByCenter(image,center,final_shape=(160,192,160)):
     c = center
-    crop = np.array([s // 2 for s in final_shape])
-    # 0 axis
+    crop = np.array([s // 2 for s in final_shape])  # crop = [160//2, 192//2, 160//2]
+
+    # Izrez vzdolž 0 axis:
     cropmin, cropmax = c[0] - crop[0], c[0] + crop[0]
     if cropmin < 0:
         cropmin = 0
