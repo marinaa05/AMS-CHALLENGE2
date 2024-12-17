@@ -145,7 +145,16 @@ def main():
     model = ModeTv2_model(img_size)
     best_model = torch.load(model_dir + natsorted(os.listdir(model_dir))[model_idx])['state_dict']
     print('Best model: {}'.format(natsorted(os.listdir(model_dir))[model_idx]))
+
     model.load_state_dict(best_model)
+
+    # Izpis uteži iz modela
+    # print("\nModel Weights:")
+    # for name, param in model.named_parameters():
+    #     if param.requires_grad:
+    #         print(f"{name}: {param.data}")
+
+
     model.cuda()
     reg_model = utils.register_model(img_size, 'nearest')
     reg_model.cuda()
@@ -179,6 +188,7 @@ def main():
             # Klic funkcije za vizualizacijo
             #visualize_registration(fixed_image, moving_image_transformed, deformation_field, stdy_idx)
             
+            # Prikaz slik - na 2 način:
             visualize_registration(
                fixed=y[0, 0], 
                moving_image=x[0, 0], 

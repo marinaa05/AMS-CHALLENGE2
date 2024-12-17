@@ -103,7 +103,7 @@ def load_pkl_image(path):
     
 
 original_pkl_image = "Release_pkl/Resized_imagesTr/ThoraxCBCT_0000_0000.pkl"
-resized_pkl_image = "Release_pkl/Resized_merged_imagesTr/Pre_therapy/Train/merged_patient_0000_pre.pkl"
+resized_pkl_image = "Release_pkl/imagesTr/ThoraxCBCT_0000_0002.pkl"
 
 # Load and display the original .pkl image
 with open(original_pkl_image, 'rb') as pkl_file:
