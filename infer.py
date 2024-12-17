@@ -57,7 +57,7 @@ def comput_fig(img, stdy_idx):
     fig.subplots_adjust(wspace=0, hspace=0)
     #return fig
     # Ustvari mapo "slike1", če še ne obstaja
-    output_dir = "post_release_slike"
+    output_dir = "pre_release_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Določite pot do shranjevanja slike
@@ -92,7 +92,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     axes = ['X', 'Y', 'Z']
     slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
 
-    output_dir = "post_release_slike2"
+    output_dir = "pre_release_slike2"
     os.makedirs(output_dir, exist_ok=True)
 
     # Prikaz za vse osi (x, y, z)
@@ -130,12 +130,12 @@ def main():
 
     stdy_idx = 0
 
-    val_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Val/'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'Post_Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = 'Pre_Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -193,7 +193,7 @@ def main():
                fixed=y[0, 0], 
                moving_image=x[0, 0], 
                moving_transformed=x_def[0, 0], 
-               deformation_field=flow[0], 
+               deformation_field=flow[0],
                stdy_idx=stdy_idx
             )
 

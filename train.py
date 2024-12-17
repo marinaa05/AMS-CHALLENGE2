@@ -38,7 +38,9 @@ class Logger(object):
 
     def flush(self):
         pass
+
 GPU_iden = 1
+
 def main():
     batch_size = 1
     # train_dir = '/workspace/modetv2/dataset/LPBA_data/Train/'
