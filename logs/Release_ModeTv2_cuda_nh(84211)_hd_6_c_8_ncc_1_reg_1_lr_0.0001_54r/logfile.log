@@ -7082,3 +7082,573 @@ Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 29 loss
 29 : 0.07142854578340922
 29 : 0.07142854578340944
 29 : 0.07142854578340961
+Training Starts
+Iter 1 of 11 loss -0.1949, Img Sim: -0.194913, Reg: 0.000000
+Iter 2 of 11 loss -0.1539, Img Sim: -0.153910, Reg: 0.000001
+Iter 3 of 11 loss -0.1524, Img Sim: -0.152422, Reg: 0.000000
+Iter 4 of 11 loss -0.1547, Img Sim: -0.154671, Reg: 0.000002
+Iter 5 of 11 loss -0.1639, Img Sim: -0.163910, Reg: 0.000003
+Iter 6 of 11 loss -0.1642, Img Sim: -0.164161, Reg: 0.000005
+Iter 7 of 11 loss -0.1783, Img Sim: -0.178349, Reg: 0.000008
+Iter 8 of 11 loss -0.1577, Img Sim: -0.157663, Reg: 0.000011
+Iter 9 of 11 loss -0.1854, Img Sim: -0.185389, Reg: 0.000013
+Iter 10 of 11 loss -0.1910, Img Sim: -0.190973, Reg: 0.000023
+Iter 11 of 11 loss -0.1729, Img Sim: -0.172931, Reg: 0.000025
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 0 loss -0.1699
+0 : 0.07142854578341037
+0 : 0.07142854578341037
+0 : 0.07142854578341037
+0 : 0.07142854578341037
+0 : 0.07142854578341037
+0 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1854, Img Sim: -0.185400, Reg: 0.000031
+Iter 2 of 11 loss -0.1895, Img Sim: -0.189526, Reg: 0.000037
+Iter 3 of 11 loss -0.1580, Img Sim: -0.158046, Reg: 0.000034
+Iter 4 of 11 loss -0.1970, Img Sim: -0.197041, Reg: 0.000044
+Iter 5 of 11 loss -0.1569, Img Sim: -0.156929, Reg: 0.000047
+Iter 6 of 11 loss -0.1794, Img Sim: -0.179397, Reg: 0.000046
+Iter 7 of 11 loss -0.1865, Img Sim: -0.186533, Reg: 0.000053
+Iter 8 of 11 loss -0.1714, Img Sim: -0.171460, Reg: 0.000066
+Iter 9 of 11 loss -0.1591, Img Sim: -0.159205, Reg: 0.000062
+Iter 10 of 11 loss -0.1542, Img Sim: -0.154253, Reg: 0.000070
+Iter 11 of 11 loss -0.1612, Img Sim: -0.161270, Reg: 0.000074
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 1 loss -0.1726
+1 : 0.07142854578341037
+1 : 0.07142854578341037
+1 : 0.07142854578341037
+1 : 0.07142854578341037
+1 : 0.07142854578341037
+1 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1554, Img Sim: -0.155449, Reg: 0.000082
+Iter 2 of 11 loss -0.1561, Img Sim: -0.156209, Reg: 0.000073
+Iter 3 of 11 loss -0.1917, Img Sim: -0.191758, Reg: 0.000088
+Iter 4 of 11 loss -0.1872, Img Sim: -0.187248, Reg: 0.000085
+Iter 5 of 11 loss -0.1536, Img Sim: -0.153640, Reg: 0.000090
+Iter 6 of 11 loss -0.1597, Img Sim: -0.159786, Reg: 0.000090
+Iter 7 of 11 loss -0.1602, Img Sim: -0.160325, Reg: 0.000094
+Iter 8 of 11 loss -0.1824, Img Sim: -0.182458, Reg: 0.000105
+Iter 9 of 11 loss -0.1708, Img Sim: -0.170868, Reg: 0.000101
+Iter 10 of 11 loss -0.1780, Img Sim: -0.178106, Reg: 0.000082
+Iter 11 of 11 loss -0.1675, Img Sim: -0.167609, Reg: 0.000087
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 2 loss -0.1693
+2 : 0.07142854578341037
+2 : 0.07142854578341037
+2 : 0.07142854578341037
+2 : 0.07142854578341037
+2 : 0.07142854578341037
+2 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1883, Img Sim: -0.188399, Reg: 0.000091
+Iter 2 of 11 loss -0.1550, Img Sim: -0.155101, Reg: 0.000094
+Iter 3 of 11 loss -0.1587, Img Sim: -0.158818, Reg: 0.000087
+Iter 4 of 11 loss -0.1865, Img Sim: -0.186639, Reg: 0.000097
+Iter 5 of 11 loss -0.1918, Img Sim: -0.191915, Reg: 0.000096
+Iter 6 of 11 loss -0.1640, Img Sim: -0.164053, Reg: 0.000088
+Iter 7 of 11 loss -0.1722, Img Sim: -0.172252, Reg: 0.000098
+Iter 8 of 11 loss -0.1641, Img Sim: -0.164222, Reg: 0.000096
+Iter 9 of 11 loss -0.1563, Img Sim: -0.156451, Reg: 0.000112
+Iter 10 of 11 loss -0.1683, Img Sim: -0.168428, Reg: 0.000131
+Iter 11 of 11 loss -0.1778, Img Sim: -0.177912, Reg: 0.000131
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 3 loss -0.1712
+3 : 0.07142854578341037
+3 : 0.07142854578341037
+3 : 0.07142854578341037
+3 : 0.07142854578341037
+3 : 0.07142854578341037
+3 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1688, Img Sim: -0.168989, Reg: 0.000154
+Iter 2 of 11 loss -0.1876, Img Sim: -0.187733, Reg: 0.000180
+Iter 3 of 11 loss -0.1786, Img Sim: -0.178837, Reg: 0.000206
+Iter 4 of 11 loss -0.1620, Img Sim: -0.162161, Reg: 0.000192
+Iter 5 of 11 loss -0.1862, Img Sim: -0.186423, Reg: 0.000200
+Iter 6 of 11 loss -0.1616, Img Sim: -0.161847, Reg: 0.000216
+Iter 7 of 11 loss -0.1532, Img Sim: -0.153410, Reg: 0.000229
+Iter 8 of 11 loss -0.1894, Img Sim: -0.189637, Reg: 0.000269
+Iter 9 of 11 loss -0.1800, Img Sim: -0.180321, Reg: 0.000273
+Iter 10 of 11 loss -0.1591, Img Sim: -0.159368, Reg: 0.000268
+Iter 11 of 11 loss -0.1545, Img Sim: -0.154717, Reg: 0.000265
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 4 loss -0.1710
+4 : 0.07142854578341037
+4 : 0.07142854578341037
+4 : 0.07142854578341037
+4 : 0.07142854578341037
+4 : 0.07142854578341037
+4 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1868, Img Sim: -0.187151, Reg: 0.000317
+Iter 2 of 11 loss -0.1857, Img Sim: -0.186054, Reg: 0.000308
+Iter 3 of 11 loss -0.1769, Img Sim: -0.177254, Reg: 0.000323
+Iter 4 of 11 loss -0.1584, Img Sim: -0.158773, Reg: 0.000348
+Iter 5 of 11 loss -0.1765, Img Sim: -0.176851, Reg: 0.000357
+Iter 6 of 11 loss -0.1790, Img Sim: -0.179363, Reg: 0.000342
+Iter 7 of 11 loss -0.1614, Img Sim: -0.161790, Reg: 0.000395
+Iter 8 of 11 loss -0.1559, Img Sim: -0.156336, Reg: 0.000444
+Iter 9 of 11 loss -0.1497, Img Sim: -0.150109, Reg: 0.000451
+Iter 10 of 11 loss -0.1488, Img Sim: -0.149345, Reg: 0.000500
+Iter 11 of 11 loss -0.1527, Img Sim: -0.153213, Reg: 0.000560
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 5 loss -0.1665
+5 : 0.07142854578341037
+5 : 0.07142854578341037
+5 : 0.07142854578341037
+5 : 0.07142854578341037
+5 : 0.07142854578341037
+5 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1527, Img Sim: -0.153254, Reg: 0.000571
+Iter 2 of 11 loss -0.1535, Img Sim: -0.154114, Reg: 0.000569
+Iter 3 of 11 loss -0.1490, Img Sim: -0.149588, Reg: 0.000541
+Iter 4 of 11 loss -0.1708, Img Sim: -0.171414, Reg: 0.000599
+Iter 5 of 11 loss -0.1466, Img Sim: -0.147269, Reg: 0.000626
+Iter 6 of 11 loss -0.1741, Img Sim: -0.174681, Reg: 0.000599
+Iter 7 of 11 loss -0.1504, Img Sim: -0.151137, Reg: 0.000702
+Iter 8 of 11 loss -0.1592, Img Sim: -0.159809, Reg: 0.000630
+Iter 9 of 11 loss -0.1740, Img Sim: -0.174827, Reg: 0.000805
+Iter 10 of 11 loss -0.1808, Img Sim: -0.181522, Reg: 0.000759
+Iter 11 of 11 loss -0.1839, Img Sim: -0.184628, Reg: 0.000736
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 6 loss -0.1632
+6 : 0.07142854578341037
+6 : 0.07142854578341037
+6 : 0.07142854578341037
+6 : 0.07142854578341037
+6 : 0.07142854578341037
+6 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1465, Img Sim: -0.147222, Reg: 0.000715
+Iter 2 of 11 loss -0.1730, Img Sim: -0.173684, Reg: 0.000709
+Iter 3 of 11 loss -0.1591, Img Sim: -0.159833, Reg: 0.000723
+Iter 4 of 11 loss -0.1706, Img Sim: -0.171360, Reg: 0.000711
+Iter 5 of 11 loss -0.1603, Img Sim: -0.161247, Reg: 0.000902
+Iter 6 of 11 loss -0.1496, Img Sim: -0.150518, Reg: 0.000920
+Iter 7 of 11 loss -0.1822, Img Sim: -0.183174, Reg: 0.000967
+Iter 8 of 11 loss -0.1521, Img Sim: -0.153071, Reg: 0.000940
+Iter 9 of 11 loss -0.1460, Img Sim: -0.146932, Reg: 0.000940
+Iter 10 of 11 loss -0.1747, Img Sim: -0.175649, Reg: 0.000961
+Iter 11 of 11 loss -0.1404, Img Sim: -0.141351, Reg: 0.000937
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 7 loss -0.1595
+7 : 0.07142854578341037
+7 : 0.07142855219466973
+7 : 0.07142855433175618
+7 : 0.07142855219466973
+7 : 0.07142855091241787
+7 : 0.07142855005758329
+Training Starts
+Iter 1 of 11 loss -0.1816, Img Sim: -0.182622, Reg: 0.001045
+Iter 2 of 11 loss -0.1727, Img Sim: -0.173482, Reg: 0.000832
+Iter 3 of 11 loss -0.1519, Img Sim: -0.152906, Reg: 0.000966
+Iter 4 of 11 loss -0.1459, Img Sim: -0.146789, Reg: 0.000892
+Iter 5 of 11 loss -0.1463, Img Sim: -0.147193, Reg: 0.000929
+Iter 6 of 11 loss -0.1733, Img Sim: -0.174151, Reg: 0.000890
+Iter 7 of 11 loss -0.1545, Img Sim: -0.155458, Reg: 0.000933
+Iter 8 of 11 loss -0.1847, Img Sim: -0.185563, Reg: 0.000884
+Iter 9 of 11 loss -0.1688, Img Sim: -0.169635, Reg: 0.000851
+Iter 10 of 11 loss -0.1499, Img Sim: -0.150778, Reg: 0.000901
+Iter 11 of 11 loss -0.1418, Img Sim: -0.142735, Reg: 0.000887
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 8 loss -0.1610
+8 : 0.07142854578341037
+8 : 0.07142854578341037
+8 : 0.07142854578341037
+8 : 0.07142854578341037
+8 : 0.07142854578341037
+8 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1864, Img Sim: -0.187272, Reg: 0.000849
+Iter 2 of 11 loss -0.1418, Img Sim: -0.142727, Reg: 0.000880
+Iter 3 of 11 loss -0.1463, Img Sim: -0.147163, Reg: 0.000886
+Iter 4 of 11 loss -0.1690, Img Sim: -0.169793, Reg: 0.000823
+Iter 5 of 11 loss -0.1722, Img Sim: -0.172991, Reg: 0.000834
+Iter 6 of 11 loss -0.1736, Img Sim: -0.174415, Reg: 0.000801
+Iter 7 of 11 loss -0.1498, Img Sim: -0.150659, Reg: 0.000870
+Iter 8 of 11 loss -0.1513, Img Sim: -0.152192, Reg: 0.000923
+Iter 9 of 11 loss -0.1470, Img Sim: -0.147838, Reg: 0.000821
+Iter 10 of 11 loss -0.1474, Img Sim: -0.148367, Reg: 0.000968
+Iter 11 of 11 loss -0.1514, Img Sim: -0.152376, Reg: 0.000974
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 9 loss -0.1578
+9 : 0.07142854578341037
+9 : 0.07142854578341037
+9 : 0.07142854578341037
+9 : 0.07142854578341037
+9 : 0.07142854578341037
+9 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1416, Img Sim: -0.142510, Reg: 0.000958
+Iter 2 of 11 loss -0.1700, Img Sim: -0.171005, Reg: 0.000958
+Iter 3 of 11 loss -0.1451, Img Sim: -0.146108, Reg: 0.001022
+Iter 4 of 11 loss -0.1694, Img Sim: -0.170378, Reg: 0.000934
+Iter 5 of 11 loss -0.1791, Img Sim: -0.180128, Reg: 0.001057
+Iter 6 of 11 loss -0.1403, Img Sim: -0.141329, Reg: 0.001024
+Iter 7 of 11 loss -0.1439, Img Sim: -0.144892, Reg: 0.000964
+Iter 8 of 11 loss -0.1663, Img Sim: -0.167268, Reg: 0.001011
+Iter 9 of 11 loss -0.1586, Img Sim: -0.159854, Reg: 0.001226
+Iter 10 of 11 loss -0.1496, Img Sim: -0.150653, Reg: 0.001067
+Iter 11 of 11 loss -0.1432, Img Sim: -0.144290, Reg: 0.001092
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 10 loss -0.1552
+10 : 0.07142854578341037
+10 : 0.07142854578341037
+10 : 0.07142854578341037
+10 : 0.07142854578341037
+10 : 0.07142854578341037
+10 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1457, Img Sim: -0.146874, Reg: 0.001133
+Iter 2 of 11 loss -0.1418, Img Sim: -0.142820, Reg: 0.001036
+Iter 3 of 11 loss -0.1741, Img Sim: -0.175210, Reg: 0.001088
+Iter 4 of 11 loss -0.1434, Img Sim: -0.144470, Reg: 0.001098
+Iter 5 of 11 loss -0.1592, Img Sim: -0.160451, Reg: 0.001209
+Iter 6 of 11 loss -0.1616, Img Sim: -0.162719, Reg: 0.001104
+Iter 7 of 11 loss -0.1456, Img Sim: -0.146696, Reg: 0.001118
+Iter 8 of 11 loss -0.1751, Img Sim: -0.176410, Reg: 0.001344
+Iter 9 of 11 loss -0.1382, Img Sim: -0.139420, Reg: 0.001237
+Iter 10 of 11 loss -0.1495, Img Sim: -0.150887, Reg: 0.001339
+Iter 11 of 11 loss -0.1618, Img Sim: -0.163171, Reg: 0.001403
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 11 loss -0.1542
+11 : 0.07142854578341037
+11 : 0.07142854578341037
+11 : 0.07142854578341037
+11 : 0.07142854578341037
+11 : 0.07142854578341037
+11 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1403, Img Sim: -0.141588, Reg: 0.001308
+Iter 2 of 11 loss -0.1606, Img Sim: -0.162100, Reg: 0.001477
+Iter 3 of 11 loss -0.1442, Img Sim: -0.145572, Reg: 0.001360
+Iter 4 of 11 loss -0.1743, Img Sim: -0.175799, Reg: 0.001494
+Iter 5 of 11 loss -0.1419, Img Sim: -0.143643, Reg: 0.001699
+Iter 6 of 11 loss -0.1502, Img Sim: -0.151703, Reg: 0.001477
+Iter 7 of 11 loss -0.1718, Img Sim: -0.173406, Reg: 0.001628
+Iter 8 of 11 loss -0.1677, Img Sim: -0.169594, Reg: 0.001869
+Iter 9 of 11 loss -0.1581, Img Sim: -0.159679, Reg: 0.001555
+Iter 10 of 11 loss -0.1420, Img Sim: -0.143590, Reg: 0.001579
+Iter 11 of 11 loss -0.1379, Img Sim: -0.139356, Reg: 0.001476
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 12 loss -0.1536
+12 : 0.07142854578341037
+12 : 0.07142854578341037
+12 : 0.07142854578341037
+12 : 0.07142854578341037
+12 : 0.07142854834791412
+12 : 0.07142855005758329
+Training Starts
+Iter 1 of 11 loss -0.1403, Img Sim: -0.142143, Reg: 0.001812
+Iter 2 of 11 loss -0.1387, Img Sim: -0.140188, Reg: 0.001450
+Iter 3 of 11 loss -0.1383, Img Sim: -0.139867, Reg: 0.001520
+Iter 4 of 11 loss -0.1564, Img Sim: -0.158096, Reg: 0.001701
+Iter 5 of 11 loss -0.1645, Img Sim: -0.166481, Reg: 0.002008
+Iter 6 of 11 loss -0.1423, Img Sim: -0.143966, Reg: 0.001662
+Iter 7 of 11 loss -0.1715, Img Sim: -0.173114, Reg: 0.001636
+Iter 8 of 11 loss -0.1726, Img Sim: -0.174263, Reg: 0.001687
+Iter 9 of 11 loss -0.1564, Img Sim: -0.158041, Reg: 0.001615
+Iter 10 of 11 loss -0.1409, Img Sim: -0.142433, Reg: 0.001504
+Iter 11 of 11 loss -0.1522, Img Sim: -0.153825, Reg: 0.001628
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 13 loss -0.1522
+13 : 0.07142854578341037
+13 : 0.07142854578341037
+13 : 0.07142854578341037
+13 : 0.07142854578341037
+13 : 0.07142854578341037
+13 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1409, Img Sim: -0.142446, Reg: 0.001512
+Iter 2 of 11 loss -0.1423, Img Sim: -0.143966, Reg: 0.001653
+Iter 3 of 11 loss -0.1359, Img Sim: -0.137758, Reg: 0.001832
+Iter 4 of 11 loss -0.1691, Img Sim: -0.170793, Reg: 0.001669
+Iter 5 of 11 loss -0.1378, Img Sim: -0.139378, Reg: 0.001563
+Iter 6 of 11 loss -0.1385, Img Sim: -0.139994, Reg: 0.001528
+Iter 7 of 11 loss -0.1563, Img Sim: -0.157877, Reg: 0.001624
+Iter 8 of 11 loss -0.1695, Img Sim: -0.171135, Reg: 0.001671
+Iter 9 of 11 loss -0.1517, Img Sim: -0.153368, Reg: 0.001647
+Iter 10 of 11 loss -0.1765, Img Sim: -0.178466, Reg: 0.001989
+Iter 11 of 11 loss -0.1553, Img Sim: -0.156880, Reg: 0.001563
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 14 loss -0.1522
+14 : 0.07142854578341037
+14 : 0.07142854578341037
+14 : 0.07142854578341037
+14 : 0.07142854578341037
+14 : 0.07142854578341037
+14 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1386, Img Sim: -0.140167, Reg: 0.001581
+Iter 2 of 11 loss -0.1545, Img Sim: -0.156227, Reg: 0.001720
+Iter 3 of 11 loss -0.1411, Img Sim: -0.142881, Reg: 0.001753
+Iter 4 of 11 loss -0.1683, Img Sim: -0.170086, Reg: 0.001784
+Iter 5 of 11 loss -0.1420, Img Sim: -0.143768, Reg: 0.001753
+Iter 6 of 11 loss -0.1488, Img Sim: -0.150515, Reg: 0.001748
+Iter 7 of 11 loss -0.1371, Img Sim: -0.138781, Reg: 0.001645
+Iter 8 of 11 loss -0.1361, Img Sim: -0.138152, Reg: 0.002025
+Iter 9 of 11 loss -0.1571, Img Sim: -0.158752, Reg: 0.001676
+Iter 10 of 11 loss -0.1735, Img Sim: -0.175607, Reg: 0.002121
+Iter 11 of 11 loss -0.1680, Img Sim: -0.169983, Reg: 0.002003
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 15 loss -0.1514
+15 : 0.07142854578341037
+15 : 0.07142854578341037
+15 : 0.07142854578341037
+15 : 0.07142854578341037
+15 : 0.07142854578341037
+15 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1416, Img Sim: -0.143169, Reg: 0.001599
+Iter 2 of 11 loss -0.1856, Img Sim: -0.187854, Reg: 0.002227
+Iter 3 of 11 loss -0.1472, Img Sim: -0.149025, Reg: 0.001850
+Iter 4 of 11 loss -0.1680, Img Sim: -0.170097, Reg: 0.002124
+Iter 5 of 11 loss -0.1400, Img Sim: -0.141985, Reg: 0.001943
+Iter 6 of 11 loss -0.1586, Img Sim: -0.160380, Reg: 0.001813
+Iter 7 of 11 loss -0.1373, Img Sim: -0.139141, Reg: 0.001850
+Iter 8 of 11 loss -0.1396, Img Sim: -0.141581, Reg: 0.002012
+Iter 9 of 11 loss -0.1349, Img Sim: -0.137197, Reg: 0.002335
+Iter 10 of 11 loss -0.1626, Img Sim: -0.164626, Reg: 0.002048
+Iter 11 of 11 loss -0.1487, Img Sim: -0.150639, Reg: 0.001976
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 16 loss -0.1513
+16 : 0.07142854578341037
+16 : 0.07142854578341037
+16 : 0.07142854578341037
+16 : 0.07142854578341037
+16 : 0.07142854578341037
+16 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1453, Img Sim: -0.147305, Reg: 0.001984
+Iter 2 of 11 loss -0.1620, Img Sim: -0.164086, Reg: 0.002077
+Iter 3 of 11 loss -0.1394, Img Sim: -0.141467, Reg: 0.002091
+Iter 4 of 11 loss -0.1693, Img Sim: -0.171620, Reg: 0.002302
+Iter 5 of 11 loss -0.1757, Img Sim: -0.178210, Reg: 0.002487
+Iter 6 of 11 loss -0.1424, Img Sim: -0.144181, Reg: 0.001802
+Iter 7 of 11 loss -0.1547, Img Sim: -0.156654, Reg: 0.001921
+Iter 8 of 11 loss -0.1496, Img Sim: -0.151625, Reg: 0.002017
+Iter 9 of 11 loss -0.1371, Img Sim: -0.139114, Reg: 0.001977
+Iter 10 of 11 loss -0.1338, Img Sim: -0.136230, Reg: 0.002428
+Iter 11 of 11 loss -0.1378, Img Sim: -0.139851, Reg: 0.002098
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 17 loss -0.1497
+17 : 0.07142854578341037
+17 : 0.07142854578341037
+17 : 0.07142854578341037
+17 : 0.07142854578341037
+17 : 0.07142854578341037
+17 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1372, Img Sim: -0.139188, Reg: 0.001990
+Iter 2 of 11 loss -0.1407, Img Sim: -0.142546, Reg: 0.001829
+Iter 3 of 11 loss -0.1457, Img Sim: -0.147728, Reg: 0.002016
+Iter 4 of 11 loss -0.1391, Img Sim: -0.141223, Reg: 0.002125
+Iter 5 of 11 loss -0.1831, Img Sim: -0.185677, Reg: 0.002547
+Iter 6 of 11 loss -0.1634, Img Sim: -0.165758, Reg: 0.002367
+Iter 7 of 11 loss -0.1349, Img Sim: -0.137103, Reg: 0.002175
+Iter 8 of 11 loss -0.1303, Img Sim: -0.132820, Reg: 0.002526
+Iter 9 of 11 loss -0.1480, Img Sim: -0.150143, Reg: 0.002132
+Iter 10 of 11 loss -0.1584, Img Sim: -0.160450, Reg: 0.002095
+Iter 11 of 11 loss -0.1489, Img Sim: -0.150992, Reg: 0.002072
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 18 loss -0.1482
+18 : 0.07142854578341037
+18 : 0.07142854578341037
+18 : 0.07142854578341037
+18 : 0.07142854578341037
+18 : 0.07142854578341037
+18 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1485, Img Sim: -0.150574, Reg: 0.002082
+Iter 2 of 11 loss -0.1477, Img Sim: -0.149650, Reg: 0.001965
+Iter 3 of 11 loss -0.1639, Img Sim: -0.166315, Reg: 0.002458
+Iter 4 of 11 loss -0.1367, Img Sim: -0.138753, Reg: 0.002036
+Iter 5 of 11 loss -0.1356, Img Sim: -0.137423, Reg: 0.001810
+Iter 6 of 11 loss -0.1285, Img Sim: -0.131098, Reg: 0.002558
+Iter 7 of 11 loss -0.1650, Img Sim: -0.167520, Reg: 0.002565
+Iter 8 of 11 loss -0.1313, Img Sim: -0.133489, Reg: 0.002236
+Iter 9 of 11 loss -0.1578, Img Sim: -0.159880, Reg: 0.002065
+Iter 10 of 11 loss -0.1433, Img Sim: -0.145490, Reg: 0.002202
+Iter 11 of 11 loss -0.1385, Img Sim: -0.140612, Reg: 0.002148
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 19 loss -0.1452
+19 : 0.07142854578341037
+19 : 0.07142854578341037
+19 : 0.07142854578341037
+19 : 0.07142854578341037
+19 : 0.07142854578341037
+19 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1591, Img Sim: -0.161543, Reg: 0.002465
+Iter 2 of 11 loss -0.1774, Img Sim: -0.180006, Reg: 0.002598
+Iter 3 of 11 loss -0.1387, Img Sim: -0.140870, Reg: 0.002182
+Iter 4 of 11 loss -0.1328, Img Sim: -0.134705, Reg: 0.001869
+Iter 5 of 11 loss -0.1366, Img Sim: -0.138790, Reg: 0.002141
+Iter 6 of 11 loss -0.1566, Img Sim: -0.158810, Reg: 0.002181
+Iter 7 of 11 loss -0.1267, Img Sim: -0.129449, Reg: 0.002760
+Iter 8 of 11 loss -0.1291, Img Sim: -0.131567, Reg: 0.002427
+Iter 9 of 11 loss -0.1461, Img Sim: -0.148308, Reg: 0.002254
+Iter 10 of 11 loss -0.1484, Img Sim: -0.150528, Reg: 0.002128
+Iter 11 of 11 loss -0.1471, Img Sim: -0.149542, Reg: 0.002463
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 20 loss -0.1453
+20 : 0.07142854578341037
+20 : 0.07142854578341037
+20 : 0.07142854578341037
+20 : 0.07142854578341037
+20 : 0.07142854578341037
+20 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1466, Img Sim: -0.149061, Reg: 0.002478
+Iter 2 of 11 loss -0.1284, Img Sim: -0.130942, Reg: 0.002504
+Iter 3 of 11 loss -0.1260, Img Sim: -0.128917, Reg: 0.002883
+Iter 4 of 11 loss -0.1293, Img Sim: -0.131316, Reg: 0.002052
+Iter 5 of 11 loss -0.1483, Img Sim: -0.150458, Reg: 0.002194
+Iter 6 of 11 loss -0.1366, Img Sim: -0.138926, Reg: 0.002323
+Iter 7 of 11 loss -0.1391, Img Sim: -0.141518, Reg: 0.002420
+Iter 8 of 11 loss -0.1830, Img Sim: -0.185960, Reg: 0.002953
+Iter 9 of 11 loss -0.1549, Img Sim: -0.157202, Reg: 0.002346
+Iter 10 of 11 loss -0.1564, Img Sim: -0.159115, Reg: 0.002753
+Iter 11 of 11 loss -0.1452, Img Sim: -0.147533, Reg: 0.002375
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 21 loss -0.1449
+21 : 0.07142854578341037
+21 : 0.07142854578341037
+21 : 0.07142854578341037
+21 : 0.07142854578341037
+21 : 0.07142854578341037
+21 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1467, Img Sim: -0.149221, Reg: 0.002569
+Iter 2 of 11 loss -0.1278, Img Sim: -0.130329, Reg: 0.002577
+Iter 3 of 11 loss -0.1594, Img Sim: -0.162369, Reg: 0.002988
+Iter 4 of 11 loss -0.1366, Img Sim: -0.139108, Reg: 0.002522
+Iter 5 of 11 loss -0.1424, Img Sim: -0.145072, Reg: 0.002649
+Iter 6 of 11 loss -0.1529, Img Sim: -0.156175, Reg: 0.003233
+Iter 7 of 11 loss -0.1487, Img Sim: -0.151669, Reg: 0.002930
+Iter 8 of 11 loss -0.1444, Img Sim: -0.147275, Reg: 0.002833
+Iter 9 of 11 loss -0.1284, Img Sim: -0.131107, Reg: 0.002680
+Iter 10 of 11 loss -0.1185, Img Sim: -0.122357, Reg: 0.003856
+Iter 11 of 11 loss -0.1310, Img Sim: -0.134333, Reg: 0.003339
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 22 loss -0.1397
+22 : 0.07142854578341037
+22 : 0.07142854578341037
+22 : 0.07142854578341037
+22 : 0.07142854898904005
+22 : 0.07142854834791412
+22 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1201, Img Sim: -0.123511, Reg: 0.003442
+Iter 2 of 11 loss -0.1302, Img Sim: -0.133604, Reg: 0.003416
+Iter 3 of 11 loss -0.1632, Img Sim: -0.167599, Reg: 0.004361
+Iter 4 of 11 loss -0.1304, Img Sim: -0.133641, Reg: 0.003203
+Iter 5 of 11 loss -0.1358, Img Sim: -0.139275, Reg: 0.003464
+Iter 6 of 11 loss -0.1458, Img Sim: -0.149185, Reg: 0.003360
+Iter 7 of 11 loss -0.1397, Img Sim: -0.142775, Reg: 0.003059
+Iter 8 of 11 loss -0.1322, Img Sim: -0.134922, Reg: 0.002742
+Iter 9 of 11 loss -0.1151, Img Sim: -0.119070, Reg: 0.003946
+Iter 10 of 11 loss -0.1405, Img Sim: -0.143429, Reg: 0.002963
+Iter 11 of 11 loss -0.1525, Img Sim: -0.155948, Reg: 0.003492
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 23 loss -0.1369
+23 : 0.07142854578341037
+23 : 0.07142854578341037
+23 : 0.07142854578341037
+23 : 0.07142854578341037
+23 : 0.07142854578341037
+23 : 0.07142854578341039
+Training Starts
+Iter 1 of 11 loss -0.1346, Img Sim: -0.137270, Reg: 0.002638
+Iter 2 of 11 loss -0.1197, Img Sim: -0.123041, Reg: 0.003346
+Iter 3 of 11 loss -0.1243, Img Sim: -0.127230, Reg: 0.002904
+Iter 4 of 11 loss -0.1142, Img Sim: -0.117956, Reg: 0.003800
+Iter 5 of 11 loss -0.1390, Img Sim: -0.141829, Reg: 0.002842
+Iter 6 of 11 loss -0.1410, Img Sim: -0.143716, Reg: 0.002737
+Iter 7 of 11 loss -0.1398, Img Sim: -0.142847, Reg: 0.003028
+Iter 8 of 11 loss -0.1487, Img Sim: -0.151807, Reg: 0.003070
+Iter 9 of 11 loss -0.1297, Img Sim: -0.132665, Reg: 0.002958
+Iter 10 of 11 loss -0.1532, Img Sim: -0.156455, Reg: 0.003296
+Iter 11 of 11 loss -0.1571, Img Sim: -0.161047, Reg: 0.003970
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 24 loss -0.1365
+24 : 0.07142855860592909
+24 : 0.07142855219466973
+24 : 0.07142855005758328
+24 : 0.07142854898904005
+24 : 0.07142854834791412
+24 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1297, Img Sim: -0.132678, Reg: 0.002933
+Iter 2 of 11 loss -0.1525, Img Sim: -0.156425, Reg: 0.003951
+Iter 3 of 11 loss -0.1414, Img Sim: -0.144068, Reg: 0.002651
+Iter 4 of 11 loss -0.1378, Img Sim: -0.140539, Reg: 0.002766
+Iter 5 of 11 loss -0.1494, Img Sim: -0.152379, Reg: 0.003022
+Iter 6 of 11 loss -0.1352, Img Sim: -0.137731, Reg: 0.002493
+Iter 7 of 11 loss -0.1251, Img Sim: -0.127860, Reg: 0.002780
+Iter 8 of 11 loss -0.1133, Img Sim: -0.116958, Reg: 0.003688
+Iter 9 of 11 loss -0.1510, Img Sim: -0.154237, Reg: 0.003231
+Iter 10 of 11 loss -0.1399, Img Sim: -0.142890, Reg: 0.002962
+Iter 11 of 11 loss -0.1199, Img Sim: -0.123153, Reg: 0.003226
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 25 loss -0.1359
+25 : 0.07142855860592909
+25 : 0.07142855219466973
+25 : 0.07142855005758328
+25 : 0.07142854898904005
+25 : 0.07142854834791412
+25 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1132, Img Sim: -0.116887, Reg: 0.003680
+Iter 2 of 11 loss -0.1496, Img Sim: -0.152579, Reg: 0.003003
+Iter 3 of 11 loss -0.1375, Img Sim: -0.140487, Reg: 0.002957
+Iter 4 of 11 loss -0.1415, Img Sim: -0.144130, Reg: 0.002615
+Iter 5 of 11 loss -0.1510, Img Sim: -0.154265, Reg: 0.003217
+Iter 6 of 11 loss -0.1372, Img Sim: -0.139966, Reg: 0.002744
+Iter 7 of 11 loss -0.1345, Img Sim: -0.136996, Reg: 0.002474
+Iter 8 of 11 loss -0.1200, Img Sim: -0.123173, Reg: 0.003218
+Iter 9 of 11 loss -0.1515, Img Sim: -0.155428, Reg: 0.003897
+Iter 10 of 11 loss -0.1224, Img Sim: -0.125142, Reg: 0.002785
+Iter 11 of 11 loss -0.1297, Img Sim: -0.132652, Reg: 0.002931
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 26 loss -0.1353
+26 : 0.07142855860592909
+26 : 0.07142855219466973
+26 : 0.07142855005758328
+26 : 0.07142854898904005
+26 : 0.07142854834791412
+26 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1244, Img Sim: -0.127191, Reg: 0.002818
+Iter 2 of 11 loss -0.1345, Img Sim: -0.137045, Reg: 0.002534
+Iter 3 of 11 loss -0.1294, Img Sim: -0.132418, Reg: 0.002973
+Iter 4 of 11 loss -0.1196, Img Sim: -0.122962, Reg: 0.003336
+Iter 5 of 11 loss -0.1127, Img Sim: -0.116550, Reg: 0.003811
+Iter 6 of 11 loss -0.1492, Img Sim: -0.152526, Reg: 0.003328
+Iter 7 of 11 loss -0.1358, Img Sim: -0.138638, Reg: 0.002874
+Iter 8 of 11 loss -0.1376, Img Sim: -0.140665, Reg: 0.003072
+Iter 9 of 11 loss -0.1444, Img Sim: -0.148450, Reg: 0.004095
+Iter 10 of 11 loss -0.1488, Img Sim: -0.151986, Reg: 0.003162
+Iter 11 of 11 loss -0.1408, Img Sim: -0.143518, Reg: 0.002722
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 27 loss -0.1343
+27 : 0.07142854578341037
+27 : 0.07142854578341037
+27 : 0.07142854578341037
+27 : 0.07142854578341037
+27 : 0.07142854834791412
+27 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1489, Img Sim: -0.152338, Reg: 0.003428
+Iter 2 of 11 loss -0.1524, Img Sim: -0.156632, Reg: 0.004199
+Iter 3 of 11 loss -0.1328, Img Sim: -0.135453, Reg: 0.002649
+Iter 4 of 11 loss -0.1187, Img Sim: -0.122245, Reg: 0.003496
+Iter 5 of 11 loss -0.1285, Img Sim: -0.131651, Reg: 0.003127
+Iter 6 of 11 loss -0.1479, Img Sim: -0.151185, Reg: 0.003242
+Iter 7 of 11 loss -0.1245, Img Sim: -0.127470, Reg: 0.002998
+Iter 8 of 11 loss -0.1364, Img Sim: -0.139573, Reg: 0.003209
+Iter 9 of 11 loss -0.1397, Img Sim: -0.142530, Reg: 0.002826
+Iter 10 of 11 loss -0.1354, Img Sim: -0.138395, Reg: 0.003018
+Iter 11 of 11 loss -0.1119, Img Sim: -0.115921, Reg: 0.004046
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 28 loss -0.1343
+28 : 0.07142854578341037
+28 : 0.07142854578341037
+28 : 0.07142854578341037
+28 : 0.07142854578341037
+28 : 0.07142854834791412
+28 : 0.07142854792049684
+Training Starts
+Iter 1 of 11 loss -0.1320, Img Sim: -0.134740, Reg: 0.002698
+Iter 2 of 11 loss -0.1354, Img Sim: -0.138410, Reg: 0.003028
+Iter 3 of 11 loss -0.1183, Img Sim: -0.121839, Reg: 0.003563
+Iter 4 of 11 loss -0.1544, Img Sim: -0.158682, Reg: 0.004315
+Iter 5 of 11 loss -0.1478, Img Sim: -0.151391, Reg: 0.003549
+Iter 6 of 11 loss -0.1371, Img Sim: -0.140343, Reg: 0.003240
+Iter 7 of 11 loss -0.1393, Img Sim: -0.142166, Reg: 0.002857
+Iter 8 of 11 loss -0.1118, Img Sim: -0.115865, Reg: 0.004068
+Iter 9 of 11 loss -0.1475, Img Sim: -0.150808, Reg: 0.003280
+Iter 10 of 11 loss -0.1236, Img Sim: -0.126601, Reg: 0.003034
+Iter 11 of 11 loss -0.1283, Img Sim: -0.131479, Reg: 0.003180
+Release_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 29 loss -0.1341
+29 : 0.07142854578341037
+29 : 0.07142854578341037
+29 : 0.07142854578341037
+29 : 0.07142854578341037
+29 : 0.07142854834791412
+29 : 0.07142854792049684

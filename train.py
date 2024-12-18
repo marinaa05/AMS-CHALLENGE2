@@ -53,7 +53,7 @@ def main():
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = '2_300_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -65,7 +65,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 30
+    max_epoch = 71
     # img_size = (160, 192, 160)
     img_size = (170, 128, 128)   ## sprememba
     cont_training = False

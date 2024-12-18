@@ -5,6 +5,7 @@ from data import datasets, trans
 import numpy as np
 import torch
 from torchvision import transforms
+from skimage.transform import resize
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
@@ -57,7 +58,7 @@ def comput_fig(img, stdy_idx):
     fig.subplots_adjust(wspace=0, hspace=0)
     #return fig
     # Ustvari mapo "slike1", če še ne obstaja
-    output_dir = "pre_release_slike"
+    output_dir = "pre_release_slike22"
     os.makedirs(output_dir, exist_ok=True)
 
     # Določite pot do shranjevanja slike
@@ -92,7 +93,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     axes = ['X', 'Y', 'Z']
     slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
 
-    output_dir = "pre_release_slike2"
+    output_dir = "300_final_release_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Prikaz za vse osi (x, y, z)
@@ -130,12 +131,12 @@ def main():
 
     stdy_idx = 0
 
-    val_dir = 'Release_pkl/Resized_merged_imagesTr/Pre_therapy/Val/'
+    val_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Val/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'Pre_Release_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = '300_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -178,6 +179,35 @@ def main():
             y_seg = data[3]
             
             x_def, flow = model(x,y)
+
+            # Originalna velikost
+            # original_shape = (256, 192, 192)
+
+            # # Resize deformacijsko polje (flow)
+            # resized_flow = np.zeros((3, *original_shape), dtype=flow.cpu().numpy().dtype)
+            # for i in range(3):  # X, Y, Z komponente deformacijskega polja
+            #     resized_flow[i] = resize(flow[0, i].cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # # Resize transformirane slike (x_def)
+            # resized_x_def = resize(x_def[0, 0].cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # # Resize moving image
+            # resized_moving = resize(x[0, 0].cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # # Resize fixed image
+            # resized_fixed = resize(y[0, 0].cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # # Pretvori nazaj v torch tensorje, če potrebuješ
+            # resized_flow_tensor = torch.tensor(resized_flow, device=flow.device)
+            # resized_x_def_tensor = torch.tensor(resized_x_def, device=x_def.device)
+            # resized_moving_tensor = torch.tensor(resized_moving, device=x.device)
+            # resized_fixed_tensor = torch.tensor(resized_fixed, device=y.device)
+
+            # print("Moving, fixed, transformirane slike in deformacijsko polje so preoblikovani nazaj na originalno velikost.")
+            # print(f"Polje deformacij: {resized_flow_tensor.shape}, "
+            #       f"Transformirana slika: {resized_x_def_tensor.shape}, "
+            #       f"Moving slika: {resized_moving_tensor.shape}, "
+            #       f"Fixed slika: {resized_fixed_tensor.shape}")
             
             def_out = reg_model([x_seg.cuda().float(), flow.cuda()])
 
@@ -187,6 +217,32 @@ def main():
 
             # Klic funkcije za vizualizacijo
             #visualize_registration(fixed_image, moving_image_transformed, deformation_field, stdy_idx)
+
+            # Originalna velikost
+            original_shape = (256, 192, 192)
+
+            # Preoblikuj fixed sliko
+            resized_fixed = resize(y[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # Preoblikuj moving sliko
+            resized_moving = resize(x[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # Preoblikuj transformirano moving sliko
+            resized_transformed = resize(x_def[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # Preoblikuj deformacijsko polje (vsaka komponenta posebej)
+            resized_flow = np.zeros((3, *original_shape), dtype=flow.detach().cpu().numpy().dtype)
+            for i in range(3):  # X, Y, Z komponente
+                resized_flow[i] = resize(flow[0, i].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+
+            # Klic funkcije visualize_registration z novimi podatki
+            # visualize_registration(
+            #     fixed=resized_fixed, 
+            #     moving_image=resized_moving, 
+            #     moving_transformed=resized_transformed, 
+            #     deformation_field=resized_flow, 
+            #     stdy_idx=stdy_idx
+            # )
             
             # Prikaz slik - na 2 način:
             visualize_registration(
@@ -197,7 +253,7 @@ def main():
                stdy_idx=stdy_idx
             )
 
-            comput_fig(x_def, stdy_idx)
+            # comput_fig(x_def, stdy_idx)
             
             stdy_idx += 1
 
@@ -212,11 +268,13 @@ def main():
             eval_dsc_def.update(dsc_trans.item(), x.size(0))
             eval_dsc_raw.update(dsc_raw.item(), x.size(0))
 
-        #print('Deformed DSC: {:.3f} +- {:.3f}, Affine DSC: {:.3f} +- {:.3f}'.format(eval_dsc_def.avg,
-        #                                                                            eval_dsc_def.std,
-        #                                                                            eval_dsc_raw.avg,
-        #                                                                            eval_dsc_raw.std))
-        #print('deformed det: {}, std: {}'.format(eval_det.avg, eval_det.std))
+        print('Deformed DSC: {:.3f} +- {:.3f}, Affine DSC: {:.3f} +- {:.3f}'.format(eval_dsc_def.avg,
+                                                                                   eval_dsc_def.std,
+                                                                                   eval_dsc_raw.avg,
+                                                                                   eval_dsc_raw.std))
+        print('deformed det: {}, std: {}'.format(eval_det.avg, eval_det.std))
+
+        print(f"Manjše polje: {flow.shape}, Resizano polje: {resized_flow.shape}")
 
 
 if __name__ == '__main__':

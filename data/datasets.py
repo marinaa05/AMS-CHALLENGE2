@@ -217,17 +217,19 @@ class ThoraxDatasetS2S(Dataset):
 
     def __getitem__(self, index):
         # Pridobivanje indeksov za par podatkov (fixed, moving)
-        x_index = index // (len(self.paths) - 1)
-        s = index % (len(self.paths) - 1)
-        y_index = s + 1 if s >= x_index else s
+        # x_index = index // (len(self.paths) - 1)
+        # s = index % (len(self.paths) - 1)
+        # y_index = s + 1 if s >= x_index else s
+        x_index = index
 
         # Pridobitev poti do datotek
         path_x = self.paths[x_index]
-        path_y = self.paths[y_index]
+        # path_y = self.paths[y_index]
 
         # Naložitev podatkov
-        x, x_seg = pkload(path_x)
-        y, y_seg = pkload(path_y)
+        # x, x_seg = pkload(path_x)
+        # y, y_seg = pkload(path_y)
+        x, y = pkload(path_x)
 
         # Dodajanje dimenzije kanala
         x, y = x[None, ...], y[None, ...]
@@ -247,7 +249,8 @@ class ThoraxDatasetS2S(Dataset):
 
     def __len__(self):
         # Izračun dolžine dataset-a glede na vse možne pare
-        return len(self.paths) * (len(self.paths) - 1)
+        # return len(self.paths) * (len(self.paths) - 1)
+        return len(self.paths)
     
 class ThoraxInferDatasetS2S(Dataset):
     def __init__(self, data_path, transforms=None):
