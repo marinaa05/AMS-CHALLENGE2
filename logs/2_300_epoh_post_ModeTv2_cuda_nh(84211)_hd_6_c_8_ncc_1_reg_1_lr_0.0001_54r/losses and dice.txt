@@ -63,3 +63,4 @@ Epoch 61 loss nan 0.0714285586059291
 Epoch 62 loss nan 0.0714285586059291
 Epoch 63 loss nan 0.0714285586059291
 Epoch 64 loss nan 0.0714285586059291
+Epoch 0 loss -0.1704 Epoch 0 loss -0.1701 Epoch 0 loss -0.1704 

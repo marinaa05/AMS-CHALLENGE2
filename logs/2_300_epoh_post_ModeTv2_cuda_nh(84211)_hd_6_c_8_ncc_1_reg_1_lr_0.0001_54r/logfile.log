@@ -1234,3 +1234,42 @@ Iter 11 of 11 loss nan, Img Sim: -0.000000, Reg: nan
 64 : 0.07142855860592909
 64 : 0.0714285586059291
 Training Starts
+Training Starts
+Iter 1 of 11 loss -0.1949, Img Sim: -0.194912, Reg: 0.000000
+Iter 2 of 11 loss -0.1540, Img Sim: -0.154021, Reg: 0.000001
+Iter 3 of 11 loss -0.1525, Img Sim: -0.152542, Reg: 0.000000
+Iter 4 of 11 loss -0.1554, Img Sim: -0.155400, Reg: 0.000002
+Iter 5 of 11 loss -0.1639, Img Sim: -0.163864, Reg: 0.000003
+Iter 6 of 11 loss -0.1647, Img Sim: -0.164752, Reg: 0.000005
+Iter 7 of 11 loss -0.1771, Img Sim: -0.177136, Reg: 0.000006
+Iter 8 of 11 loss -0.1591, Img Sim: -0.159153, Reg: 0.000011
+Iter 9 of 11 loss -0.1889, Img Sim: -0.188927, Reg: 0.000014
+Iter 10 of 11 loss -0.1919, Img Sim: -0.191967, Reg: 0.000019
+Iter 11 of 11 loss -0.1714, Img Sim: -0.171374, Reg: 0.000020
+2_300_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 0 loss -0.1704
+Training Starts
+Iter 1 of 11 loss -0.1949, Img Sim: -0.194912, Reg: 0.000000
+Iter 2 of 11 loss -0.1540, Img Sim: -0.154011, Reg: 0.000001
+Iter 3 of 11 loss -0.1525, Img Sim: -0.152520, Reg: 0.000000
+Iter 4 of 11 loss -0.1548, Img Sim: -0.154799, Reg: 0.000002
+Iter 5 of 11 loss -0.1637, Img Sim: -0.163724, Reg: 0.000003
+Iter 6 of 11 loss -0.1681, Img Sim: -0.168060, Reg: 0.000005
+Iter 7 of 11 loss -0.1775, Img Sim: -0.177461, Reg: 0.000008
+Iter 8 of 11 loss -0.1575, Img Sim: -0.157508, Reg: 0.000014
+Iter 9 of 11 loss -0.1864, Img Sim: -0.186401, Reg: 0.000018
+Iter 10 of 11 loss -0.1919, Img Sim: -0.191924, Reg: 0.000021
+Iter 11 of 11 loss -0.1697, Img Sim: -0.169684, Reg: 0.000020
+2_300_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 0 loss -0.1701
+Training Starts
+Iter 1 of 11 loss -0.1949, Img Sim: -0.194912, Reg: 0.000000
+Iter 2 of 11 loss -0.1540, Img Sim: -0.154019, Reg: 0.000001
+Iter 3 of 11 loss -0.1519, Img Sim: -0.151933, Reg: 0.000000
+Iter 4 of 11 loss -0.1559, Img Sim: -0.155919, Reg: 0.000002
+Iter 5 of 11 loss -0.1640, Img Sim: -0.163973, Reg: 0.000003
+Iter 6 of 11 loss -0.1643, Img Sim: -0.164266, Reg: 0.000005
+Iter 7 of 11 loss -0.1781, Img Sim: -0.178096, Reg: 0.000007
+Iter 8 of 11 loss -0.1581, Img Sim: -0.158082, Reg: 0.000010
+Iter 9 of 11 loss -0.1877, Img Sim: -0.187679, Reg: 0.000013
+Iter 10 of 11 loss -0.1939, Img Sim: -0.193895, Reg: 0.000014
+Iter 11 of 11 loss -0.1717, Img Sim: -0.171682, Reg: 0.000017
+2_300_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 0 loss -0.1704

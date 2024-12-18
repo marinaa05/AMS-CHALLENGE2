@@ -65,7 +65,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 71
+    max_epoch = 50
     # img_size = (160, 192, 160)
     img_size = (170, 128, 128)   ## sprememba
     cont_training = False
@@ -166,13 +166,15 @@ def main():
                 data = [t.cuda() for t in data]
                 x = data[0]
                 y = data[1]
-                x_seg = data[2]
-                y_seg = data[3]
+                # x_seg = data[2]
+                # y_seg = data[3]
 
                 output = model(x,y)
-                def_out = reg_model([x_seg.cuda().float(), output[1].cuda()])
+                # def_out = reg_model([x_seg.cuda().float(), output[1].cuda()])
+                def_out = reg_model([x.cuda().float(), output[1].cuda()])
 
-                dsc = utils.dice_val_VOI(def_out.long(), y_seg.long())
+                # dsc = utils.dice_val_VOI(def_out.long(), y_seg.long())
+                dsc = utils.dice_val_VOI(def_out.long(), y.long())
                 eval_dsc.update(dsc.item(), x.size(0))
                 print(epoch, ':',eval_dsc.avg)
         best_dsc = max(eval_dsc.avg, best_dsc)

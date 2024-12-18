@@ -222,18 +222,18 @@ def main():
             original_shape = (256, 192, 192)
 
             # Preoblikuj fixed sliko
-            resized_fixed = resize(y[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+            resized_fixed = resize(y[0, 0].detach().cpu().numpy(), original_shape, mode='constant', anti_aliasing=True)
 
             # Preoblikuj moving sliko
-            resized_moving = resize(x[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+            resized_moving = resize(x[0, 0].detach().cpu().numpy(), original_shape, mode='constant', anti_aliasing=True)
 
             # Preoblikuj transformirano moving sliko
-            resized_transformed = resize(x_def[0, 0].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+            resized_transformed = resize(x_def[0, 0].detach().cpu().numpy(), original_shape, mode='constant', anti_aliasing=True)
 
             # Preoblikuj deformacijsko polje (vsaka komponenta posebej)
             resized_flow = np.zeros((3, *original_shape), dtype=flow.detach().cpu().numpy().dtype)
             for i in range(3):  # X, Y, Z komponente
-                resized_flow[i] = resize(flow[0, i].detach().cpu().numpy(), original_shape, mode='reflect', anti_aliasing=True)
+                resized_flow[i] = resize(flow[0, i].detach().cpu().numpy(), original_shape, mode='constant', anti_aliasing=True)
 
             # Klic funkcije visualize_registration z novimi podatki
             # visualize_registration(
