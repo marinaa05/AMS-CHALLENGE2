@@ -1324,3 +1324,653 @@ Iter 9 of 11 loss -0.1346
 Iter 10 of 11 loss -0.1291
 Iter 11 of 11 loss -0.1409
 50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 49 loss -0.1317
+Training Starts
+Iter 1 of 11 loss -0.1903
+Iter 2 of 11 loss -0.1924
+Iter 3 of 11 loss -0.1647
+Iter 4 of 11 loss -0.1576
+Iter 5 of 11 loss -0.1697
+Iter 6 of 11 loss -0.1881
+Iter 7 of 11 loss -0.1602
+Iter 8 of 11 loss -0.1808
+Iter 9 of 11 loss -0.1560
+Iter 10 of 11 loss -0.1574
+Iter 11 of 11 loss -0.1754
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 0 loss -0.1721
+Training Starts
+Iter 1 of 11 loss -0.1895
+Iter 2 of 11 loss -0.1563
+Iter 3 of 11 loss -0.1600
+Iter 4 of 11 loss -0.1902
+Iter 5 of 11 loss -0.1916
+Iter 6 of 11 loss -0.1587
+Iter 7 of 11 loss -0.1543
+Iter 8 of 11 loss -0.1837
+Iter 9 of 11 loss -0.1788
+Iter 10 of 11 loss -0.1636
+Iter 11 of 11 loss -0.1648
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 1 loss -0.1719
+Training Starts
+Iter 1 of 11 loss -0.1916
+Iter 2 of 11 loss -0.1577
+Iter 3 of 11 loss -0.1852
+Iter 4 of 11 loss -0.1521
+Iter 5 of 11 loss -0.1612
+Iter 6 of 11 loss -0.1768
+Iter 7 of 11 loss -0.1615
+Iter 8 of 11 loss -0.1562
+Iter 9 of 11 loss -0.1855
+Iter 10 of 11 loss -0.1574
+Iter 11 of 11 loss -0.1709
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 2 loss -0.1687
+Training Starts
+Iter 1 of 11 loss -0.1502
+Iter 2 of 11 loss -0.1595
+Iter 3 of 11 loss -0.1561
+Iter 4 of 11 loss -0.1547
+Iter 5 of 11 loss -0.1815
+Iter 6 of 11 loss -0.1568
+Iter 7 of 11 loss -0.1819
+Iter 8 of 11 loss -0.1693
+Iter 9 of 11 loss -0.1878
+Iter 10 of 11 loss -0.1541
+Iter 11 of 11 loss -0.1567
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 3 loss -0.1644
+Training Starts
+Iter 1 of 11 loss -0.1698
+Iter 2 of 11 loss -0.1487
+Iter 3 of 11 loss -0.1825
+Iter 4 of 11 loss -0.1722
+Iter 5 of 11 loss -0.1541
+Iter 6 of 11 loss -0.1508
+Iter 7 of 11 loss -0.1502
+Iter 8 of 11 loss -0.1715
+Iter 9 of 11 loss -0.1571
+Iter 10 of 11 loss -0.1574
+Iter 11 of 11 loss -0.1777
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 4 loss -0.1629
+Training Starts
+Iter 1 of 11 loss -0.1704
+Iter 2 of 11 loss -0.1484
+Iter 3 of 11 loss -0.1582
+Iter 4 of 11 loss -0.1731
+Iter 5 of 11 loss -0.1880
+Iter 6 of 11 loss -0.1531
+Iter 7 of 11 loss -0.1677
+Iter 8 of 11 loss -0.1562
+Iter 9 of 11 loss -0.1771
+Iter 10 of 11 loss -0.1476
+Iter 11 of 11 loss -0.1486
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 5 loss -0.1626
+Training Starts
+Iter 1 of 11 loss -0.1556
+Iter 2 of 11 loss -0.1531
+Iter 3 of 11 loss -0.1752
+Iter 4 of 11 loss -0.1581
+Iter 5 of 11 loss -0.1471
+Iter 6 of 11 loss -0.1522
+Iter 7 of 11 loss -0.1477
+Iter 8 of 11 loss -0.1693
+Iter 9 of 11 loss -0.1835
+Iter 10 of 11 loss -0.1701
+Iter 11 of 11 loss -0.1452
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 6 loss -0.1597
+Training Starts
+Iter 1 of 11 loss -0.1469
+Iter 2 of 11 loss -0.1540
+Iter 3 of 11 loss -0.1696
+Iter 4 of 11 loss -0.1578
+Iter 5 of 11 loss -0.1819
+Iter 6 of 11 loss -0.1476
+Iter 7 of 11 loss -0.1695
+Iter 8 of 11 loss -0.1562
+Iter 9 of 11 loss -0.1843
+Iter 10 of 11 loss -0.1455
+Iter 11 of 11 loss -0.1765
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 7 loss -0.1627
+Training Starts
+Iter 1 of 11 loss -0.1810
+Iter 2 of 11 loss -0.1538
+Iter 3 of 11 loss -0.1564
+Iter 4 of 11 loss -0.1530
+Iter 5 of 11 loss -0.1465
+Iter 6 of 11 loss -0.1464
+Iter 7 of 11 loss -0.1657
+Iter 8 of 11 loss -0.1690
+Iter 9 of 11 loss -0.1575
+Iter 10 of 11 loss -0.1454
+Iter 11 of 11 loss -0.1755
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 8 loss -0.1591
+Training Starts
+Iter 1 of 11 loss -inf
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 9 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 10 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 11 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 12 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 13 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 14 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 15 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 16 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 17 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 18 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 19 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 20 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 21 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 22 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 23 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 24 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 25 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 26 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 27 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 28 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 29 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 30 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 31 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 32 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 33 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 34 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 35 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 36 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 37 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 38 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 39 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 40 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 41 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 42 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 43 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 44 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 45 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 46 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 47 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 48 loss nan
+Training Starts
+Iter 1 of 11 loss nan
+Iter 2 of 11 loss nan
+Iter 3 of 11 loss nan
+Iter 4 of 11 loss nan
+Iter 5 of 11 loss nan
+Iter 6 of 11 loss nan
+Iter 7 of 11 loss nan
+Iter 8 of 11 loss nan
+Iter 9 of 11 loss nan
+Iter 10 of 11 loss nan
+Iter 11 of 11 loss nan
+50_epoh_post_ModeTv2_cuda_nh(84211)_hd_6_c_8_ncc_1_reg_1_lr_0.0001_54r/ Epoch 49 loss nan

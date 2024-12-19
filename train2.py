@@ -24,6 +24,7 @@ def same_seeds(seed):
     torch.backends.cudnn.benchmark=True
 
 same_seeds(24)
+
 class Logger(object):
     def __init__(self, save_dir):
         self.terminal = sys.stdout
@@ -41,15 +42,15 @@ GPU_iden = 1
 def main():
     batch_size = 1
 
-    train_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Train'
-    val_dir = 'Release_pkl/Resized_merged_imagesTr/Post_therapy/Val'
+    train_dir = 'Release_pkl/Resized_normalized_imagesTr/Train/'
+    val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
     
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = '50_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_c_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = '55_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -61,7 +62,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 50
+    max_epoch = 55
     img_size = (170, 128, 128)
     cont_training = False
 
@@ -94,17 +95,15 @@ def main():
     Initialize training
     '''
     train_composed = transforms.Compose([
-                                         trans.NumpyType((np.float32, np.float32)),
+        trans.NumpyType((np.float32, np.float32)),
                                          ])
 
     val_composed = transforms.Compose([
-                                        trans.Seg_norm(),
-                                        trans.NumpyType((np.float32, np.float32)),
+        trans.NumpyType((np.float32, np.float32)),
                                        ])
 
-
-    train_set = datasets.ThoraxDatasetPairwise(glob.glob(os.path.join(train_dir, '*.pkl')), transforms=train_composed)
-    val_set = datasets.ThoraxDatasetPairwise(glob.glob(os.path.join(val_dir, '*.pkl')), transforms=val_composed)
+    train_set = datasets.ThoraxDatasetSequential(train_dir, transforms=train_composed)
+    val_set = datasets.ThoraxDatasetSequential(val_dir, transforms=val_composed)
 
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
@@ -121,37 +120,17 @@ def main():
         Training
         '''
         loss_all = utils.AverageMeter()
-        # idx = 0
-        # for data in train_loader:
-        #     idx += 1
-        #     model.train()
-        #     adjust_learning_rate(optimizer, epoch, max_epoch, lr)
-        #     x = data[0].cuda()
-        #     y = data[1].cuda()
-
-        #     output = model(x,y)
-
-        #     loss = 0
-        #     loss_vals = []
-        #     for n, loss_function in enumerate(criterions):
-        #         curr_loss = loss_function(output[n], y) * weights[n]
-        #         loss_vals.append(curr_loss)
-        #         loss += curr_loss
-        #     loss_all.update(loss.item(), y.numel())
-        #     optimizer.zero_grad()
-        #     loss.backward()
-        #     optimizer.step()
-
-        #     print('Iter {} of {} loss {:.4f}, Img Sim: {:.6f}, Reg: {:.6f}'.format(idx, len(train_loader), loss.item(), loss_vals[0].item(), loss_vals[1].item()))
-        for idx, (fbct, cbct) in enumerate(train_loader, start=1):
+        
+        for idx, data in enumerate(train_loader):
             model.train()
+
+            fbct, cbct1 = [d.cuda() for d in data]
+            output = model(fbct, cbct1)
+            
             adjust_learning_rate(optimizer, epoch, max_epoch, lr)
 
-            fbct, cbct = fbct.cuda(), cbct.cuda()
-            output = model(fbct, cbct)
-
-            loss = sum(loss_fn(output[n], cbct) * weights[n] for n, loss_fn in enumerate(criterions))
-            loss_all.update(loss.item(), cbct.numel())
+            loss = sum(loss_fn(output[n], fbct) * weights[n] for n, loss_fn in enumerate(criterions))
+            loss_all.update(loss.item(), fbct.numel())
 
             optimizer.zero_grad()
             loss.backward()
@@ -167,29 +146,15 @@ def main():
         '''
         eval_dsc = utils.AverageMeter()
         with torch.no_grad():
-            # for data in val_loader:
-            #     model.eval()
-            #     data = [t.cuda() for t in data]
-            #     x = data[0]
-            #     y = data[1]
-            #     x_seg = data[2]
-            #     y_seg = data[3]
-
-            #     output = model(x,y)
-            #     def_out = reg_model([x_seg.cuda().float(), output[1].cuda()])
-
-            #     dsc = utils.dice_val_VOI(def_out.long(), y_seg.long())
-            #     eval_dsc.update(dsc.item(), x.size(0))
-            #     print(epoch, ':',eval_dsc.avg)
-            for fbct, cbct in val_loader:
+            for data in val_loader:
                 model.eval()
+                fbct, cbct1 = [d.cuda() for d in data]
+                
+                fbct_def, flow = model(fbct, cbct1)
 
-                fbct, cbct = fbct.cuda(), cbct.cuda()
-                output = model(fbct, cbct)
-
-                def_out = reg_model([fbct.float(), output[1].float()])
-                dsc = utils.dice_val_VOI(def_out.long(), cbct.long())
+                dsc = utils.dice_val_VOI(fbct_def, fbct)
                 eval_dsc.update(dsc.item(), fbct.size(0))
+                print(epoch, ':',eval_dsc.avg)
 
         best_dsc = max(eval_dsc.avg, best_dsc)
         print(eval_dsc.avg, file=f)

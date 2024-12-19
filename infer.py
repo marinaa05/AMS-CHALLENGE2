@@ -297,7 +297,7 @@ def main():
 
         print('deformed det: {}, std: {}'.format(eval_det.avg, eval_det.std))
 
-        # print(f"Manjše polje: {flow.shape}, Resizano polje: {resized_flow.shape}")
+        print(f"Manjše polje: {flow.shape}, Resizano polje: {resized_flow.shape}")
 
 
 if __name__ == '__main__':

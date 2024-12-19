@@ -4,6 +4,7 @@ from torch.utils.data import Dataset
 import matplotlib.pyplot as plt
 import pickle
 import numpy as np
+from skimage.io import imread
 
 def pkload(fname):
     with open(fname, 'rb') as f:
@@ -274,29 +275,37 @@ class ThoraxDatasetSequential(Dataset):
             data_dir (str): Pot do mape z vsemi slikami.
             transforms (callable, optional): Transformacije za slike.
         """
+        # Preveri vhodni argument
+        if not isinstance(data_dir, (str, os.PathLike)):
+            raise TypeError("data_dir must be a string or PathLike object, got {}".format(type(data_dir)))
+        
         self.data_dir = data_dir
         self.transforms = transforms
 
         # Branje vseh poti do slik in sortiranje po vrstnem redu
         self.image_paths = sorted([os.path.join(data_dir, f) for f in os.listdir(data_dir)])
-        
-        # Razvrsti slike na FBCT in CBCT1
-        self.fbct_paths = self.image_paths[::3]  # FBCT slike
-        self.cbct1_paths = self.image_paths[1::3]  # CBCT1 slike
 
-        # Preveri, da sta dolžini enaki
-        assert len(self.fbct_paths) == len(self.cbct1_paths), "FBCT in CBCT1 slike se ne ujemajo!"
+        # Preveri, da imamo slike
+        if len(self.image_paths) == 0:
+            raise FileNotFoundError(f"No images found in directory: {data_dir}")
+
+        # Razvrsti slike na FBCT in CBCT1
+        # self.fbct_paths = self.image_paths[::3]  # FBCT slike
+        # self.cbct1_paths = self.image_paths[1::3]  # CBCT1 slike
 
     def __len__(self):
-        return len(self.fbct_paths)  # Število pacientov
+        return len(self.image_paths) // 3 # Število pacientov
 
     def __getitem__(self, index):
         # Preberi FBCT in CBCT1 za trenutnega pacienta
-        fbct_path = self.fbct_paths[index]
-        cbct1_path = self.cbct1_paths[index]
+        fbct_path = self.image_paths[3*index]
+        cbct1_path = self.image_paths[3*index+1]
 
-        fbct = imread(fbct_path).astype(np.float32)  # Naloži sliko in pretvori v float
-        cbct1 = imread(cbct1_path).astype(np.float32)
+        with open(fbct_path, 'rb') as f:
+            fbct = pickle.load(f)
+
+        with open(cbct1_path, 'rb') as f:
+            cbct1 = pickle.load(f)
 
         # Normalizacija na [0, 1]
         fbct = (fbct - fbct.min()) / (fbct.max() - fbct.min())

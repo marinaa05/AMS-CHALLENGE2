@@ -126,9 +126,12 @@ def jacobian_determinant_vxm(disp):
     # compute grid
     grid_lst = nd.volsize2ndgrid(volshape)
     grid = np.stack(grid_lst, len(volshape))
+    print(f"Grid shape: {grid.shape}, Grid stats: min={grid.min()}, max={grid.max()}, mean={grid.mean()}")
 
     # compute gradients
     J = np.gradient(disp + grid)
+    for i, grad in enumerate(J):
+        print(f"Gradient {i} stats: min={grad.min()}, max={grad.max()}, mean={grad.mean()}")
 
     # 3D glow
     if nb_dims == 3:
