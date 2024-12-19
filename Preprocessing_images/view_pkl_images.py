@@ -103,7 +103,7 @@ def load_pkl_image(path):
     
 
 original_pkl_image = "Release_pkl/Resized_imagesTr/ThoraxCBCT_0000_0000.pkl"
-resized_pkl_image = "Release_pkl/Resized_merged_imagesTr/Pre_therapy/Train/merged_patient_0004_pre.pkl"
+resized_pkl_image = "test_code_for_preprocessing/ThoraxCBCT_0000_0002.pkl"
 
 # Load and display the original .pkl image
 with open(original_pkl_image, 'rb') as pkl_file:
@@ -115,7 +115,7 @@ with open(original_pkl_image, 'rb') as pkl_file:
 #     resized_image = pickle.load(pkl_file)
 #     display_slices(resized_image, title="Resized Image")
 
-save_dir = "Release_pkl/Resized_merged_imagesTr/data_viewed"
+save_dir = "test_code_for_preprocessing/data_viewed"
 # processed_data = "processed_ThoraxCBCT/patient_0000_CBCT_post.pkl"
 # # Naloži sliko
 image_data = load_pkl_image(resized_pkl_image)

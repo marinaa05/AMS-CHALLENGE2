@@ -96,8 +96,8 @@ class Preprocessing:
                     print(f"An error occurred while processing {file_name}: {e}")
 
 if __name__ == "__main__":
-    input_dir = "path_to_input_directory"
-    output_dir = "path_to_output_directory"
+    input_dir = "Release_06_12_23/imagesTr"
+    output_dir = "test_code_for_preprocessing"
     new_shape = (256 // 1.5, 192 // 1.5, 192 // 1.5)  # Example shape
 
     preprocessing = Preprocessing(input_dir, output_dir, new_shape)
