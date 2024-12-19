@@ -12,6 +12,8 @@ from mpl_toolkits.mplot3d import axes3d
 from natsort import natsorted
 from models_cuda import ModeTv2_model
 import random
+import nibabel as nib
+from skimage.transform import resize
 
 def same_seeds(seed):
     # Python built-in random module
@@ -152,11 +154,37 @@ def visualize_and_save_flow(flow, patient_idx, output_dir="def_polje"):
         plt.close()  # Zapri sliko, da sprosti pomnilnik
         print(f"Slika shranjena: {output_path}")
 
+def save_nifti(data, output_path, affine=np.eye(4)):
+    """
+    Shrani podatke v NIfTI format (.nii.gz).
+    
+    Args:
+        data (numpy array): 3D ali 4D podatki za shranjevanje.
+        output_path (str): Pot za shranjevanje datoteke.
+        affine (numpy array): Afina matrika za NIfTI (privzeto enotska matrika).
+    """
+    img = nib.Nifti1Image(data, affine)
+    nib.save(img, output_path)
+    print(f"NIfTI datoteka shranjena: {output_path}")
 
+def resize_volume(volume, output_shape):
+    """
+    Spremeni velikost volumna na zahtevano obliko.
+    
+    Args:
+        volume (numpy array): Volumen za spremembo velikosti.
+        output_shape (tuple): Ciljna oblika (npr. (256, 192, 192)).
+        
+    Returns:
+        numpy array: Spremenjen volumen.
+    """
+    return resize(volume, output_shape, mode='constant', anti_aliasing=True)
 
 def main():
 
     stdy_idx = 0
+    output_dir = "dof_final"
+    os.makedirs(output_dir, exist_ok=True)
 
     val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
     weights = [1, 1]  # loss weights
@@ -167,8 +195,8 @@ def main():
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
-    # img_size = (160, 192, 160)
     img_size = (170, 128, 128)
+    target_size = (256, 192, 192)  # Ciljna velikost
 
     # Inicializacija modela
     model = ModeTv2_model(img_size)
@@ -235,6 +263,28 @@ def main():
 
             # Vizualiziraj in shrani slike deformacijskega polja
             # visualize_and_save_flow(flow_numpy, stdy_idx)
+
+            # Pretvorba v numpy in sprememba velikosti
+            fbct_np = fbct[0, 0].detach().cpu().numpy()
+            cbct1_np = cbct1[0, 0].detach().cpu().numpy()
+            fbct_def_np = fbct_def[0, 0].detach().cpu().numpy()
+            flow_np = flow[0].detach().cpu().numpy()
+
+            fbct_resized = resize_volume(fbct_np, target_size)
+            cbct1_resized = resize_volume(cbct1_np, target_size)
+            fbct_def_resized = resize_volume(fbct_def_np, target_size)
+            flow_resized = np.stack([
+                resize_volume(flow_np[i], target_size) for i in range(flow_np.shape[0])
+            ], axis=-1)  # Oblika: (256, 192, 192, 3)
+
+            # Shranjevanje v NIfTI formatu
+            save_nifti(fbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_fixed.nii.gz"))
+            save_nifti(cbct1_resized, os.path.join(output_dir, f"patient_{stdy_idx}_moving.nii.gz"))
+            save_nifti(fbct_def_resized, os.path.join(output_dir, f"patient_{stdy_idx}_transformed.nii.gz"))
+            save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
+
+            print(f"Deformacijsko polje za pacienta {stdy_idx + 1} uspešno shranjeno.")
+
 
 
             stdy_idx += 1
