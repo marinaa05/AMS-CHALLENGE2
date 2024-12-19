@@ -195,8 +195,9 @@ class ThoraxInferDatasetS2S(Dataset):
         # Naložitev podatkov
         path_x = self.paths[x_index]
         path_y = self.paths[y_index]
-        x, x_seg = pkload(path_x)
-        y, y_seg = pkload(path_y)
+        # x, x_seg = pkload(path_x)
+        x, y = pkload(path_x)
+        # y, y_seg = pkload(path_y)
 
         # Dodajanje dimenzije kanala
         x, y = x[None, ...], y[None, ...]
@@ -223,3 +224,94 @@ class ThoraxInferDatasetS2S(Dataset):
         # Izračun dolžine dataset-a glede na vse možne pare
         return len(self.paths) * (len(self.paths) - 1)
 
+class ThoraxDatasetPairwise(Dataset):
+    def __init__(self, data_paths, transforms=None):
+        """
+        Inicializacija dataset razreda.
+        Args:
+            data_paths (list): Seznam poti do `.pkl` datotek.
+            transforms (callable, optional): Funkcije za transformacije podatkov.
+        """
+        self.paths = sorted(data_paths)  # Uredi, da so slike pravilno poravnane
+        self.transforms = transforms
+
+    def __getitem__(self, index):
+        """
+        Pridobi FBCT in CBCT par za določenega pacienta.
+        Args:
+            index (int): Indeks pacienta.
+        Returns:
+            torch.Tensor: FBCT slika.
+            torch.Tensor: CBCT slika.
+        """
+        path = self.paths[index]
+        data = pkload(path)  # Naloži .pkl datoteko
+        fbct, cbct = data[0], data[1]  # Razčleni na FBCT in CBCT
+
+        fbct, cbct = fbct.astype(np.float32), cbct.astype(np.float32)
+
+        # Dodaj dimenzijo kanala (če ni prisotna)
+        fbct, cbct = fbct[None, ...], cbct[None, ...]
+
+        # Uporabi transformacije (če so definirane)
+        if self.transforms:
+            fbct, cbct = self.transforms([fbct, cbct])
+
+        # Pretvori v PyTorch tenzor
+        fbct = torch.from_numpy(np.ascontiguousarray(fbct))
+        cbct = torch.from_numpy(np.ascontiguousarray(cbct))
+
+        return fbct, cbct
+
+    def __len__(self):
+        """Vrne število pacientov v datasetu."""
+        return len(self.paths)
+    
+class ThoraxDatasetSequential(Dataset):
+    def __init__(self, data_dir, transforms=None):
+        """
+        Args:
+            data_dir (str): Pot do mape z vsemi slikami.
+            transforms (callable, optional): Transformacije za slike.
+        """
+        self.data_dir = data_dir
+        self.transforms = transforms
+
+        # Branje vseh poti do slik in sortiranje po vrstnem redu
+        self.image_paths = sorted([os.path.join(data_dir, f) for f in os.listdir(data_dir)])
+        
+        # Razvrsti slike na FBCT in CBCT1
+        self.fbct_paths = self.image_paths[::3]  # FBCT slike
+        self.cbct1_paths = self.image_paths[1::3]  # CBCT1 slike
+
+        # Preveri, da sta dolžini enaki
+        assert len(self.fbct_paths) == len(self.cbct1_paths), "FBCT in CBCT1 slike se ne ujemajo!"
+
+    def __len__(self):
+        return len(self.fbct_paths)  # Število pacientov
+
+    def __getitem__(self, index):
+        # Preberi FBCT in CBCT1 za trenutnega pacienta
+        fbct_path = self.fbct_paths[index]
+        cbct1_path = self.cbct1_paths[index]
+
+        fbct = imread(fbct_path).astype(np.float32)  # Naloži sliko in pretvori v float
+        cbct1 = imread(cbct1_path).astype(np.float32)
+
+        # Normalizacija na [0, 1]
+        fbct = (fbct - fbct.min()) / (fbct.max() - fbct.min())
+        cbct1 = (cbct1 - cbct1.min()) / (cbct1.max() - cbct1.min())
+
+        # Dodaj dimenzijo kanala
+        fbct = fbct[None, ...]
+        cbct1 = cbct1[None, ...]
+
+        # Uporabi transformacije, če so definirane
+        if self.transforms:
+            fbct, cbct1 = self.transforms([fbct, cbct1])
+
+        # Pretvori v PyTorch tenzor
+        fbct = torch.from_numpy(fbct)
+        cbct1 = torch.from_numpy(cbct1)
+
+        return fbct, cbct1
