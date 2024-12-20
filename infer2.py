@@ -95,7 +95,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     axes = ['X', 'Y', 'Z']
     slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
 
-    output_dir = "train_300_final_release_slike"
+    output_dir = "55_post_final_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Prikaz za vse osi (x, y, z)
@@ -183,7 +183,7 @@ def resize_volume(volume, output_shape):
 def main():
 
     stdy_idx = 0
-    output_dir = "dof_final"
+    output_dir = "dof_pre_final_150"
     os.makedirs(output_dir, exist_ok=True)
 
     val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
@@ -191,7 +191,7 @@ def main():
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = '55_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    model_folder = 'Pre_150_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -220,7 +220,7 @@ def main():
         trans.NumpyType((np.float32, np.float32)),
                                         ])
     
-    test_set = datasets.ThoraxDatasetSequential(val_dir, transforms=test_composed)
+    test_set = datasets.ThoraxDatasetSequentialPre(val_dir, transforms=test_composed)
 
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
 
@@ -251,13 +251,13 @@ def main():
             eval_det.update(np.sum(jac_det <= 0) / np.prod(tar.shape), fbct.size(0))
 
             # Klic funkcije visualize_registration z novimi podatki
-            visualize_registration(
-                fixed=fbct[0, 0],  # Ciljna slika (CBCT)
-                moving_image=cbct1[0, 0],  # Premaknjena slika (FBCT)
-                moving_transformed=fbct_def[0, 0],  # Transformirana premaknjena slika
-                deformation_field=flow[0],  # Deformacijsko polje
-                stdy_idx=stdy_idx
-            )
+            # visualize_registration(
+            #     fixed=fbct[0, 0],  # Ciljna slika (CBCT)
+            #     moving_image=cbct1[0, 0],  # Premaknjena slika (FBCT)
+            #     moving_transformed=fbct_def[0, 0],  # Transformirana premaknjena slika
+            #     deformation_field=flow[0],  # Deformacijsko polje
+            #     stdy_idx=stdy_idx
+            # )
             
             flow_numpy = flow[0].detach().cpu().numpy()  # Oblika: [3, D, H, W]
 
@@ -284,8 +284,6 @@ def main():
             save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
 
             print(f"Deformacijsko polje za pacienta {stdy_idx + 1} uspešno shranjeno.")
-
-
 
             stdy_idx += 1
 

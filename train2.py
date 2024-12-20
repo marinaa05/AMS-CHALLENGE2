@@ -50,7 +50,7 @@ def main():
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = '55_epoh_post_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'Pre_150_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -62,7 +62,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 55
+    max_epoch = 150
     img_size = (170, 128, 128)
     cont_training = False
 
@@ -102,8 +102,8 @@ def main():
         trans.NumpyType((np.float32, np.float32)),
                                        ])
 
-    train_set = datasets.ThoraxDatasetSequential(train_dir, transforms=train_composed)
-    val_set = datasets.ThoraxDatasetSequential(val_dir, transforms=val_composed)
+    train_set = datasets.ThoraxDatasetSequentialPre(train_dir, transforms=train_composed)
+    val_set = datasets.ThoraxDatasetSequentialPre(val_dir, transforms=val_composed)
 
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)

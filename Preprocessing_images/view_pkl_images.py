@@ -37,7 +37,6 @@ def display_slices(image_data, title="Image Slices"):
     except Exception as e:
         print(f"An error occurred while displaying slices: {e}")
 
-
 def display_and_save_slices(image_data, save_dir, base_filename="slices"):
     """
     Displays and saves three orthogonal slices (axial, sagittal, coronal) of a 3D image as a single figure.
@@ -117,7 +116,7 @@ with open(original_pkl_image, 'rb') as pkl_file:
 
 save_dir = "test_code_for_preprocessing/data_viewed"
 # processed_data = "processed_ThoraxCBCT/patient_0000_CBCT_post.pkl"
-# # Naloži sliko
+# Naloži sliko
 image_data = load_pkl_image(resized_pkl_image)
 
 # # # Če je slika uspešno naložena, jo prikaži in shrani
