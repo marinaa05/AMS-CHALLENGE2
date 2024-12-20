@@ -4,17 +4,19 @@ from torch.utils.data import DataLoader
 import numpy as np
 from data import datasets, trans
 from torchvision import transforms
+import nibabel as nib
 
-# Testno deformacijsko polje
-D, H, W = 10, 10, 10
-disp_test = np.zeros((D, H, W, 3))
-disp_test[..., 0] = np.linspace(-1, 1, D)[:, None, None]
-disp_test[..., 1] = np.linspace(-1, 1, H)[None, :, None]
-disp_test[..., 2] = np.linspace(-1, 1, W)[None, None, :]
+file_path = "new_dof_post_final_55/def_polja_new/disp_0011_0002_0011_0000.nii.gz"
 
-# Izračun Jacobian determinant
-jac_det_test = utils.jacobian_determinant_vxm(disp_test)
-print(f"Jacobian determinant test stats: min={jac_det_test.min()}, max={jac_det_test.max()}, mean={jac_det_test.mean()}")
+# Naloži datoteko
+img = nib.load(file_path)
+data = img.get_fdata()
+
+# Dimenzije in število točk
+print(f"Dimenzije podatkov: {data.shape}")
+print(f"Skupno število točk: {np.prod(data.shape)}")
+print(f"Velikost podatkov (približno v MB): {data.nbytes / (1024 ** 2):.2f} MB")
+
 
 
 

@@ -378,4 +378,108 @@ class ThoraxDatasetSequentialPost(Dataset):
 
         return fbct, cbct2
 
+class ThoraxDatasetSequentialPre2(Dataset):
+    def __init__(self, data_dir, transforms=None):
+        """
+        Args:
+            data_dir (str): Pot do mape z vsemi slikami.
+            transforms (callable, optional): Transformacije za slike.
+        """
+        # Preveri vhodni argument
+        if not isinstance(data_dir, (str, os.PathLike)):
+            raise TypeError("data_dir must be a string or PathLike object, got {}".format(type(data_dir)))
         
+        self.data_dir = data_dir
+        self.transforms = transforms
+
+        # Branje vseh poti do slik in sortiranje po vrstnem redu
+        self.image_paths = sorted([os.path.join(data_dir, f) for f in os.listdir(data_dir)])
+
+        # Preveri, da imamo slike
+        if len(self.image_paths) == 0:
+            raise FileNotFoundError(f"No images found in directory: {data_dir}")
+
+    def __len__(self):
+        return len(self.image_paths) // 3 # Število pacientov
+
+    def __getitem__(self, index):
+        # Preberi FBCT in CBCT za trenutnega pacienta
+        fbct_path = self.image_paths[3*index]
+        cbct_path = self.image_paths[3*index+1]
+
+        with open(fbct_path, 'rb') as f:
+            fbct = pickle.load(f)
+
+        with open(cbct_path, 'rb') as f:
+            cbct = pickle.load(f)
+
+        # Normalizacija na [0, 1]
+        fbct = (fbct - fbct.min()) / (fbct.max() - fbct.min())
+        cbct = (cbct - cbct.min()) / (cbct.max() - cbct.min())
+
+        # Dodaj dimenzijo kanala
+        fbct = fbct[None, ...]
+        cbct = cbct[None, ...]
+
+        # Uporabi transformacije, če so definirane
+        if self.transforms:
+            cbct, fbct = self.transforms([cbct, fbct])
+
+        # Pretvori v PyTorch tenzor
+        fbct = torch.from_numpy(fbct)
+        cbct = torch.from_numpy(cbct)
+
+        return cbct, fbct
+
+class ThoraxDatasetSequentialPost2(Dataset):
+    def __init__(self, data_dir, transforms=None):
+        """
+        Args:
+            data_dir (str): Pot do mape z vsemi slikami.
+            transforms (callable, optional): Transformacije za slike.
+        """
+        # Preveri vhodni argument
+        if not isinstance(data_dir, (str, os.PathLike)):
+            raise TypeError("data_dir must be a string or PathLike object, got {}".format(type(data_dir)))
+        
+        self.data_dir = data_dir
+        self.transforms = transforms
+
+        # Branje vseh poti do slik in sortiranje po vrstnem redu
+        self.image_paths = sorted([os.path.join(data_dir, f) for f in os.listdir(data_dir)])
+
+        # Preveri, da imamo slike
+        if len(self.image_paths) == 0:
+            raise FileNotFoundError(f"No images found in directory: {data_dir}")
+
+    def __len__(self):
+        return len(self.image_paths) // 3 # Število pacientov
+
+    def __getitem__(self, index):
+        # Preberi FBCT in CBCT2 za trenutnega pacienta
+        fbct_path = self.image_paths[3*index]
+        cbct2_path = self.image_paths[3*index+2]
+
+        with open(fbct_path, 'rb') as f:
+            fbct = pickle.load(f)
+
+        with open(cbct2_path, 'rb') as f:
+            cbct2 = pickle.load(f)
+
+        # Normalizacija na [0, 1]
+        fbct = (fbct - fbct.min()) / (fbct.max() - fbct.min())
+        cbct2 = (cbct2 - cbct2.min()) / (cbct2.max() - cbct2.min())
+
+        # Dodaj dimenzijo kanala
+        fbct = fbct[None, ...]
+        cbct2 = cbct2[None, ...]
+
+        # Uporabi transformacije, če so definirane
+        if self.transforms:
+            fbct, cbct2 = self.transforms([fbct, cbct2])
+
+        # Pretvori v PyTorch tenzor
+        fbct = torch.from_numpy(fbct)
+        cbct2 = torch.from_numpy(cbct2)
+
+        return cbct2, fbct 

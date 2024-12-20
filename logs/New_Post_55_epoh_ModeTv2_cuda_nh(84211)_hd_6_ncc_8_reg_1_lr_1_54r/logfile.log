@@ -1,0 +1,880 @@
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1979
+Iter 2 of 11 loss -0.1648
+Iter 3 of 11 loss -0.1563
+Iter 4 of 11 loss -0.1695
+Iter 5 of 11 loss -0.1902
+Iter 6 of 11 loss -0.1635
+Iter 7 of 11 loss -0.1841
+Iter 8 of 11 loss -0.1534
+Iter 9 of 11 loss -0.1547
+Iter 10 of 11 loss -0.1902
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 0 loss -0.1741
+0 : 0.048657588979805544
+0 : 0.024328794489902772
+0 : 0.016219196326601848
+Training Starts
+Iter 0 of 11 loss -0.1922
+Iter 1 of 11 loss -0.1527
+Iter 2 of 11 loss -0.1519
+Iter 3 of 11 loss -0.1887
+Iter 4 of 11 loss -0.1974
+Iter 5 of 11 loss -0.1625
+Iter 6 of 11 loss -0.1451
+Iter 7 of 11 loss -0.1793
+Iter 8 of 11 loss -0.1736
+Iter 9 of 11 loss -0.1587
+Iter 10 of 11 loss -0.1636
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 1 loss -0.1696
+1 : 0.02080901749575001
+1 : 0.010404508747875005
+1 : 0.0069363391652500035
+Training Starts
+Iter 0 of 11 loss -0.1830
+Iter 1 of 11 loss -0.1435
+Iter 2 of 11 loss -0.1780
+Iter 3 of 11 loss -0.1378
+Iter 4 of 11 loss -0.1528
+Iter 5 of 11 loss -0.1760
+Iter 6 of 11 loss -0.1580
+Iter 7 of 11 loss -0.1403
+Iter 8 of 11 loss -0.1779
+Iter 9 of 11 loss -0.1512
+Iter 10 of 11 loss -0.1715
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 2 loss -0.1609
+2 : 0.04621152321951842
+2 : 0.02310576160975921
+2 : 0.015403841073172808
+Training Starts
+Iter 0 of 11 loss -0.1324
+Iter 1 of 11 loss -0.1567
+Iter 2 of 11 loss -0.1407
+Iter 3 of 11 loss -0.1347
+Iter 4 of 11 loss -0.1711
+Iter 5 of 11 loss -0.1628
+Iter 6 of 11 loss -0.1669
+Iter 7 of 11 loss -0.1667
+Iter 8 of 11 loss -0.1771
+Iter 9 of 11 loss -0.1708
+Iter 10 of 11 loss -0.1508
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 3 loss -0.1573
+3 : 0.01710617058394585
+3 : 0.008553085291972925
+3 : 0.0057020568613152835
+Training Starts
+Iter 0 of 11 loss -0.1712
+Iter 1 of 11 loss -0.1338
+Iter 2 of 11 loss -0.1659
+Iter 3 of 11 loss -0.1632
+Iter 4 of 11 loss -0.1367
+Iter 5 of 11 loss -0.1635
+Iter 6 of 11 loss -0.1550
+Iter 7 of 11 loss -0.1599
+Iter 8 of 11 loss -0.1490
+Iter 9 of 11 loss -0.1388
+Iter 10 of 11 loss -0.1723
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 4 loss -0.1554
+4 : 0.018225551396977093
+4 : 0.009112775698488547
+4 : 0.006075183798992364
+Training Starts
+Iter 0 of 11 loss -0.1541
+Iter 1 of 11 loss -0.1335
+Iter 2 of 11 loss -0.1395
+Iter 3 of 11 loss -0.1694
+Iter 4 of 11 loss -0.1525
+Iter 5 of 11 loss -0.1309
+Iter 6 of 11 loss -0.1630
+Iter 7 of 11 loss -0.1290
+Iter 8 of 11 loss -0.1692
+Iter 9 of 11 loss -0.1466
+Iter 10 of 11 loss -0.1561
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 5 loss -0.1494
+5 : 0.014447049414313042
+5 : 0.007223524707156521
+5 : 0.004815683138104348
+Training Starts
+Iter 0 of 11 loss -0.1298
+Iter 1 of 11 loss -0.1499
+Iter 2 of 11 loss -0.1709
+Iter 3 of 11 loss -0.1338
+Iter 4 of 11 loss -0.1415
+Iter 5 of 11 loss -0.1225
+Iter 6 of 11 loss -0.1507
+Iter 7 of 11 loss -0.1525
+Iter 8 of 11 loss -0.1409
+Iter 9 of 11 loss -0.1568
+Iter 10 of 11 loss -0.1123
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 6 loss -0.1420
+6 : 0.00879579871885541
+6 : 0.004397899359427705
+6 : 0.0029319329062851367
+Training Starts
+Iter 0 of 11 loss -0.1389
+Iter 1 of 11 loss -0.1209
+Iter 2 of 11 loss -0.1462
+Iter 3 of 11 loss -0.1281
+Iter 4 of 11 loss -0.1361
+Iter 5 of 11 loss -0.1500
+Iter 6 of 11 loss -0.1574
+Iter 7 of 11 loss -0.1116
+Iter 8 of 11 loss -0.1508
+Iter 9 of 11 loss -0.1104
+Iter 10 of 11 loss -0.1506
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 7 loss -0.1364
+7 : 0.006040158893174411
+7 : 0.0030200794465872053
+7 : 0.0020133862977248034
+Training Starts
+Iter 0 of 11 loss -0.1326
+Iter 1 of 11 loss -0.1229
+Iter 2 of 11 loss -0.1077
+Iter 3 of 11 loss -0.1362
+Iter 4 of 11 loss -0.1398
+Iter 5 of 11 loss -0.1059
+Iter 6 of 11 loss -0.1442
+Iter 7 of 11 loss -0.1486
+Iter 8 of 11 loss -0.1237
+Iter 9 of 11 loss -0.1497
+Iter 10 of 11 loss -0.1372
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 8 loss -0.1317
+8 : 0.005222005814037033
+8 : 0.0026110029070185166
+8 : 0.001740668604679011
+Training Starts
+Iter 0 of 11 loss -0.1478
+Iter 1 of 11 loss -0.1434
+Iter 2 of 11 loss -0.1434
+Iter 3 of 11 loss -0.1234
+Iter 4 of 11 loss -0.1080
+Iter 5 of 11 loss -0.1263
+Iter 6 of 11 loss -0.1477
+Iter 7 of 11 loss -0.1393
+Iter 8 of 11 loss -0.1401
+Iter 9 of 11 loss -0.1176
+Iter 10 of 11 loss -0.1437
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 9 loss -0.1346
+9 : 0.004909795465377581
+9 : 0.0024548977326887904
+9 : 0.0016365984884591936
+Training Starts
+Iter 0 of 11 loss -0.1439
+Iter 1 of 11 loss -0.1081
+Iter 2 of 11 loss -0.1468
+Iter 3 of 11 loss -0.1270
+Iter 4 of 11 loss -0.1454
+Iter 5 of 11 loss -0.1427
+Iter 6 of 11 loss -0.1395
+Iter 7 of 11 loss -0.1224
+Iter 8 of 11 loss -0.1387
+Iter 9 of 11 loss -0.1429
+Iter 10 of 11 loss -0.1165
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 10 loss -0.1340
+10 : 0.004684961524793149
+10 : 0.0023424807623965743
+10 : 0.0015616538415977163
+Training Starts
+Iter 0 of 11 loss -0.1456
+Iter 1 of 11 loss -0.1415
+Iter 2 of 11 loss -0.1063
+Iter 3 of 11 loss -0.1159
+Iter 4 of 11 loss -0.1376
+Iter 5 of 11 loss -0.1211
+Iter 6 of 11 loss -0.1341
+Iter 7 of 11 loss -0.1444
+Iter 8 of 11 loss -0.1390
+Iter 9 of 11 loss -0.1390
+Iter 10 of 11 loss -0.1262
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 11 loss -0.1319
+11 : 0.004611783420040633
+11 : 0.0023058917100203164
+11 : 0.0015372611400135442
+Training Starts
+Iter 0 of 11 loss -0.1393
+Iter 1 of 11 loss -0.1258
+Iter 2 of 11 loss -0.1309
+Iter 3 of 11 loss -0.1051
+Iter 4 of 11 loss -0.1433
+Iter 5 of 11 loss -0.1380
+Iter 6 of 11 loss -0.1430
+Iter 7 of 11 loss -0.1343
+Iter 8 of 11 loss -0.1185
+Iter 9 of 11 loss -0.1133
+Iter 10 of 11 loss -0.1347
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 12 loss -0.1297
+12 : 0.00451753943605754
+12 : 0.00225876971802877
+12 : 0.0015058464786858467
+Training Starts
+Iter 0 of 11 loss -0.1421
+Iter 1 of 11 loss -0.1366
+Iter 2 of 11 loss -0.1350
+Iter 3 of 11 loss -0.1247
+Iter 4 of 11 loss -0.1328
+Iter 5 of 11 loss -0.1120
+Iter 6 of 11 loss -0.1035
+Iter 7 of 11 loss -0.1408
+Iter 8 of 11 loss -0.1173
+Iter 9 of 11 loss -0.1268
+Iter 10 of 11 loss -0.1328
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 13 loss -0.1277
+13 : 0.004634379184968356
+13 : 0.002317189592484178
+13 : 0.0015447930616561186
+Training Starts
+Iter 0 of 11 loss -0.1303
+Iter 1 of 11 loss -0.1115
+Iter 2 of 11 loss -0.1400
+Iter 3 of 11 loss -0.1021
+Iter 4 of 11 loss -0.1274
+Iter 5 of 11 loss -0.1319
+Iter 6 of 11 loss -0.1171
+Iter 7 of 11 loss -0.1419
+Iter 8 of 11 loss -0.1344
+Iter 9 of 11 loss -0.1326
+Iter 10 of 11 loss -0.1171
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 14 loss -0.1260
+14 : 0.004622414489603848
+14 : 0.002311207244801924
+14 : 0.0015408048298679493
+Training Starts
+Iter 0 of 11 loss -0.1313
+Iter 1 of 11 loss -0.1171
+Iter 2 of 11 loss -0.1082
+Iter 3 of 11 loss -0.0988
+Iter 4 of 11 loss -0.1237
+Iter 5 of 11 loss -0.1330
+Iter 6 of 11 loss -0.1288
+Iter 7 of 11 loss -0.1355
+Iter 8 of 11 loss -0.1146
+Iter 9 of 11 loss -0.1319
+Iter 10 of 11 loss -0.1425
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 15 loss -0.1241
+15 : 0.004846248254973945
+15 : 0.0024231241274869724
+15 : 0.001615416084991315
+Training Starts
+Iter 0 of 11 loss -0.1316
+Iter 1 of 11 loss -0.1317
+Iter 2 of 11 loss -0.1325
+Iter 3 of 11 loss -0.1421
+Iter 4 of 11 loss -0.1162
+Iter 5 of 11 loss -0.1139
+Iter 6 of 11 loss -0.1265
+Iter 7 of 11 loss -0.1061
+Iter 8 of 11 loss -0.1345
+Iter 9 of 11 loss -0.0986
+Iter 10 of 11 loss -0.1165
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 16 loss -0.1228
+16 : 0.004946451260823735
+16 : 0.0024732256304118676
+16 : 0.0016488170869412451
+Training Starts
+Iter 0 of 11 loss -0.1312
+Iter 1 of 11 loss -0.0972
+Iter 2 of 11 loss -0.1061
+Iter 3 of 11 loss -0.1412
+Iter 4 of 11 loss -0.1302
+Iter 5 of 11 loss -0.1300
+Iter 6 of 11 loss -0.1126
+Iter 7 of 11 loss -0.1162
+Iter 8 of 11 loss -0.1254
+Iter 9 of 11 loss -0.1341
+Iter 10 of 11 loss -0.1102
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 17 loss -0.1213
+17 : 0.004999835024471281
+17 : 0.0024999175122356406
+17 : 0.0016666116748237604
+Training Starts
+Iter 0 of 11 loss -0.1249
+Iter 1 of 11 loss -0.1308
+Iter 2 of 11 loss -0.1288
+Iter 3 of 11 loss -0.1059
+Iter 4 of 11 loss -0.1290
+Iter 5 of 11 loss -0.1410
+Iter 6 of 11 loss -0.1135
+Iter 7 of 11 loss -0.1333
+Iter 8 of 11 loss -0.1159
+Iter 9 of 11 loss -0.0958
+Iter 10 of 11 loss -0.1116
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 18 loss -0.1210
+18 : 0.00474215456950145
+18 : 0.002371077284750725
+18 : 0.0015807181898338165
+Training Starts
+Iter 0 of 11 loss -0.1112
+Iter 1 of 11 loss -0.1272
+Iter 2 of 11 loss -0.1416
+Iter 3 of 11 loss -0.1225
+Iter 4 of 11 loss -0.1291
+Iter 5 of 11 loss -0.1327
+Iter 6 of 11 loss -0.1274
+Iter 7 of 11 loss -0.1129
+Iter 8 of 11 loss -0.0954
+Iter 9 of 11 loss -0.1154
+Iter 10 of 11 loss -0.1039
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 19 loss -0.1199
+19 : 0.004570284978465912
+19 : 0.002285142489232956
+19 : 0.0015234283261553038
+Training Starts
+Iter 0 of 11 loss -0.1415
+Iter 1 of 11 loss -0.1270
+Iter 2 of 11 loss -0.1040
+Iter 3 of 11 loss -0.1282
+Iter 4 of 11 loss -0.1219
+Iter 5 of 11 loss -0.0951
+Iter 6 of 11 loss -0.1324
+Iter 7 of 11 loss -0.1119
+Iter 8 of 11 loss -0.1107
+Iter 9 of 11 loss -0.1247
+Iter 10 of 11 loss -0.1152
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 20 loss -0.1193
+20 : 0.004552657239723131
+20 : 0.0022763286198615655
+20 : 0.0015175524132410437
+Training Starts
+Iter 0 of 11 loss -0.1152
+Iter 1 of 11 loss -0.1152
+Iter 2 of 11 loss -0.1324
+Iter 3 of 11 loss -0.1263
+Iter 4 of 11 loss -0.1245
+Iter 5 of 11 loss -0.1220
+Iter 6 of 11 loss -0.1039
+Iter 7 of 11 loss -0.1265
+Iter 8 of 11 loss -0.0955
+Iter 9 of 11 loss -0.1410
+Iter 10 of 11 loss -0.1120
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 21 loss -0.1195
+21 : 0.0046127979990209945
+21 : 0.0023063989995104972
+21 : 0.0015375993330069982
+Training Starts
+Iter 0 of 11 loss -0.1154
+Iter 1 of 11 loss -0.1113
+Iter 2 of 11 loss -0.1265
+Iter 3 of 11 loss -0.1216
+Iter 4 of 11 loss -0.1119
+Iter 5 of 11 loss -0.1408
+Iter 6 of 11 loss -0.0960
+Iter 7 of 11 loss -0.1254
+Iter 8 of 11 loss -0.1265
+Iter 9 of 11 loss -0.1324
+Iter 10 of 11 loss -0.1034
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 22 loss -0.1192
+22 : 0.004641567817790171
+22 : 0.0023207839088950854
+22 : 0.0015471892725967237
+Training Starts
+Iter 0 of 11 loss -0.1112
+Iter 1 of 11 loss -0.1034
+Iter 2 of 11 loss -0.1265
+Iter 3 of 11 loss -0.1213
+Iter 4 of 11 loss -0.1157
+Iter 5 of 11 loss -0.0949
+Iter 6 of 11 loss -0.1115
+Iter 7 of 11 loss -0.1259
+Iter 8 of 11 loss -0.1316
+Iter 9 of 11 loss -0.1263
+Iter 10 of 11 loss -0.1396
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 23 loss -0.1189
+23 : 0.005252438139655975
+23 : 0.0026262190698279875
+23 : 0.0017508127132186584
+Training Starts
+Iter 0 of 11 loss -0.1254
+Iter 1 of 11 loss -0.1093
+Iter 2 of 11 loss -0.1200
+Iter 3 of 11 loss -0.1315
+Iter 4 of 11 loss -0.1286
+Iter 5 of 11 loss -0.1058
+Iter 6 of 11 loss -0.1133
+Iter 7 of 11 loss -0.0947
+Iter 8 of 11 loss -0.0989
+Iter 9 of 11 loss -0.1398
+Iter 10 of 11 loss -0.1257
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 24 loss -0.1176
+24 : 0.005279819054652174
+24 : 0.002639909527326087
+24 : 0.001759939684884058
+Training Starts
+Iter 0 of 11 loss -0.0987
+Iter 1 of 11 loss -0.1258
+Iter 2 of 11 loss -0.1046
+Iter 3 of 11 loss -0.1287
+Iter 4 of 11 loss -0.0942
+Iter 5 of 11 loss -0.1239
+Iter 6 of 11 loss -0.1207
+Iter 7 of 11 loss -0.1323
+Iter 8 of 11 loss -0.1395
+Iter 9 of 11 loss -0.1138
+Iter 10 of 11 loss -0.1099
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 25 loss -0.1174
+25 : 0.005890226293844915
+25 : 0.0029451131469224573
+25 : 0.0019634087646149714
+Training Starts
+Iter 0 of 11 loss -0.1326
+Iter 1 of 11 loss -0.0954
+Iter 2 of 11 loss -0.1139
+Iter 3 of 11 loss -0.1059
+Iter 4 of 11 loss -0.1390
+Iter 5 of 11 loss -0.1298
+Iter 6 of 11 loss -0.1253
+Iter 7 of 11 loss -0.1099
+Iter 8 of 11 loss -0.1261
+Iter 9 of 11 loss -0.1219
+Iter 10 of 11 loss -0.0997
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 26 loss -0.1181
+26 : 0.0062139998740506535
+26 : 0.0031069999370253267
+26 : 0.0020713332913502177
+Training Starts
+Iter 0 of 11 loss -0.1221
+Iter 1 of 11 loss -0.1246
+Iter 2 of 11 loss -0.0987
+Iter 3 of 11 loss -0.1082
+Iter 4 of 11 loss -0.1327
+Iter 5 of 11 loss -0.1385
+Iter 6 of 11 loss -0.1309
+Iter 7 of 11 loss -0.1138
+Iter 8 of 11 loss -0.1256
+Iter 9 of 11 loss -0.0960
+Iter 10 of 11 loss -0.1068
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 27 loss -0.1180
+27 : 0.00594280887542379
+27 : 0.002971404437711895
+27 : 0.00198093629180793
+Training Starts
+Iter 0 of 11 loss -0.1386
+Iter 1 of 11 loss -0.1255
+Iter 2 of 11 loss -0.1233
+Iter 3 of 11 loss -0.1079
+Iter 4 of 11 loss -0.0984
+Iter 5 of 11 loss -0.0978
+Iter 6 of 11 loss -0.1173
+Iter 7 of 11 loss -0.1124
+Iter 8 of 11 loss -0.1027
+Iter 9 of 11 loss -0.1183
+Iter 10 of 11 loss -0.1238
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 28 loss -0.1151
+28 : 0.002918045809341635
+28 : 0.0014590229046708176
+28 : 0.0009726819364472117
+Training Starts
+Iter 0 of 11 loss -0.1215
+Iter 1 of 11 loss -0.1181
+Iter 2 of 11 loss -0.1184
+Iter 3 of 11 loss -0.1226
+Iter 4 of 11 loss -0.1404
+Iter 5 of 11 loss -0.1144
+Iter 6 of 11 loss -0.1053
+Iter 7 of 11 loss -0.1248
+Iter 8 of 11 loss -0.0929
+Iter 9 of 11 loss -0.1149
+Iter 10 of 11 loss -0.1026
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 29 loss -0.1160
+29 : 0.002471708220145456
+29 : 0.001235854110072728
+29 : 0.0008239027400484853
+Training Starts
+Iter 0 of 11 loss -0.1163
+Iter 1 of 11 loss -0.1255
+Iter 2 of 11 loss -0.0969
+Iter 3 of 11 loss -0.1098
+Iter 4 of 11 loss -0.1241
+Iter 5 of 11 loss -0.1165
+Iter 6 of 11 loss -0.1060
+Iter 7 of 11 loss -0.1396
+Iter 8 of 11 loss -0.1216
+Iter 9 of 11 loss -0.1220
+Iter 10 of 11 loss -0.1257
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 30 loss -0.1185
+30 : 0.0022824583263714596
+30 : 0.0011412291631857298
+30 : 0.0007608194421238199
+Training Starts
+Iter 0 of 11 loss -0.1227
+Iter 1 of 11 loss -0.1012
+Iter 2 of 11 loss -0.1220
+Iter 3 of 11 loss -0.1085
+Iter 4 of 11 loss -0.1257
+Iter 5 of 11 loss -0.1112
+Iter 6 of 11 loss -0.1166
+Iter 7 of 11 loss -0.1266
+Iter 8 of 11 loss -0.1174
+Iter 9 of 11 loss -0.1387
+Iter 10 of 11 loss -0.1237
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 31 loss -0.1195
+31 : 0.002198290467303458
+31 : 0.001099145233651729
+31 : 0.0007327634891011527
+Training Starts
+Iter 0 of 11 loss -0.1215
+Iter 1 of 11 loss -0.1086
+Iter 2 of 11 loss -0.1264
+Iter 3 of 11 loss -0.1040
+Iter 4 of 11 loss -0.1260
+Iter 5 of 11 loss -0.1253
+Iter 6 of 11 loss -0.1161
+Iter 7 of 11 loss -0.1225
+Iter 8 of 11 loss -0.1111
+Iter 9 of 11 loss -0.1378
+Iter 10 of 11 loss -0.1172
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 32 loss -0.1197
+32 : 0.002141441087393544
+32 : 0.001070720543696772
+32 : 0.0007138136957978479
+Training Starts
+Iter 0 of 11 loss -0.1092
+Iter 1 of 11 loss -0.1251
+Iter 2 of 11 loss -0.1258
+Iter 3 of 11 loss -0.1029
+Iter 4 of 11 loss -0.1205
+Iter 5 of 11 loss -0.1148
+Iter 6 of 11 loss -0.1103
+Iter 7 of 11 loss -0.1374
+Iter 8 of 11 loss -0.1155
+Iter 9 of 11 loss -0.1187
+Iter 10 of 11 loss -0.1212
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 33 loss -0.1183
+33 : 0.002148317029684074
+33 : 0.001074158514842037
+33 : 0.000716105676561358
+Training Starts
+Iter 0 of 11 loss -0.1242
+Iter 1 of 11 loss -0.1149
+Iter 2 of 11 loss -0.1195
+Iter 3 of 11 loss -0.1381
+Iter 4 of 11 loss -0.1016
+Iter 5 of 11 loss -0.1141
+Iter 6 of 11 loss -0.1092
+Iter 7 of 11 loss -0.1061
+Iter 8 of 11 loss -0.1231
+Iter 9 of 11 loss -0.1199
+Iter 10 of 11 loss -0.1137
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 34 loss -0.1168
+34 : 0.0021501219347703133
+34 : 0.0010750609673851567
+34 : 0.0007167073115901044
+Training Starts
+Iter 0 of 11 loss -0.1371
+Iter 1 of 11 loss -0.1136
+Iter 2 of 11 loss -0.1187
+Iter 3 of 11 loss -0.1235
+Iter 4 of 11 loss -0.1209
+Iter 5 of 11 loss -0.1138
+Iter 6 of 11 loss -0.1003
+Iter 7 of 11 loss -0.1184
+Iter 8 of 11 loss -0.1091
+Iter 9 of 11 loss -0.1223
+Iter 10 of 11 loss -0.1056
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 35 loss -0.1167
+35 : 0.0021729013979690207
+35 : 0.0010864506989845103
+35 : 0.0007243004659896736
+Training Starts
+Iter 0 of 11 loss -0.1220
+Iter 1 of 11 loss -0.1231
+Iter 2 of 11 loss -0.0993
+Iter 3 of 11 loss -0.1367
+Iter 4 of 11 loss -0.1184
+Iter 5 of 11 loss -0.1130
+Iter 6 of 11 loss -0.1161
+Iter 7 of 11 loss -0.1083
+Iter 8 of 11 loss -0.1045
+Iter 9 of 11 loss -0.1215
+Iter 10 of 11 loss -0.1125
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 36 loss -0.1160
+36 : 0.0021597553569684845
+36 : 0.0010798776784842422
+36 : 0.0007199184523228281
+Training Starts
+Iter 0 of 11 loss -0.1227
+Iter 1 of 11 loss -0.1239
+Iter 2 of 11 loss -0.1126
+Iter 3 of 11 loss -0.1049
+Iter 4 of 11 loss -0.1215
+Iter 5 of 11 loss -0.0996
+Iter 6 of 11 loss -0.1191
+Iter 7 of 11 loss -0.1178
+Iter 8 of 11 loss -0.1368
+Iter 9 of 11 loss -0.1125
+Iter 10 of 11 loss -0.1082
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 37 loss -0.1163
+37 : 0.0021574664308091906
+37 : 0.0010787332154045953
+37 : 0.0007191554769363969
+Training Starts
+Iter 0 of 11 loss -0.1049
+Iter 1 of 11 loss -0.1176
+Iter 2 of 11 loss -0.1187
+Iter 3 of 11 loss -0.1172
+Iter 4 of 11 loss -0.1125
+Iter 5 of 11 loss -0.1358
+Iter 6 of 11 loss -0.1126
+Iter 7 of 11 loss -0.1080
+Iter 8 of 11 loss -0.0998
+Iter 9 of 11 loss -0.1224
+Iter 10 of 11 loss -0.1213
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 38 loss -0.1155
+38 : 0.002140371549951369
+38 : 0.0010701857749756845
+38 : 0.000713457183317123
+Training Starts
+Iter 0 of 11 loss -0.1231
+Iter 1 of 11 loss -0.1124
+Iter 2 of 11 loss -0.0998
+Iter 3 of 11 loss -0.1212
+Iter 4 of 11 loss -0.1175
+Iter 5 of 11 loss -0.1224
+Iter 6 of 11 loss -0.1084
+Iter 7 of 11 loss -0.1365
+Iter 8 of 11 loss -0.1049
+Iter 9 of 11 loss -0.1169
+Iter 10 of 11 loss -0.1126
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 39 loss -0.1160
+39 : 0.002129099600045517
+39 : 0.0010645498000227585
+39 : 0.000709699866681839
+Training Starts
+Iter 0 of 11 loss -0.1121
+Iter 1 of 11 loss -0.1359
+Iter 2 of 11 loss -0.1166
+Iter 3 of 11 loss -0.0999
+Iter 4 of 11 loss -0.1173
+Iter 5 of 11 loss -0.1048
+Iter 6 of 11 loss -0.1126
+Iter 7 of 11 loss -0.1231
+Iter 8 of 11 loss -0.1224
+Iter 9 of 11 loss -0.1030
+Iter 10 of 11 loss -0.1194
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 40 loss -0.1152
+40 : 0.001959571048011106
+40 : 0.000979785524005553
+40 : 0.0006531903493370354
+Training Starts
+Iter 0 of 11 loss -0.1043
+Iter 1 of 11 loss -0.1197
+Iter 2 of 11 loss -0.1054
+Iter 3 of 11 loss -0.0934
+Iter 4 of 11 loss -0.1168
+Iter 5 of 11 loss -0.1140
+Iter 6 of 11 loss -0.0956
+Iter 7 of 11 loss -0.1189
+Iter 8 of 11 loss -0.1106
+Iter 9 of 11 loss -0.0955
+Iter 10 of 11 loss -0.1192
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 41 loss -0.1085
+41 : 0.0018735331446670248
+41 : 0.0009367665723335124
+41 : 0.0006245110482223416
+Training Starts
+Iter 0 of 11 loss -0.0993
+Iter 1 of 11 loss -0.1185
+Iter 2 of 11 loss -0.1209
+Iter 3 of 11 loss -0.0955
+Iter 4 of 11 loss -0.1128
+Iter 5 of 11 loss -0.1188
+Iter 6 of 11 loss -0.1238
+Iter 7 of 11 loss -0.0935
+Iter 8 of 11 loss -0.1084
+Iter 9 of 11 loss -0.1271
+Iter 10 of 11 loss -0.0974
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 42 loss -0.1106
+42 : 0.0019361934022108574
+42 : 0.0009680967011054287
+42 : 0.0006453978007369525
+Training Starts
+Iter 0 of 11 loss -0.1201
+Iter 1 of 11 loss -0.1270
+Iter 2 of 11 loss -0.0998
+Iter 3 of 11 loss -0.0963
+Iter 4 of 11 loss -0.0940
+Iter 5 of 11 loss -0.1176
+Iter 6 of 11 loss -0.1060
+Iter 7 of 11 loss -0.1216
+Iter 8 of 11 loss -0.1223
+Iter 9 of 11 loss -0.1021
+Iter 10 of 11 loss -0.1123
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 43 loss -0.1108
+43 : 0.0019411060172950408
+43 : 0.0009705530086475204
+43 : 0.000647035339098347
+Training Starts
+Iter 0 of 11 loss -0.1001
+Iter 1 of 11 loss -0.1210
+Iter 2 of 11 loss -0.1267
+Iter 3 of 11 loss -0.1122
+Iter 4 of 11 loss -0.1248
+Iter 5 of 11 loss -0.0915
+Iter 6 of 11 loss -0.0944
+Iter 7 of 11 loss -0.1223
+Iter 8 of 11 loss -0.0960
+Iter 9 of 11 loss -0.1181
+Iter 10 of 11 loss -0.1050
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 44 loss -0.1102
+44 : 0.0019280494110131398
+44 : 0.0009640247055065699
+44 : 0.00064268313700438
+Training Starts
+Iter 0 of 11 loss -0.1176
+Iter 1 of 11 loss -0.1219
+Iter 2 of 11 loss -0.0957
+Iter 3 of 11 loss -0.1262
+Iter 4 of 11 loss -0.1101
+Iter 5 of 11 loss -0.1222
+Iter 6 of 11 loss -0.1210
+Iter 7 of 11 loss -0.0938
+Iter 8 of 11 loss -0.1002
+Iter 9 of 11 loss -0.1005
+Iter 10 of 11 loss -0.1043
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 45 loss -0.1103
+45 : 0.0019258167238829368
+45 : 0.0009629083619414684
+45 : 0.000641938907960979
+Training Starts
+Iter 0 of 11 loss -0.1230
+Iter 1 of 11 loss -0.1005
+Iter 2 of 11 loss -0.1110
+Iter 3 of 11 loss -0.1220
+Iter 4 of 11 loss -0.0938
+Iter 5 of 11 loss -0.1260
+Iter 6 of 11 loss -0.0966
+Iter 7 of 11 loss -0.1208
+Iter 8 of 11 loss -0.1045
+Iter 9 of 11 loss -0.1179
+Iter 10 of 11 loss -0.1001
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 46 loss -0.1106
+46 : 0.0019279831314727629
+46 : 0.0009639915657363814
+46 : 0.0006426610438242543
+Training Starts
+Iter 0 of 11 loss -0.0939
+Iter 1 of 11 loss -0.1112
+Iter 2 of 11 loss -0.0952
+Iter 3 of 11 loss -0.1175
+Iter 4 of 11 loss -0.1259
+Iter 5 of 11 loss -0.1221
+Iter 6 of 11 loss -0.1048
+Iter 7 of 11 loss -0.1219
+Iter 8 of 11 loss -0.0961
+Iter 9 of 11 loss -0.0996
+Iter 10 of 11 loss -0.1207
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 47 loss -0.1099
+47 : 0.0019265953585787222
+47 : 0.0009632976792893611
+47 : 0.000642198452859574
+Training Starts
+Iter 0 of 11 loss -0.1110
+Iter 1 of 11 loss -0.0937
+Iter 2 of 11 loss -0.0952
+Iter 3 of 11 loss -0.1000
+Iter 4 of 11 loss -0.1043
+Iter 5 of 11 loss -0.1258
+Iter 6 of 11 loss -0.1208
+Iter 7 of 11 loss -0.1217
+Iter 8 of 11 loss -0.0899
+Iter 9 of 11 loss -0.1207
+Iter 10 of 11 loss -0.1176
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 48 loss -0.1091
+48 : 0.0019376395030647818
+48 : 0.0009688197515323909
+48 : 0.0006458798343549273
+Training Starts
+Iter 0 of 11 loss -0.1043
+Iter 1 of 11 loss -0.1220
+Iter 2 of 11 loss -0.1007
+Iter 3 of 11 loss -0.1266
+Iter 4 of 11 loss -0.1173
+Iter 5 of 11 loss -0.1117
+Iter 6 of 11 loss -0.0955
+Iter 7 of 11 loss -0.0938
+Iter 8 of 11 loss -0.1209
+Iter 9 of 11 loss -0.0997
+Iter 10 of 11 loss -0.1226
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 49 loss -0.1105
+49 : 0.001961520804504436
+49 : 0.000980760402252218
+49 : 0.0006538402681681454
+Training Starts
+Iter 0 of 11 loss -0.0956
+Iter 1 of 11 loss -0.0971
+Iter 2 of 11 loss -0.1002
+Iter 3 of 11 loss -0.0934
+Iter 4 of 11 loss -0.1209
+Iter 5 of 11 loss -0.1230
+Iter 6 of 11 loss -0.1052
+Iter 7 of 11 loss -0.1175
+Iter 8 of 11 loss -0.1115
+Iter 9 of 11 loss -0.1223
+Iter 10 of 11 loss -0.1273
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 50 loss -0.1104
+50 : 0.0019688673473001964
+50 : 0.0009844336736500982
+50 : 0.0006562891157667321
+Training Starts
+Iter 0 of 11 loss -0.1043
+Iter 1 of 11 loss -0.1175
+Iter 2 of 11 loss -0.1209
+Iter 3 of 11 loss -0.0939
+Iter 4 of 11 loss -0.1001
+Iter 5 of 11 loss -0.0954
+Iter 6 of 11 loss -0.1226
+Iter 7 of 11 loss -0.1272
+Iter 8 of 11 loss -0.1013
+Iter 9 of 11 loss -0.1116
+Iter 10 of 11 loss -0.1223
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 51 loss -0.1106
+51 : 0.0019635558463159965
+51 : 0.0009817779231579983
+51 : 0.0006545186154386655
+Training Starts
+Iter 0 of 11 loss -0.1222
+Iter 1 of 11 loss -0.1209
+Iter 2 of 11 loss -0.0956
+Iter 3 of 11 loss -0.1247
+Iter 4 of 11 loss -0.1049
+Iter 5 of 11 loss -0.0997
+Iter 6 of 11 loss -0.1115
+Iter 7 of 11 loss -0.1015
+Iter 8 of 11 loss -0.0936
+Iter 9 of 11 loss -0.1174
+Iter 10 of 11 loss -0.1271
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 52 loss -0.1108
+52 : 0.001963289662586982
+52 : 0.000981644831293491
+52 : 0.000654429887528994
+Training Starts
+Iter 0 of 11 loss -0.1010
+Iter 1 of 11 loss -0.1115
+Iter 2 of 11 loss -0.1222
+Iter 3 of 11 loss -0.1270
+Iter 4 of 11 loss -0.1049
+Iter 5 of 11 loss -0.1000
+Iter 6 of 11 loss -0.0954
+Iter 7 of 11 loss -0.1179
+Iter 8 of 11 loss -0.1209
+Iter 9 of 11 loss -0.0994
+Iter 10 of 11 loss -0.1235
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 53 loss -0.1112
+53 : 0.0020109452877798487
+53 : 0.0010054726438899243
+53 : 0.0006703150959266163
+Training Starts
+Iter 0 of 11 loss -0.1238
+Iter 1 of 11 loss -0.1062
+Iter 2 of 11 loss -0.1021
+Iter 3 of 11 loss -0.1284
+Iter 4 of 11 loss -0.1240
+Iter 5 of 11 loss -0.1251
+Iter 6 of 11 loss -0.1037
+Iter 7 of 11 loss -0.1141
+Iter 8 of 11 loss -0.1229
+Iter 9 of 11 loss -0.0967
+Iter 10 of 11 loss -0.1007
+New_Post_55_epoh_ModeTv2_cuda_nh(84211)_hd_6_ncc_8_reg_1_lr_1_54r/ Epoch 54 loss -0.1134
+54 : 0.0021049893757027474
+54 : 0.0010524946878513737
+54 : 0.0007016631252342491
