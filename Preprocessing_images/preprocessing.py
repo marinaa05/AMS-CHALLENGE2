@@ -3,6 +3,7 @@ import pickle
 import nibabel as nib
 import numpy as np
 from skimage.transform import resize
+import argparse
 
 class Preprocessing:
     def __init__(self, input_dir, output_dir, new_shape):
@@ -96,9 +97,15 @@ class Preprocessing:
                     print(f"An error occurred while processing {file_name}: {e}")
 
 if __name__ == "__main__":
-    input_dir = "Release_06_12_23/imagesTr"
-    output_dir = "test_code_for_preprocessing"
-    new_shape = (256 // 1.5, 192 // 1.5, 192 // 1.5)  # Example shape
+    parser = argparse.ArgumentParser(description="Preprocess .nii.gz files to .pkl with resizing and normalization.")
+    parser.add_argument('--input_dir', type=str, required=True, help="Path to the directory containing .nii.gz files.")
+    parser.add_argument('--output_dir', type=str, required=True, help="Path to the directory to save processed .pkl files.")
+    args = parser.parse_args()
 
-    preprocessing = Preprocessing(input_dir, output_dir, new_shape)
+    new_shape = (int(256 // 1.5), int(192 // 1.5), int(192 // 1.5))
+
+    preprocessing = Preprocessing(args.input_dir, args.output_dir, new_shape)
     preprocessing.process_images()
+
+    # Example:
+    # python script_name.py --input_dir ./Release_06_12_23/imagesTr --output_dir ./processed_files
