@@ -95,7 +95,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     axes = ['X', 'Y', 'Z']
     slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
 
-    output_dir = "new_infer_slike2"
+    output_dir = "2_new_infer_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Prikaz za vse osi (x, y, z)
@@ -183,7 +183,7 @@ def resize_volume(volume, output_shape):
 def main():
 
     stdy_idx = 0
-    output_dir = "new_infer_results2"
+    output_dir = "2_new_infer_results"
     os.makedirs(output_dir, exist_ok=True)
 
     val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
@@ -191,7 +191,7 @@ def main():
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'New_Train_Post_ModeTv2/'
+    model_folder = '2_New_Train_Post_ModeTv2/'
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -279,9 +279,9 @@ def main():
 
             # Shranjevanje v NIfTI formatu
             save_nifti(fbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_fixed.nii.gz"))
-            save_nifti(cbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_moving.nii.gz"))
-            save_nifti(fbct_def_resized, os.path.join(output_dir, f"patient_{stdy_idx}_transformed.nii.gz"))
-            save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
+            # save_nifti(cbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_moving.nii.gz"))
+            # save_nifti(fbct_def_resized, os.path.join(output_dir, f"patient_{stdy_idx}_transformed.nii.gz"))
+            # save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
 
             print(f"Deformacijsko polje za pacienta {stdy_idx + 1} uspešno shranjeno.")
 

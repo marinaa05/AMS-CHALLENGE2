@@ -62,7 +62,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 0
+    max_epoch = 50
     img_size = (170, 128, 128)
     cont_training = False
 

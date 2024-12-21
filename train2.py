@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from natsort import natsorted
 from models_cuda import ModeTv2_model
 import random
+import argparse
 
 def same_seeds(seed):
     random.seed(seed)
@@ -39,18 +40,15 @@ class Logger(object):
 
 GPU_iden = 1
 
-def main():
+def main(train_dir, val_dir):
     batch_size = 1
-
-    train_dir = 'Release_pkl/Resized_normalized_imagesTr/Train/'
-    val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
     
-    weights = [1, 1]  # loss weights
+    weights = [1, 1]
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'Train2_Pre_ModeTv2/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'ModeTv2/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -201,6 +199,12 @@ def save_checkpoint(state, save_dir='models', filename='checkpoint.pth.tar', max
         model_lists = natsorted(glob.glob(save_dir + '*'))
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description="Train ModeTv2 Model")
+    parser.add_argument('--train_dir', type=str, required=True, help="Path to the training data directory")
+    parser.add_argument('--val_dir', type=str, required=True, help="Path to the validation data directory")
+    args = parser.parse_args()
+
     '''
     GPU configuration
     '''
@@ -214,4 +218,4 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main()
+    main(args.train_dir, args.val_dir)

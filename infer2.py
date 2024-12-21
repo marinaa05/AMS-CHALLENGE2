@@ -220,7 +220,7 @@ def main():
         trans.NumpyType((np.float32, np.float32)),
                                         ])
     
-    test_set = datasets.ThoraxDatasetSequentialPre(val_dir, transforms=test_composed)
+    test_set = datasets.ThoraxDatasetSequentialPost(val_dir, transforms=test_composed)
 
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
 
