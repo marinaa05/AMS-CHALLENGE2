@@ -476,7 +476,7 @@ class ThoraxDatasetSequentialPost2(Dataset):
 
         # Uporabi transformacije, če so definirane
         if self.transforms:
-            fbct, cbct2 = self.transforms([fbct, cbct2])
+            cbct2, fbct = self.transforms([cbct2, fbct])
 
         # Pretvori v PyTorch tenzor
         fbct = torch.from_numpy(fbct)

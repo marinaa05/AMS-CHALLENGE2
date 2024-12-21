@@ -1,0 +1,800 @@
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1624
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1680
+Iter 5 of 11 loss -0.1836
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1523
+Iter 9 of 11 loss -0.1521
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 0 loss -0.1704
+0 : 0.007980845968234536
+0 : 0.003990422984117268
+0 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1836
+Iter 1 of 11 loss -0.1521
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1523
+Iter 7 of 11 loss -0.1840
+Iter 8 of 11 loss -0.1762
+Iter 9 of 11 loss -0.1624
+Iter 10 of 11 loss -0.1680
+New_Train_Post_ModeTv2/ Epoch 1 loss -0.1704
+1 : 0.007980845968234536
+1 : 0.003990422984117268
+1 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1539
+Iter 2 of 11 loss -0.1903
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1762
+Iter 6 of 11 loss -0.1680
+Iter 7 of 11 loss -0.1521
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1560
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 2 loss -0.1704
+2 : 0.007980845968234536
+2 : 0.003990422984117268
+2 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1523
+Iter 1 of 11 loss -0.1624
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1903
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1836
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1955
+Iter 9 of 11 loss -0.1840
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 3 loss -0.1704
+3 : 0.007980845968234536
+3 : 0.003990422984117268
+3 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1840
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1762
+Iter 4 of 11 loss -0.1521
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1539
+Iter 10 of 11 loss -0.1955
+New_Train_Post_ModeTv2/ Epoch 4 loss -0.1704
+4 : 0.007980845968234536
+4 : 0.003990422984117268
+4 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1560
+Iter 3 of 11 loss -0.1840
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1539
+Iter 8 of 11 loss -0.1955
+Iter 9 of 11 loss -0.1624
+Iter 10 of 11 loss -0.1680
+New_Train_Post_ModeTv2/ Epoch 5 loss -0.1704
+5 : 0.007980845968234536
+5 : 0.003990422984117268
+5 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1539
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1560
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1680
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1523
+New_Train_Post_ModeTv2/ Epoch 6 loss -0.1704
+6 : 0.007980845968234536
+6 : 0.003990422984117268
+6 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1521
+Iter 2 of 11 loss -0.1762
+Iter 3 of 11 loss -0.1560
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1903
+Iter 7 of 11 loss -0.1539
+Iter 8 of 11 loss -0.1840
+Iter 9 of 11 loss -0.1523
+Iter 10 of 11 loss -0.1955
+New_Train_Post_ModeTv2/ Epoch 7 loss -0.1704
+7 : 0.007980845968234536
+7 : 0.003990422984117268
+7 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1836
+Iter 1 of 11 loss -0.1521
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1840
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1523
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1680
+Iter 10 of 11 loss -0.1955
+New_Train_Post_ModeTv2/ Epoch 8 loss -0.1704
+8 : 0.007980845968234536
+8 : 0.003990422984117268
+8 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1624
+Iter 3 of 11 loss -0.1560
+Iter 4 of 11 loss -0.1523
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1680
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1840
+Iter 9 of 11 loss -0.1539
+Iter 10 of 11 loss -0.1762
+New_Train_Post_ModeTv2/ Epoch 9 loss -0.1704
+9 : 0.007980845968234536
+9 : 0.003990422984117268
+9 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1680
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1903
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1840
+Iter 7 of 11 loss -0.1560
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 10 loss -0.1704
+10 : 0.007980845968234536
+10 : 0.003990422984117268
+10 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1680
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1523
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1840
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1624
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 11 loss -0.1704
+11 : 0.007980845968234536
+11 : 0.003990422984117268
+11 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1521
+Iter 2 of 11 loss -0.1840
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1680
+Iter 5 of 11 loss -0.1762
+Iter 6 of 11 loss -0.1903
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1539
+Iter 10 of 11 loss -0.1624
+New_Train_Post_ModeTv2/ Epoch 12 loss -0.1704
+12 : 0.007980845968234536
+12 : 0.003990422984117268
+12 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1680
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1624
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1539
+Iter 6 of 11 loss -0.1523
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1840
+Iter 10 of 11 loss -0.1762
+New_Train_Post_ModeTv2/ Epoch 13 loss -0.1704
+13 : 0.007980845968234536
+13 : 0.003990422984117268
+13 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1840
+Iter 1 of 11 loss -0.1539
+Iter 2 of 11 loss -0.1680
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1762
+Iter 9 of 11 loss -0.1836
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 14 loss -0.1704
+14 : 0.007980845968234536
+14 : 0.003990422984117268
+14 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1560
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1840
+Iter 5 of 11 loss -0.1762
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1680
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1836
+Iter 10 of 11 loss -0.1903
+New_Train_Post_ModeTv2/ Epoch 15 loss -0.1704
+15 : 0.007980845968234536
+15 : 0.003990422984117268
+15 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1762
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1840
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1539
+Iter 8 of 11 loss -0.1680
+Iter 9 of 11 loss -0.1523
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 16 loss -0.1704
+16 : 0.007980845968234536
+16 : 0.003990422984117268
+16 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1762
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1955
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1560
+Iter 8 of 11 loss -0.1624
+Iter 9 of 11 loss -0.1680
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 17 loss -0.1704
+17 : 0.007980845968234536
+17 : 0.003990422984117268
+17 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1762
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1903
+Iter 6 of 11 loss -0.1840
+Iter 7 of 11 loss -0.1680
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1523
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 18 loss -0.1704
+18 : 0.007980845968234536
+18 : 0.003990422984117268
+18 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1521
+Iter 1 of 11 loss -0.1762
+Iter 2 of 11 loss -0.1903
+Iter 3 of 11 loss -0.1624
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1836
+Iter 7 of 11 loss -0.1840
+Iter 8 of 11 loss -0.1523
+Iter 9 of 11 loss -0.1560
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 19 loss -0.1704
+19 : 0.007980845968234536
+19 : 0.003990422984117268
+19 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1955
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1523
+Iter 6 of 11 loss -0.1680
+Iter 7 of 11 loss -0.1840
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 20 loss -0.1704
+20 : 0.007980845968234536
+20 : 0.003990422984117268
+20 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1560
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1680
+Iter 3 of 11 loss -0.1955
+Iter 4 of 11 loss -0.1762
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1539
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1523
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 21 loss -0.1704
+21 : 0.007980845968234536
+21 : 0.003990422984117268
+21 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1560
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1624
+Iter 4 of 11 loss -0.1521
+Iter 5 of 11 loss -0.1903
+Iter 6 of 11 loss -0.1523
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1955
+Iter 9 of 11 loss -0.1680
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 22 loss -0.1704
+22 : 0.007980845968234536
+22 : 0.003990422984117268
+22 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1840
+Iter 1 of 11 loss -0.1539
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1624
+Iter 4 of 11 loss -0.1560
+Iter 5 of 11 loss -0.1523
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1955
+Iter 8 of 11 loss -0.1680
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1903
+New_Train_Post_ModeTv2/ Epoch 23 loss -0.1704
+23 : 0.007980845968234536
+23 : 0.003990422984117268
+23 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1624
+Iter 3 of 11 loss -0.1680
+Iter 4 of 11 loss -0.1762
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1523
+Iter 8 of 11 loss -0.1539
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1836
+New_Train_Post_ModeTv2/ Epoch 24 loss -0.1704
+24 : 0.007980845968234536
+24 : 0.003990422984117268
+24 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1539
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1521
+Iter 3 of 11 loss -0.1762
+Iter 4 of 11 loss -0.1523
+Iter 5 of 11 loss -0.1955
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1680
+Iter 8 of 11 loss -0.1903
+Iter 9 of 11 loss -0.1560
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 25 loss -0.1704
+25 : 0.007980845968234536
+25 : 0.003990422984117268
+25 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1680
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1560
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1903
+Iter 5 of 11 loss -0.1762
+Iter 6 of 11 loss -0.1955
+Iter 7 of 11 loss -0.1840
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1624
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 26 loss -0.1704
+26 : 0.007980845968234536
+26 : 0.003990422984117268
+26 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1840
+Iter 4 of 11 loss -0.1680
+Iter 5 of 11 loss -0.1903
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1560
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1523
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 27 loss -0.1704
+27 : 0.007980845968234536
+27 : 0.003990422984117268
+27 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1840
+Iter 4 of 11 loss -0.1539
+Iter 5 of 11 loss -0.1523
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1560
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1680
+New_Train_Post_ModeTv2/ Epoch 28 loss -0.1704
+28 : 0.007980845968234536
+28 : 0.003990422984117268
+28 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1762
+Iter 2 of 11 loss -0.1840
+Iter 3 of 11 loss -0.1836
+Iter 4 of 11 loss -0.1903
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1680
+Iter 8 of 11 loss -0.1523
+Iter 9 of 11 loss -0.1624
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 29 loss -0.1704
+29 : 0.007980845968234536
+29 : 0.003990422984117268
+29 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1523
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1840
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1539
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1762
+Iter 9 of 11 loss -0.1955
+Iter 10 of 11 loss -0.1680
+New_Train_Post_ModeTv2/ Epoch 30 loss -0.1704
+30 : 0.007980845968234536
+30 : 0.003990422984117268
+30 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1762
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1680
+Iter 5 of 11 loss -0.1521
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 31 loss -0.1704
+31 : 0.007980845968234536
+31 : 0.003990422984117268
+31 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1539
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1840
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 32 loss -0.1704
+32 : 0.007980845968234536
+32 : 0.003990422984117268
+32 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1539
+Iter 1 of 11 loss -0.1680
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1840
+Iter 10 of 11 loss -0.1762
+New_Train_Post_ModeTv2/ Epoch 33 loss -0.1704
+33 : 0.007980845968234536
+33 : 0.003990422984117268
+33 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1680
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1523
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1539
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 34 loss -0.1704
+34 : 0.007980845968234536
+34 : 0.003990422984117268
+34 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1560
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1680
+Iter 4 of 11 loss -0.1840
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1523
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1836
+Iter 10 of 11 loss -0.1539
+New_Train_Post_ModeTv2/ Epoch 35 loss -0.1704
+35 : 0.007980845968234536
+35 : 0.003990422984117268
+35 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1762
+Iter 1 of 11 loss -0.1680
+Iter 2 of 11 loss -0.1523
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1624
+Iter 6 of 11 loss -0.1840
+Iter 7 of 11 loss -0.1521
+Iter 8 of 11 loss -0.1539
+Iter 9 of 11 loss -0.1836
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 36 loss -0.1704
+36 : 0.007980845968234536
+36 : 0.003990422984117268
+36 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1680
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1560
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1836
+Iter 5 of 11 loss -0.1523
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1955
+Iter 8 of 11 loss -0.1903
+Iter 9 of 11 loss -0.1624
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 37 loss -0.1704
+37 : 0.007980845968234536
+37 : 0.003990422984117268
+37 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1539
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1840
+Iter 3 of 11 loss -0.1762
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1903
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1521
+Iter 8 of 11 loss -0.1523
+Iter 9 of 11 loss -0.1680
+Iter 10 of 11 loss -0.1836
+New_Train_Post_ModeTv2/ Epoch 38 loss -0.1704
+38 : 0.007980845968234536
+38 : 0.003990422984117268
+38 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1840
+Iter 1 of 11 loss -0.1624
+Iter 2 of 11 loss -0.1523
+Iter 3 of 11 loss -0.1836
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1521
+Iter 7 of 11 loss -0.1903
+Iter 8 of 11 loss -0.1539
+Iter 9 of 11 loss -0.1762
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 39 loss -0.1704
+39 : 0.007980845968234536
+39 : 0.003990422984117268
+39 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1903
+Iter 2 of 11 loss -0.1762
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1539
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1840
+Iter 8 of 11 loss -0.1680
+Iter 9 of 11 loss -0.1521
+Iter 10 of 11 loss -0.1836
+New_Train_Post_ModeTv2/ Epoch 40 loss -0.1704
+40 : 0.007980845968234536
+40 : 0.003990422984117268
+40 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1521
+Iter 1 of 11 loss -0.1680
+Iter 2 of 11 loss -0.1624
+Iter 3 of 11 loss -0.1523
+Iter 4 of 11 loss -0.1762
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1840
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1955
+Iter 9 of 11 loss -0.1539
+Iter 10 of 11 loss -0.1903
+New_Train_Post_ModeTv2/ Epoch 41 loss -0.1704
+41 : 0.007980845968234536
+41 : 0.003990422984117268
+41 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1521
+Iter 1 of 11 loss -0.1903
+Iter 2 of 11 loss -0.1836
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1560
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1523
+Iter 8 of 11 loss -0.1624
+Iter 9 of 11 loss -0.1680
+Iter 10 of 11 loss -0.1840
+New_Train_Post_ModeTv2/ Epoch 42 loss -0.1704
+42 : 0.007980845968234536
+42 : 0.003990422984117268
+42 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1560
+Iter 1 of 11 loss -0.1680
+Iter 2 of 11 loss -0.1521
+Iter 3 of 11 loss -0.1539
+Iter 4 of 11 loss -0.1523
+Iter 5 of 11 loss -0.1903
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1762
+Iter 8 of 11 loss -0.1836
+Iter 9 of 11 loss -0.1840
+Iter 10 of 11 loss -0.1955
+New_Train_Post_ModeTv2/ Epoch 43 loss -0.1704
+43 : 0.007980845968234536
+43 : 0.003990422984117268
+43 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1521
+Iter 1 of 11 loss -0.1560
+Iter 2 of 11 loss -0.1680
+Iter 3 of 11 loss -0.1955
+Iter 4 of 11 loss -0.1762
+Iter 5 of 11 loss -0.1840
+Iter 6 of 11 loss -0.1523
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1539
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1624
+New_Train_Post_ModeTv2/ Epoch 44 loss -0.1704
+44 : 0.007980845968234536
+44 : 0.003990422984117268
+44 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1903
+Iter 1 of 11 loss -0.1762
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1680
+Iter 4 of 11 loss -0.1955
+Iter 5 of 11 loss -0.1836
+Iter 6 of 11 loss -0.1560
+Iter 7 of 11 loss -0.1523
+Iter 8 of 11 loss -0.1521
+Iter 9 of 11 loss -0.1840
+Iter 10 of 11 loss -0.1624
+New_Train_Post_ModeTv2/ Epoch 45 loss -0.1704
+45 : 0.007980845968234536
+45 : 0.003990422984117268
+45 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1762
+Iter 1 of 11 loss -0.1840
+Iter 2 of 11 loss -0.1955
+Iter 3 of 11 loss -0.1836
+Iter 4 of 11 loss -0.1523
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1539
+Iter 7 of 11 loss -0.1560
+Iter 8 of 11 loss -0.1624
+Iter 9 of 11 loss -0.1903
+Iter 10 of 11 loss -0.1521
+New_Train_Post_ModeTv2/ Epoch 46 loss -0.1704
+46 : 0.007980845968234536
+46 : 0.003990422984117268
+46 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1523
+Iter 1 of 11 loss -0.1955
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1903
+Iter 4 of 11 loss -0.1680
+Iter 5 of 11 loss -0.1762
+Iter 6 of 11 loss -0.1624
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1840
+Iter 9 of 11 loss -0.1521
+Iter 10 of 11 loss -0.1560
+New_Train_Post_ModeTv2/ Epoch 47 loss -0.1704
+47 : 0.007980845968234536
+47 : 0.003990422984117268
+47 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1955
+Iter 1 of 11 loss -0.1523
+Iter 2 of 11 loss -0.1539
+Iter 3 of 11 loss -0.1521
+Iter 4 of 11 loss -0.1624
+Iter 5 of 11 loss -0.1680
+Iter 6 of 11 loss -0.1762
+Iter 7 of 11 loss -0.1836
+Iter 8 of 11 loss -0.1840
+Iter 9 of 11 loss -0.1560
+Iter 10 of 11 loss -0.1903
+New_Train_Post_ModeTv2/ Epoch 48 loss -0.1704
+48 : 0.007980845968234536
+48 : 0.003990422984117268
+48 : 0.002660281989411512
+Training Starts
+Iter 0 of 11 loss -0.1624
+Iter 1 of 11 loss -0.1836
+Iter 2 of 11 loss -0.1840
+Iter 3 of 11 loss -0.1680
+Iter 4 of 11 loss -0.1903
+Iter 5 of 11 loss -0.1955
+Iter 6 of 11 loss -0.1539
+Iter 7 of 11 loss -0.1523
+Iter 8 of 11 loss -0.1560
+Iter 9 of 11 loss -0.1521
+Iter 10 of 11 loss -0.1762
+New_Train_Post_ModeTv2/ Epoch 49 loss -0.1704
+49 : 0.007980845968234536
+49 : 0.003990422984117268
+49 : 0.002660281989411512

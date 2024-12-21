@@ -95,7 +95,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
     axes = ['X', 'Y', 'Z']
     slices = [slice_idx[0], slice_idx[1], slice_idx[2]]
 
-    output_dir = "New_55_post_final_slike"
+    output_dir = "neeew_slike"
     os.makedirs(output_dir, exist_ok=True)
 
     # Prikaz za vse osi (x, y, z)
@@ -129,7 +129,7 @@ def visualize_registration(fixed, moving_image, moving_transformed, deformation_
         print(f"Slika shranjena: {output_file}")
 
 # Vizualizacija deformacijskega polja
-def visualize_and_save_flow(flow, patient_idx, output_dir="def_polje"):
+def visualize_and_save_flow(flow, patient_idx, output_dir="new_def_polje"):
     """
     Vizualizira deformacijsko polje in shrani slike v mapo.
     
@@ -180,10 +180,47 @@ def resize_volume(volume, output_shape):
     """
     return resize(volume, output_shape, mode='constant', anti_aliasing=True)
 
+def save_transformed_image(transformed_image, patient_idx, output_dir="transf_image"):
+    """
+    Prikaže in shrani transformirano sliko v mapo.
+
+    Args:
+        transformed_image (numpy array): Transformirana slika (3D array).
+        patient_idx (int): Indeks trenutnega pacienta.
+        output_dir (str): Pot do mape za shranjevanje slik.
+    """
+    # Ustvari mapo, če ne obstaja
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Preveri, če je slika PyTorch tensor, in jo pretvori v numpy
+    if isinstance(transformed_image, torch.Tensor):
+        transformed_image = transformed_image.detach().cpu().numpy()
+
+    # Izračun sredinskega reza (z-os)
+    slice_idx = transformed_image.shape[0] // 2  # Sredina volumna
+
+    # Pridobi sredinski rez slike
+    middle_slice = transformed_image[slice_idx, :, :]
+
+    # Prikaz slike
+    plt.figure(figsize=(8, 8))
+    plt.imshow(middle_slice, cmap='gray')
+    plt.title(f"Transformed Image - Patient {patient_idx}")
+    plt.axis('off')
+
+    # Shrani sliko
+    output_file = os.path.join(output_dir, f"patient_{patient_idx}_transformed.png")
+    plt.savefig(output_file)
+    plt.close()
+    print(f"Transformirana slika shranjena: {output_file}")
+
+
 def main():
 
     stdy_idx = 0
-    output_dir = "new_dof_post_final_55/poskus2"
+
+    # Ustvari datoteko za shranjevanje DOF:
+    output_dir = "neeew2"
     os.makedirs(output_dir, exist_ok=True)
 
     val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
@@ -191,7 +228,8 @@ def main():
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'New_Post_55_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    channels = 8
+    model_folder = 'New_Post_55_epoh_ModeTv2/'
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -199,8 +237,10 @@ def main():
     target_size = (256, 192, 192)  # Ciljna velikost
 
     # Inicializacija modela
-    model = ModeTv2_model(img_size)
+    model = ModeTv2_model(img_size, head_dim=head_dim, num_heads=num_heads,channels=channels//2, scale=1)
+
     best_model = torch.load(model_dir + natsorted(os.listdir(model_dir))[model_idx])['state_dict']
+
     print('Best model: {}'.format(natsorted(os.listdir(model_dir))[model_idx]))
 
     model.load_state_dict(best_model)
@@ -224,37 +264,40 @@ def main():
 
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
 
+    eval_dsc_def = AverageMeter()
+    eval_dsc_raw = AverageMeter()
     eval_det = utils.AverageMeter()
 
     with torch.no_grad():
         stdy_idx = 0
         for stdy_idx, data in enumerate(test_loader):
+
             print(f"Processing patient {stdy_idx + 1}/{len(test_loader.dataset)}")
             model.eval()
 
             # Pridobi pare FBCT in CBCT
-            cbct1, fbct = [d.cuda() for d in data]
+            cbct, fbct = [d.cuda() for d in data]
 
             # Napovej deformacijsko polje in transformirano sliko
-            cbct1_def, flow = model(cbct1, fbct)
+            fbct_def, flow = model(fbct, cbct)
+
             flow = flow / flow.abs().max()   # Normalizacija na interval [-1, 1]
     
-            tar = cbct1.detach().cpu().numpy()[0, 0, :, :, :]
+            tar = cbct.detach().cpu().numpy()[0, 0, :, :, :]
 
-            print(f"Flow shape: {flow.shape}")
-            print(f"Flow stats: min={flow.min().item()}, max={flow.max().item()}, mean={flow.mean().item()}")
+            # print(f"Flow shape: {flow.shape}")
+            # print(f"Flow stats: min={flow.min().item()}, max={flow.max().item()}, mean={flow.mean().item()}")
             
-
             jac_det = utils.jacobian_determinant_vxm(flow.detach().cpu().numpy()[0, :, :, :, :])
             print(f"Flow stats for patient {stdy_idx + 1}: mean={flow.mean().item()}, max={flow.max().item()}, min={flow.min().item()}")
 
-            eval_det.update(np.sum(jac_det <= 0) / np.prod(tar.shape), cbct1.size(0))
+            eval_det.update(np.sum(jac_det <= 0) / np.prod(tar.shape), fbct.size(0))
 
             # Klic funkcije visualize_registration z novimi podatki
             visualize_registration(
-                fixed=cbct1[0, 0],  # Ciljna slika (CBCT)
+                fixed=cbct[0, 0],  # Ciljna slika (CBCT)
                 moving_image=fbct[0, 0],  # Premaknjena slika (FBCT)
-                moving_transformed=cbct1_def[0, 0],  # Transformirana premaknjena slika
+                moving_transformed=fbct_def[0, 0],  # Transformirana premaknjena slika
                 deformation_field=flow[0],  # Deformacijsko polje
                 stdy_idx=stdy_idx
             )
@@ -266,24 +309,29 @@ def main():
 
             # Pretvorba v numpy in sprememba velikosti
             fbct_np = fbct[0, 0].detach().cpu().numpy()
-            cbct1_np = cbct1[0, 0].detach().cpu().numpy()
-            cbct1_def_np = cbct1_def[0, 0].detach().cpu().numpy()
+            cbct1_np = cbct[0, 0].detach().cpu().numpy()
+            cbct_def_np = fbct_def[0, 0].detach().cpu().numpy()
             flow_np = flow[0].detach().cpu().numpy()
 
             fbct_resized = resize_volume(fbct_np, target_size)
             cbct1_resized = resize_volume(cbct1_np, target_size)
-            cbct1_def_resized = resize_volume(cbct1_def_np, target_size)
+            fbct_def_resized = resize_volume(cbct_def_np, target_size)
             flow_resized = np.stack([
                 resize_volume(flow_np[i], target_size) for i in range(flow_np.shape[0])
             ], axis=-1)  # Oblika: (256, 192, 192, 3)
 
             # Shranjevanje v NIfTI formatu
-            #save_nifti(fbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_fixed.nii.gz"))
-            #save_nifti(cbct1_resized, os.path.join(output_dir, f"patient_{stdy_idx}_moving.nii.gz"))
-            #save_nifti(cbct1_def_resized, os.path.join(output_dir, f"patient_{stdy_idx}_transformed.nii.gz"))
-            # save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
+            # save_nifti(fbct_resized, os.path.join(output_dir, f"patient_{stdy_idx}_fixed.nii.gz"))
+            # save_nifti(cbct1_resized, os.path.join(output_dir, f"patient_{stdy_idx}_moving.nii.gz"))
+            # save_nifti(fbct_def_resized, os.path.join(output_dir, f"patient_{stdy_idx}_transformed.nii.gz"))
+            save_nifti(flow_resized, os.path.join(output_dir, f"patient_{stdy_idx}_flow.nii.gz"))
 
             print(f"Deformacijsko polje za pacienta {stdy_idx + 1} uspešno shranjeno.")
+            
+            # save_transformed_image(transformed_image=fbct[0, 0], patient_idx=stdy_idx, output_dir="pre_transform_moving")
+            # save_transformed_image(transformed_image=cbct[0, 0], patient_idx=stdy_idx, output_dir="pre_transform_fixed")
+            # save_transformed_image(transformed_image=cbct_def[0, 0], patient_idx=stdy_idx)
+            # visualize_and_save_flow(flow.detach().cpu().numpy()[0], patient_idx=stdy_idx)
 
             stdy_idx += 1
 
@@ -302,7 +350,7 @@ if __name__ == '__main__':
     '''
     GPU configuration
     '''
-    GPU_iden = 0  # 0 ali 1
+    GPU_iden = 1  # 0 ali 1
     GPU_num = torch.cuda.device_count()
     print('Number of GPU: ' + str(GPU_num))
     for GPU_idx in range(GPU_num):

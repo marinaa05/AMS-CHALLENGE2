@@ -50,7 +50,7 @@ def main():
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'New_Post_55_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'New_Post_55_epoh_ModeTv2/'
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -62,7 +62,7 @@ def main():
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 55
+    max_epoch = 0
     img_size = (170, 128, 128)
     cont_training = False
 
@@ -125,18 +125,22 @@ def main():
             model.train()
 
             cbct1, fbct = [d.cuda() for d in data]
-            output = model(cbct1, fbct)
-            
-            adjust_learning_rate(optimizer, epoch, max_epoch, lr)
 
-            loss = sum(loss_fn(output[n], fbct) * weights[n] for n, loss_fn in enumerate(criterions))
-            loss_all.update(loss.item(), fbct.numel())
+            output = model(fbct, cbct1)
 
+            loss = 0
+            loss_vals = []
+            for n, loss_function in enumerate(criterions):
+                curr_loss = loss_function(output[n], cbct1) * weights[n]
+                loss_vals.append(curr_loss)
+                loss += curr_loss
+
+            loss_all.update(loss.item(), cbct1.numel())
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
 
-            print(f'Iter {idx} of {len(train_loader)} loss {loss.item():.4f}')
+            print('Iter {} of {} loss {:.4f}, Img Sim: {:.6f}, Reg: {:.6f}'.format(idx, len(train_loader), loss.item(), loss_vals[0].item(), loss_vals[1].item()))
 
         print('{} Epoch {} loss {:.4f}'.format(save_dir, epoch, loss_all.avg))
         print('Epoch {} loss {:.4f}'.format(epoch, loss_all.avg), file=f, end=' ')
@@ -150,14 +154,23 @@ def main():
                 model.eval()
                 cbct1, fbct = [d.cuda() for d in data]
                 
-                cbct1_def, flow = model(cbct1, fbct)
+                fbct_def, flow = model(fbct, cbct1)
 
-                dsc = utils.dice_val_VOI(cbct1_def, cbct1)
+                dsc = utils.dice_val_VOI(fbct_def, cbct1)
                 eval_dsc.update(dsc.item(), cbct1.size(0))
                 print(epoch, ':',eval_dsc.avg)
 
         best_dsc = max(eval_dsc.avg, best_dsc)
         print(eval_dsc.avg, file=f)
+
+        test_loader = DataLoader(val_set, batch_size=1, shuffle=False)
+        with torch.no_grad():
+            for idx, data in enumerate(test_loader):
+                cbct1, fbct = [d.cuda() for d in data]
+                fbct_def, flow = model(fbct, cbct1)
+
+                fig = comput_fig(fbct_def)
+                plt.savefig(f'results/test_{idx}_fbct_def.png')
 
         save_checkpoint({
             'epoch': epoch + 1,

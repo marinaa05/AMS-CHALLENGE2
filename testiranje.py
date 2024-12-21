@@ -5,17 +5,25 @@ import numpy as np
 from data import datasets, trans
 from torchvision import transforms
 import nibabel as nib
+import matplotlib.pyplot as plt
+import pickle
 
-file_path = "new_dof_post_final_55/def_polja_new/disp_0011_0002_0011_0000.nii.gz"
+# Pot do mape s podatki
+data_dir = "Release_pkl/Resized_normalized_imagesTr/Train"
 
-# Naloži datoteko
-img = nib.load(file_path)
-data = img.get_fdata()
+import os
 
-# Dimenzije in število točk
-print(f"Dimenzije podatkov: {data.shape}")
-print(f"Skupno število točk: {np.prod(data.shape)}")
-print(f"Velikost podatkov (približno v MB): {data.nbytes / (1024 ** 2):.2f} MB")
+# Inicializiraj razred
+dataset = datasets.ThoraxDatasetSequentialPre(data_dir)
+
+# Preveri, ali so poti pravilno prebrane in sortirane
+print("Prebrane poti:")
+for path in dataset.image_paths:
+    print(path)
+
+
+
+
 
 
 

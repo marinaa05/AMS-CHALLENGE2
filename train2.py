@@ -50,7 +50,7 @@ def main():
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'Pre_150_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    save_dir = 'Train2_Pre_ModeTv2/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
