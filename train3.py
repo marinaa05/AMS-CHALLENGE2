@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from natsort import natsorted
 from models_cuda import ModeTv2_model
 import random
+import argparse
 
 def same_seeds(seed):
     random.seed(seed)
@@ -214,6 +215,12 @@ def save_checkpoint(state, save_dir='models', filename='checkpoint.pth.tar', max
         model_lists = natsorted(glob.glob(save_dir + '*'))
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description="Train ModeTv2 Model")
+    parser.add_argument('--train_dir', type=str, required=True, help="Path to the training data directory")
+    parser.add_argument('--val_dir', type=str, required=True, help="Path to the validation data directory")
+    args = parser.parse_args()
+
     '''
     GPU configuration
     '''
@@ -227,4 +234,4 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main()
+    main(args.train_dir, args.val_dir)

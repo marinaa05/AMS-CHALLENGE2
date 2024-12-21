@@ -215,6 +215,7 @@ if __name__ == '__main__':
     '''
     GPU configuration
     '''
+    
     GPU_num = torch.cuda.device_count()
     print('Number of GPU: ' + str(GPU_num))
     for GPU_idx in range(GPU_num):
