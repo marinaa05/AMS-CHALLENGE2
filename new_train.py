@@ -40,18 +40,19 @@ class Logger(object):
 
 GPU_iden = 0
 
-def main(train_dir, val_dir):
-    batch_size = 1
+def main(train_dir, val_dir, lr, weights, max_epoch, batch_size, save_dir):
+
+    # batch_size = 1
 
     # train_dir = 'Release_pkl/Resized_normalized_imagesTr/Train/'
     # val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
     
-    weights = [1, 1]  # loss weights
-    lr = 0.001
+    # weights = [1, 1]  # loss weights
+    # lr = 0.001
     head_dim = 6
     num_heads = [8,4,2,1,1]
     channels = 8
-    save_dir = 'ModeTv2/'.format(*num_heads, head_dim,channels,weights[0], weights[1], lr)
+    # save_dir = 'ModeTv2/'
 
     if not os.path.exists('experiments/' + save_dir):
         os.makedirs('experiments/' + save_dir)
@@ -63,7 +64,7 @@ def main(train_dir, val_dir):
     f = open(os.path.join('logs/'+save_dir, 'losses and dice' + ".txt"), "a")
 
     epoch_start = 0
-    max_epoch = 50
+    # max_epoch = 50
     img_size = (170, 128, 128)
     cont_training = False
 
@@ -210,6 +211,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train ModeTv2 Model")
     parser.add_argument('--train_dir', type=str, required=True, help="Path to the training data directory")
     parser.add_argument('--val_dir', type=str, required=True, help="Path to the validation data directory")
+    parser.add_argument('--lr', type=float, required=True, help="Learning rate for training")
+    parser.add_argument('--weights', type=float, nargs=2, required=True, help="Loss weights for the task (two values required)")
+    parser.add_argument('--max_epoch', type=int, required=True, help="Maximum number of training epochs")
+    parser.add_argument('--batch_size', type=int, required=True, help="Batch size")
+    parser.add_argument('--save_dir', type=str, required=True, help="Path where to save results")
     args = parser.parse_args()
 
     '''
@@ -225,4 +231,14 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main(args.train_dir, args.val_dir)
+    main(args.train_dir, args.val_dir, args.lr, args.weights, args.max_epoch, args.batch_size, args.save_dir)
+
+# Usage:
+    # python new_train.py \
+    # --train_dir Release_pkl/Resized_normalized_imagesTr/Train/ \
+    # --val_dir Release_pkl/Resized_normalized_imagesTr/Val/ \
+    # --lr 0.001 \
+    # --weights 1 1 \
+    # --max_epoch 50 \
+    # --batch_size 1 \
+    # --save_dir ModeTv2/

@@ -14,6 +14,7 @@ from models_cuda import ModeTv2_model
 import random
 import nibabel as nib
 from skimage.transform import resize
+import argparse
 
 def same_seeds(seed):
     # Python built-in random module
@@ -180,18 +181,18 @@ def resize_volume(volume, output_shape):
     """
     return resize(volume, output_shape, mode='constant', anti_aliasing=True)
 
-def main():
+def main(output_dir, val_dir, model_folder):
 
     stdy_idx = 0
-    output_dir = "dof_pre_final_150"
+    # output_dir = "dof_pre_final_150"
     os.makedirs(output_dir, exist_ok=True)
 
-    val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
+    # val_dir = 'Release_pkl/Resized_normalized_imagesTr/Val/'
     weights = [1, 1]  # loss weights
     lr = 0.0001
     head_dim = 6
     num_heads = [8,4,2,1,1]
-    model_folder = 'Pre_150_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
+    # model_folder = 'Pre_150_epoh_ModeTv2_cuda_nh({}{}{}{}{})_hd_{}_ncc_{}_reg_{}_lr_{}_54r/'.format(*num_heads, head_dim,weights[0], weights[1], lr)
     model_idx = -1
     model_dir = 'experiments/' + model_folder
 
@@ -299,6 +300,13 @@ def main():
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description="Inference and Evaluation")
+    parser.add_argument('--output_dir', type=str, required=True, help="Path to the saved files (moving, fixed img, def. field)")
+    parser.add_argument('--val_dir', type=str, required=True, help="Path to the validation data directory")
+    parser.add_argument('--model_folder', type=str, required=True, help="Path to the folder containing the model files")
+    args = parser.parse_args()
+
     '''
     GPU configuration
     '''
@@ -312,4 +320,4 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main()
+    main(args.output_dir, args.val_dir, args.model_folder)
