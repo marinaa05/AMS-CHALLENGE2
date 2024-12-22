@@ -181,7 +181,7 @@ def resize_volume(volume, output_shape):
     """
     return resize(volume, output_shape, mode='constant', anti_aliasing=True)
 
-def main(output_dir, val_dir, model_folder):
+def main(output_dir, val_dir, model_folder, dataset_class):
 
     stdy_idx = 0
     # output_dir = "2_new_infer_results"
@@ -221,7 +221,7 @@ def main(output_dir, val_dir, model_folder):
         trans.NumpyType((np.float32, np.float32)),
                                         ])
     
-    test_set = new_datasets.ThoraxDatasetSequentialPost(val_dir, transforms=test_composed)
+    test_set = dataset_class(val_dir, transforms=test_composed)
 
     test_loader = DataLoader(test_set, batch_size=1, shuffle=False, num_workers=0, pin_memory=True, drop_last=True)
 
@@ -303,6 +303,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', type=str, required=True, help="Path to the saved files (moving, fixed img, def. field)")
     parser.add_argument('--val_dir', type=str, required=True, help="Path to the validation data directory")
     parser.add_argument('--model_folder', type=str, required=True, help="Path to the folder containing the model files")
+    parser.add_argument('--task', type=str, required=True, choices=['pre', 'post'], 
+                        help="Task type: 'pre' for preoperative or 'post' for postoperative dataset")
     args = parser.parse_args()
     
     '''
@@ -318,5 +320,12 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main(args.output_dir, args.val_dir, args.model_folder)
+
+    # Determine dataset class based on task argument
+    if args.task == 'pre':
+        dataset_class = new_datasets.ThoraxDatasetSequentialPre
+    elif args.task == 'post':
+        dataset_class = new_datasets.ThoraxDatasetSequentialPost
+
+    main(args.output_dir, args.val_dir, args.model_folder, dataset_class)
 

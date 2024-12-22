@@ -40,7 +40,7 @@ class Logger(object):
 
 GPU_iden = 1
 
-def main(train_dir, val_dir, lr, weights, max_epoch, batch_size, save_dir):
+def main(train_dir, val_dir, lr, weights, max_epoch, batch_size, save_dir, dataset_class):
     # batch_size = 1
     
     # weights = [1, 1]
@@ -100,8 +100,8 @@ def main(train_dir, val_dir, lr, weights, max_epoch, batch_size, save_dir):
         trans.NumpyType((np.float32, np.float32)),
                                        ])
 
-    train_set = datasets.ThoraxDatasetSequentialPre(train_dir, transforms=train_composed)
-    val_set = datasets.ThoraxDatasetSequentialPre(val_dir, transforms=val_composed)
+    train_set = dataset_class(train_dir, transforms=train_composed)
+    val_set = dataset_class(val_dir, transforms=val_composed)
 
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
@@ -208,6 +208,8 @@ if __name__ == '__main__':
     parser.add_argument('--max_epoch', type=int, required=True, help="Maximum number of training epochs")
     parser.add_argument('--batch_size', type=int, required=True, help="Batch size")
     parser.add_argument('--save_dir', type=str, required=True, help="Path where to save results")
+    parser.add_argument('--task', type=str, required=True, choices=['pre', 'post'], 
+                        help="Task type: 'pre' for preoperative or 'post' for postoperative dataset")
     args = parser.parse_args()
 
     '''
@@ -223,4 +225,11 @@ if __name__ == '__main__':
     GPU_avai = torch.cuda.is_available()
     print('Currently using: ' + torch.cuda.get_device_name(GPU_iden))
     print('If the GPU is available? ' + str(GPU_avai))
-    main(args.train_dir, args.val_dir, args.lr, args.weights, args.max_epoch, args.batch_size, args.save_dir)
+
+    # Determine dataset class based on task argument
+    if args.task == 'pre':
+        dataset_class = datasets.ThoraxDatasetSequentialPre
+    elif args.task == 'post':
+        dataset_class = datasets.ThoraxDatasetSequentialPost
+
+    main(args.train_dir, args.val_dir, args.lr, args.weights, args.max_epoch, args.batch_size, args.save_dir, dataset_class)

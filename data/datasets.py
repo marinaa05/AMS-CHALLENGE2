@@ -274,6 +274,7 @@ class ThoraxDatasetSequentialPre(Dataset):
         Args:
             data_dir (str): Pot do mape z vsemi slikami.
             transforms (callable, optional): Transformacije za slike.
+            Vrne pare slik (fbct, cbct), kjer fbct je fixed img, cbct (pre-operative) pa moving img.
         """
         # Preveri vhodni argument
         if not isinstance(data_dir, (str, os.PathLike)):
@@ -331,6 +332,7 @@ class ThoraxDatasetSequentialPost(Dataset):
         Args:
             data_dir (str): Pot do mape z vsemi slikami.
             transforms (callable, optional): Transformacije za slike.
+            Vrne pare slik (fbct, cbct), kjer fbct je fixed img, cbct (post-operative) pa moving img.
         """
         # Preveri vhodni argument
         if not isinstance(data_dir, (str, os.PathLike)):
@@ -384,6 +386,7 @@ class ThoraxDatasetSequentialPre2(Dataset):
         Args:
             data_dir (str): Pot do mape z vsemi slikami.
             transforms (callable, optional): Transformacije za slike.
+            Vrne pare slik (cbct, fbct), kjer cbct (pre-operative) je fixed img, fbct pa moving img.
         """
         # Preveri vhodni argument
         if not isinstance(data_dir, (str, os.PathLike)):
@@ -437,6 +440,7 @@ class ThoraxDatasetSequentialPost2(Dataset):
         Args:
             data_dir (str): Pot do mape z vsemi slikami.
             transforms (callable, optional): Transformacije za slike.
+            Vrne pare slik (cbct, fbct), kjer cbct (post-operative) je fixed img, fbct pa moving img.
         """
         # Preveri vhodni argument
         if not isinstance(data_dir, (str, os.PathLike)):
